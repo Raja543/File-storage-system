@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;500&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  height: 97vh;
+  background-color: rgba(0, 0, 0, 0.863);
+  padding-top: 10px;
+}
+
+.hero-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  letter-spacing: 0.5rem;
+  color: #00ffff;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.hero-subheading {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.5rem;
+  color: #00ffff;
+  margin-top: 5px;
+}
+
+.hero__description {
+  color: #fff;
+  padding: 0.5rem;
+  max-width: 30em;
+  font-family: "Poppins", sans-serif;
+  font-size: 26px;
+  margin-top: 50px;
+  margin-left: 90px;
+  text-align: justify;
+  float: left;
+}
+
+.right {
+  float: right;
+  margin-right: 50px;
+  margin-top: 35px;
+  max-width: 800px;
+}
+
+/* services section */
+.service {
+  height: 60vh;
+  background-color: rgba(3, 2, 2, 0.806);
+  padding-top: 5px;
+}
+
+.services-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  letter-spacing: 0.5rem;
+  color: #00ffff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.services-mainbrief {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 20px;
+  text-align: inherit;
+}
+
+.service-button {
+  background-color: transparent;
+  border-color: #08fdd8;
+  padding: 10px;
+  margin: auto;
+  display: block;
+  text-align: center;
+  width: 40%;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.service-button-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  color: #08fdd8;
+  text-decoration: none;
+}
+
+/* about-section */
+.about {
+  height: 95vh;
+  background-color: rgba(3, 2, 2, 0.703);
+  padding-top: 5px;
+}
+
+.about-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  letter-spacing: 0.5rem;
+  color: #00ffff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about-text {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 20px;
+  text-align: inherit;
+}
+
+.profile-card {
+  grid-gap: 25px;
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* contact-section */
+.contact {
+  height: 40vh;
+  background-color: rgba(3, 2, 2, 0.856);
+  padding-top: 5px;
+}
+
+.contact-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  letter-spacing: 0.5rem;
+  color: #00ffff;
+  text-align: center;
+  margin-top: 19px;
+}
+
+.contact-description {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 20px;
+  text-align: inherit;
+}
