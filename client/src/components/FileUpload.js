@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
-import "./Secondfile.css"
+import "./FileUpload.css";
+import "./Secondfile.css";
+
 
 const FileUpload = ({ contract, account, provider }) => {
   const [file, setFile] = useState(null);
@@ -60,17 +62,10 @@ const FileUpload = ({ contract, account, provider }) => {
             onChange={retrieveFile}
           />
           <span className="textArea">Image: {fileName}</span>
-          {/* <div className="button">
-            <button type="submit" className="upload" hidden={!file}>
-              Upload File
-            </button>
-          </div> */}
         </form>
-        <div className="button">
-          <button type="submit" className="upload" hidden={!file}>
-            Upload File
-          </button>
-        </div>
+        <button type="submit" className="upload" hidden={!file}>
+          Upload File
+        </button>
       </div>
     </>
   );

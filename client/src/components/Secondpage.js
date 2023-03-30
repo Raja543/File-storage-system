@@ -56,12 +56,12 @@ const Secondpage = () => {
 
       {/* Main service section */}
       <div className="account-container">
-        <p style={{ color: "black" }}>
+        <p className="account-">
           Account : {account ? account : "Not connected"}
         </p>
       </div>
       <div className="file-container">
-        <h4>Image</h4>
+        <h4 className="file-heading">Image</h4>
         <p className="image-description">
           File types supported : JPG,PNG,SVG,GIF,MP4. Max size : 10MB
         </p>

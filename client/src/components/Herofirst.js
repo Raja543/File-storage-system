@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Herofirst.css";
 import "./Secondpage";
-import firstimage from "./images/firstimage.jpeg";
 import Card from "./Profilecard";
+import Discordsvg from "./Discordsvg";
+import Twittersvg from "./Twittersvg";
+import Instagramsvg from "./Instagramsvg";
 
 const Herofirst = () => {
   return (
@@ -17,25 +19,6 @@ const Herofirst = () => {
           for a central authority. This approach represents a significant shift
           in the way we distribute information online, providing a more secure
           and equitable alternative to traditional file sharing systems.
-        </p>
-        <div className="right">
-          <img src={firstimage} height={350} width={420} alt="firstimage"></img>
-        </div>
-      </div>
-
-      {/* Services section */}
-      <div className="service">
-        <h2 className="services-heading">Services</h2>
-        <p className="services-mainbrief">
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Ac purus in massa
-          egestas mollis varius; dignissim elementum. Mollis tincidunt mattis
-          hendrerit dolor eros enim, nisi ligula ornare. Hendrerit parturient
-          habitant pharetra rutrum gravida porttitor eros feugiat. Mollis elit
-          sodales taciti duis praesent id Lorem ipsum odor amet, consectetuer
-          adipiscing elit. Ac purus in massa egestas mollis varius; dignissim
-          elementum. Mollis tincidunt mattis hendrerit dolor eros enim, nisi
-          ligula ornare. Hendrerit parturient habitant pharetra rutrum gravida
-          porttitor eros feugiat. Mollis elit sodales taciti duis praesent id
         </p>
         <button className="service-button">
           <Link className="service-button-text" to="/secondpage">
@@ -59,15 +42,28 @@ const Herofirst = () => {
         </div>
       </div>
 
-      {/* Contact-section */}
-      <div className="contact">
-        <h2 className="contact-heading">Contact Us</h2>
-        <p className="contact-description">
-          This is a decentralized image storage where we can store the image
-          inside blockchain which helps to improve security , transparency,etc.
-        </p>
-        <div className="social-profile">
-          <p>MY name is raja</p>
+      <div className="footer-section">
+        <div className="columns">
+          <div className="column">
+            <h2 className="column1-heading">ShareX</h2>
+            <p className="column1-para">
+              © 2023 Polyhedra Network. All rights reserved
+            </p>
+          </div>
+
+          <div className="column">
+            <h2>2nd Content Area</h2>
+            <div className="social-icons">
+              <Discordsvg />
+              <Twittersvg />
+              <Instagramsvg />
+            </div>
+          </div>
+
+          <div className="column">
+            <h2>3rd Content Area</h2>
+            <p>Illo quod nemo ratione itaque dolores laudantium error vero</p>
+          </div>
         </div>
       </div>
     </>

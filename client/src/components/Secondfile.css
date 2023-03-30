@@ -4,35 +4,47 @@
 }
 
 .account-container {
-  padding: 25px 30px;
+  padding: 15px 10px;
   max-width: 700px;
   border: 2px solid black;
   margin: auto;
   margin-top: 10px;
-  background-color: #ffffff;
+  background-color: #000;
+  color: #ffffff;
   border-radius: 15px;
-  font-size: 30px;
+  font-size: 24px;
+  text-align: center;
 }
 
 .file-container {
   padding: 25px 30px;
-  max-width: 1400px;
-  border: 2px solid black;
+  height: 67vh;
+  background-color: rgba(0, 0, 0, 0.863);
   margin: auto;
   margin-top: 10px;
-  background-color: #ffffff;
-  border-radius: 15px;
   font-size: 25px;
+}
+
+.file-heading {
+  color: #ffff;
+  margin: auto;
+  text-align: center;
+}
+
+.image-description {
+  color: #ffff;
+  text-align: center;
 }
 
 .image-container {
   padding: 25px 30px;
-  max-width: 300px;
+  max-width: 400px;
   height: 40vh;
   border: 2px solid black;
-  margin-top: 10px;
+  margin: auto;
+  margin-top: 20px;
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 15px;
   font-size: 25px;
 }
 
