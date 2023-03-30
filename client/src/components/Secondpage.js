@@ -90,12 +90,9 @@ const Secondpage = () => {
       </div>
 
       {/* File Check Section */}
-    <div className="">
-      <Display
-            account={account}
-            contract={contract}
-          ></Display>
-    </div>
+      <div className="">
+        <Display account={account} contract={contract}></Display>
+      </div>
 
       <div className="contact">
         <h2 className="contact-heading">Contact Us</h2>

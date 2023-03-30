@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import "./Secondfile.css"
 
 const FileUpload = ({ contract, account, provider }) => {
   const [file, setFile] = useState(null);
@@ -44,26 +45,33 @@ const FileUpload = ({ contract, account, provider }) => {
     setFileName(e.target.files[0].name);
     e.preventDefault();
   };
-  return(
+  return (
     <>
-    <div className="top">
-      <form className="form" onSubmit={handleSubmit}>
-        <label htmlFor="file-upload" className="choose">
-          Choose Image
-        </label>
-        <input
-          disabled={!account}
-          type="file"
-          id="file-upload"
-          name="data"
-          onChange={retrieveFile}
-        />
-        <span className="textArea">Image: {fileName}</span>
-        <button type="submit" className="upload" disabled={!file}>
-          Upload File
-        </button>
-      </form>
-    </div>
+      <div className="top">
+        <form className="form" onSubmit={handleSubmit}>
+          <label htmlFor="file-upload" className="choose">
+            Choose Image
+          </label>
+          <input
+            disabled={!account}
+            type="file"
+            id="file-upload"
+            name="data"
+            onChange={retrieveFile}
+          />
+          <span className="textArea">Image: {fileName}</span>
+          {/* <div className="button">
+            <button type="submit" className="upload" hidden={!file}>
+              Upload File
+            </button>
+          </div> */}
+        </form>
+        <div className="button">
+          <button type="submit" className="upload" hidden={!file}>
+            Upload File
+          </button>
+        </div>
+      </div>
     </>
   );
 };

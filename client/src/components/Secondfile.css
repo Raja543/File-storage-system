@@ -5,13 +5,13 @@
 
 .account-container {
   padding: 25px 30px;
-  max-width: 900px;
+  max-width: 700px;
   border: 2px solid black;
   margin: auto;
   margin-top: 10px;
   background-color: #ffffff;
   border-radius: 15px;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .file-container {
@@ -80,8 +80,8 @@
   border-radius: 15px;
   font-size: 25px;
 }
-.search-icon{
-  float : right;
+.search-icon {
+  float: right;
 }
 .image-show {
   padding: 25px 30px;
