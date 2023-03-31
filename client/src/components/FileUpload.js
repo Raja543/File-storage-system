@@ -1,12 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
-import "./FileUpload.css";
-import "./Secondfile.css";
-
 
 const FileUpload = ({ contract, account, provider }) => {
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState("No image selected");
+  const [imageUrl, setImageUrl] = useState(null);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (file) {
@@ -35,18 +34,18 @@ const FileUpload = ({ contract, account, provider }) => {
     alert("Successfully Image Uploaded");
     setFileName("No image selected");
     setFile(null);
+    setImageUrl(null);
   };
+
   const retrieveFile = (e) => {
     const data = e.target.files[0]; //files array of files object
-    // console.log(data);
-    const reader = new window.FileReader();
-    reader.readAsArrayBuffer(data);
-    reader.onloadend = () => {
-      setFile(e.target.files[0]);
-    };
+    const imageUrl = URL.createObjectURL(data);
+    setFile(e.target.files[0]);
     setFileName(e.target.files[0].name);
+    setImageUrl(imageUrl);
     e.preventDefault();
   };
+
   return (
     <>
       <div className="top">
@@ -61,13 +60,17 @@ const FileUpload = ({ contract, account, provider }) => {
             name="data"
             onChange={retrieveFile}
           />
-          <span className="textArea">Image: {fileName}</span>
+          {imageUrl && <img src={imageUrl} alt="Selected file" height={100} width={100}/>}
+          {/* <button type="submit" className="upload" disabled={!file}>
+            Upload File
+          </button> */}
         </form>
-        <button type="submit" className="upload" hidden={!file}>
-          Upload File
-        </button>
+        <button type="submit" className="upload" disabled={!file}>
+            Upload File
+          </button>
       </div>
     </>
   );
 };
+
 export default FileUpload;
