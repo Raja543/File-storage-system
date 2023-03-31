@@ -23,41 +23,14 @@
   padding: 7px;
 }
 
-button.primary {
-  background-color: #03bfcb;
-  border: 1px solid #03bfcb;
-  border-radius: 3px;
-  color: #231e39;
-  font-family: Montserrat, sans-serif;
-  font-weight: 500;
-  padding: 10px 25px;
-  cursor: pointer;
-}
-
-button.primary.ghost {
-  background-color: transparent;
-  color: #02899c;
-  /* cursor: pointer; */
+.card-container h3 {
+  margin-top: 10px;
+  color : #eeeeee
 }
 
 .skills {
   background-color: #000;
   text-align: left;
   padding: 15px;
-  margin-top: 30px;
-}
-
-.skills ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.skills ul li {
-  border: 1px solid #2d2747;
-  border-radius: 2px;
-  display: inline-block;
-  font-size: 12px;
-  margin: 0 7px 7px 0;
-  padding: 7px;
+  margin-top: 10px;
 }

@@ -34,13 +34,12 @@ const Herofirst = () => {
           At SecureShareX, we believe that data ownership and privacy are
           fundamental rights that should be protected in the digital age. That's
           why we've created a decentralized file storage system that puts you in
-          control of your data.<br></br>
-          Our team of experienced developers and blockchain experts have
-          designed a secure, decentralized network that allows you to store and
-          access your files from anywhere, without relying on a central
-          authority. By using blockchain technology, we ensure that your data is
-          encrypted, tamper-proof, and always available, even in the face of
-          network outages or attacks.
+          control of your data. Our team of experienced developers and
+          blockchain experts have designed a secure, decentralized network that
+          allows you to store and access your files from anywhere, without
+          relying on a central authority. By using blockchain technology, we
+          ensure that your data is encrypted, tamper-proof, and always
+          available, even in the face of network outages or attacks.
         </p>
         <div className="profile-card">
           <Card /> <Card /> <Card />
@@ -50,7 +49,7 @@ const Herofirst = () => {
       <div className="footer-section">
         <div className="columns">
           <div className="column">
-            <h2 className="column1-heading">Secure ShareX</h2>
+            <h2 className="column1-heading">SecureShareX</h2>
             <p className="column1-para">
               © 2023 Secure ShareX. All rights reserved
             </p>
