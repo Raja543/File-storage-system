@@ -14,8 +14,7 @@
 
 .hero-heading {
   font-family: "Poppins", sans-serif;
-  font-size: 60px;
-  letter-spacing: 0.5rem;
+  font-size: 50px;
   color: #00ffff;
   text-align: center;
   margin-top: 80px;
@@ -24,8 +23,8 @@
 .hero-subheading {
   font-family: "Poppins", sans-serif;
   text-align: center;
-  font-size: 30px;
-  letter-spacing: 0.5rem;
+  font-size: 25px;
+  letter-spacing: 0.2rem;
   color: #00ffff;
   margin-top: 5px;
 }
@@ -38,7 +37,7 @@
   font-size: 26px;
   margin: auto;
   margin-top: 50px;
-  text-align: justify;
+  text-align: center;
 }
 
 .service-button {
@@ -104,6 +103,7 @@
 .footer-section {
   padding: 5px;
   background: #000;
+  height: 25vh;
 }
 .columns {
   display: flex;
@@ -115,11 +115,41 @@
 
 .column {
   flex: 1;
-  border: 1px solid aqua;
   margin: 10px;
   padding: 10px;
+  margin-top: 20px;
+}
+.column1-heading {
+  margin-left: 75px;
+  font-size: 24px;
 }
 
-.social-icons{
+.column1-para {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 28px;
+  color: rgb(113, 112, 112);
+}
+
+.column2-text {
+  text-align: center;
+  font-size: 24px;
+}
+
+.social-icons {
   display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.Colum3-heading {
+  margin-left: 130px;
+  font-size: 24px;
+}
+
+.Column3-text {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 28px;
 }

@@ -11,14 +11,14 @@ const Herofirst = () => {
   return (
     <>
       <div className="hero">
-        <h1 className="hero-heading">Empowering File sharing</h1>
-        <h1 className="hero-subheading">The Decentralized Approach</h1>
+        <h1 className="hero-heading">
+          Revolutionize Your File Storage with Decentralization
+        </h1>
+        <h1 className="hero-subheading"> Your Data, Your Control</h1>
         <p className="hero__description">
-          Decentralized file sharing projects utilize peer-to-peer networks and
-          blockchain technology to enable users to share files without the need
-          for a central authority. This approach represents a significant shift
-          in the way we distribute information online, providing a more secure
-          and equitable alternative to traditional file sharing systems.
+          Join the movement towards a more decentralized web, where users own
+          and control their data, and where censorship and surveillance are a
+          thing of the past.
         </p>
         <button className="service-button">
           <Link className="service-button-text" to="/secondpage">
@@ -31,11 +31,16 @@ const Herofirst = () => {
       <div className="about">
         <h2 className="about-heading">About Us</h2>
         <p className="about-text">
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Ac purus in massa
-          egestas mollis varius; dignissim elementum. Mollis tincidunt mattis
-          hendrerit dolor eros enim, nisi ligula ornare. Hendrerit parturient
-          habitant pharetra rutrum gravida porttitor eros feugiat. Mollis elit
-          sodales taciti duis praesent id. Consequat urna vitae morbi nunc
+          At SecureShareX, we believe that data ownership and privacy are
+          fundamental rights that should be protected in the digital age. That's
+          why we've created a decentralized file storage system that puts you in
+          control of your data.<br></br>
+          Our team of experienced developers and blockchain experts have
+          designed a secure, decentralized network that allows you to store and
+          access your files from anywhere, without relying on a central
+          authority. By using blockchain technology, we ensure that your data is
+          encrypted, tamper-proof, and always available, even in the face of
+          network outages or attacks.
         </p>
         <div className="profile-card">
           <Card /> <Card /> <Card />
@@ -45,14 +50,14 @@ const Herofirst = () => {
       <div className="footer-section">
         <div className="columns">
           <div className="column">
-            <h2 className="column1-heading">ShareX</h2>
+            <h2 className="column1-heading">Secure ShareX</h2>
             <p className="column1-para">
-              © 2023 Polyhedra Network. All rights reserved
+              © 2023 Secure ShareX. All rights reserved
             </p>
           </div>
 
           <div className="column">
-            <h2>2nd Content Area</h2>
+            <h2 className="column2-text">Get involved</h2>
             <div className="social-icons">
               <Discordsvg />
               <Twittersvg />
@@ -61,8 +66,8 @@ const Herofirst = () => {
           </div>
 
           <div className="column">
-            <h2>3rd Content Area</h2>
-            <p>Illo quod nemo ratione itaque dolores laudantium error vero</p>
+            <h2 className="Colum3-heading">Contact Us</h2>
+            <p className="Column3-text">SecureShareX@gmail.com</p>
           </div>
         </div>
       </div>

@@ -7,6 +7,9 @@ import "./Secondfile.css";
 import FileUpload from "./FileUpload";
 import Modal from "./Modal";
 import Display from "./Display";
+import Discordsvg from "./Discordsvg";
+import Twittersvg from "./Twittersvg";
+import Instagramsvg from "./Instagramsvg";
 
 const Secondpage = () => {
   const [account, setAccount] = useState("");
@@ -94,13 +97,29 @@ const Secondpage = () => {
         <Display account={account} contract={contract}></Display>
       </div>
 
-      <div className="contact">
-        <h2 className="contact-heading">Contact Us</h2>
-        <p className="contact-description">
-          This is a decentralized image storage where we can store the image
-          inside blockchain which helps to improve security , transparency,etc.
-        </p>
-        <div className="social-profile">hello</div>
+      <div className="footer-section">
+        <div className="columns">
+          <div className="column">
+            <h2 className="column1-heading">Secure ShareX</h2>
+            <p className="column1-para">
+              © 2023 Secure ShareX. All rights reserved
+            </p>
+          </div>
+
+          <div className="column">
+            <h2 className="column2-text">Get involved</h2>
+            <div className="social-icons">
+              <Discordsvg />
+              <Twittersvg />
+              <Instagramsvg />
+            </div>
+          </div>
+
+          <div className="column">
+            <h2 className="Colum3-heading">Contact Us</h2>
+            <p className="Column3-text">SecureShareX@gmail.com</p>
+          </div>
+        </div>
       </div>
     </>
   );
