@@ -1,107 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Roboto+Mono:wght@100&display=swap');
 * {
   margin: 0;
   padding: 0;
 }
 
-.account-container {
-  padding: 15px 10px;
-  max-width: 700px;
-  border: 2px solid black;
-  margin: auto;
-  margin-top: 10px;
-  background-color: #000;
-  color: #ffffff;
-  border-radius: 15px;
-  font-size: 24px;
-  text-align: center;
-}
 
 .file-container {
   padding: 25px 30px;
-  height: 67vh;
+  height: 27vh;
   background-color: rgba(0, 0, 0, 0.863);
-  margin: auto;
-  margin-top: 10px;
   font-size: 25px;
 }
 
-.file-heading {
-  color: #ffff;
-  margin: auto;
-  text-align: center;
-}
-
-.image-description {
-  color: #ffff;
-  text-align: center;
-}
-
-.image-container {
-  padding: 25px 30px;
-  max-width: 400px;
-  height: 40vh;
-  border: 2px solid black;
-  margin: auto;
-  margin-top: 20px;
-  background-color: #ffffff;
+.upload-file-button{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
+  border-color: #08fdd8;
   border-radius: 15px;
-  font-size: 25px;
-}
-
-.upload-button {
-  background-color: transparent;
-  border-color: #000;
-  padding: 5px;
+  padding: 10px;
+  margin: auto;
+  display: block;
   text-align: center;
+  width: 366px;
+  height: 54px;
   cursor: pointer;
-  margin-top: 30px;
-  font-size: 20px;
-  border-radius: 5px;
+  margin-top: 10vh;
 }
 
-.share-button {
-  background-color: transparent;
-  border-color: #000;
-  padding: 5px;
+.brief-detail {
+  padding: 25px 30px;
+  height: 57vh;
+  background-color: rgba(0, 0, 0, 0.863);
+  font-size: 25px;
   text-align: center;
-  cursor: pointer;
-  margin-top: 30px;
-  font-size: 20px;
-  border-radius: 5px;
-  margin-left: 20px;
+  color: #08fdd8;
+  font-family: 'Roboto Mono', monospace;
 }
 
-.detail-check {
+.upload-check-sectionS {
   padding: 25px 30px;
-  max-width: 1400px;
-  border: 2px solid black;
-  margin: auto;
-  margin-top: 10px;
-  background-color: #ffffff;
-  border-radius: 15px;
-  font-size: 25px;
-  height: 60vh;
-}
-.address-fill {
-  padding: 25px 30px;
-  max-width: 900px;
-  border: 2px solid black;
-  margin: auto;
-  margin-top: 10px;
-  background-color: #ffffff;
-  border-radius: 15px;
-  font-size: 25px;
-}
-.search-icon {
-  float: right;
-}
-.image-show {
-  padding: 25px 30px;
-  max-width: 1400px;
-  height: 36vh;
-  border: 2px solid black;
-  margin-top: 10px;
-  background-color: #ffffff;
-  border-radius: 10px;
+  height: 37vh;
+  background-color: rgba(0, 0, 0, 0.863);
   font-size: 25px;
 }
