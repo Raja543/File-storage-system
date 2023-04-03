@@ -44,10 +44,10 @@ const Herofirst = () => {
 
       {/* Product section */}
       <div className="product-section">
+      <h2 className="product-head">ZK Full Stack for web3</h2>
         <div className="right-image">
           <Animation1 />
         </div>
-        <h2 className="product-head">ZK Full Stack for web3</h2>
         <div className="product-detail">
           <div className="Para-1">
             <h3 className="para1-heading">Interoperability</h3>
