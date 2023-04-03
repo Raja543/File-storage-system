@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Roboto+Mono:wght@100&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-wrapper {
+    display: flex;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .custom-file-upload,
+  .upload {
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
+    border-color: #08fdd8;
+    border-radius: 15px;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 11px;
+  }
+  
+  .upload {
+    width: 86px;
+    height: 44px;
+    padding: 1px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }

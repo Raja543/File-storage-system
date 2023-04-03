@@ -10,21 +10,16 @@
   height: 27vh;
   background-color: rgba(0, 0, 0, 0.863);
   font-size: 25px;
+  display: flex;
+  align-items: center;
 }
 
-.upload-file-button{
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
-  border-color: #08fdd8;
-  border-radius: 15px;
-  padding: 10px;
-  margin: auto;
-  display: block;
-  text-align: center;
-  width: 366px;
-  height: 54px;
-  cursor: pointer;
-  margin-top: 10vh;
+.file-container h1{
+  color: #08fdd8;
+  font-family: 'Roboto Mono', monospace;
+  position: absolute;
+  top: 80px;
+  left: 25%;
 }
 
 .brief-detail {
@@ -37,9 +32,7 @@
   font-family: 'Roboto Mono', monospace;
 }
 
-.upload-check-sectionS {
-  padding: 25px 30px;
-  height: 37vh;
-  background-color: rgba(0, 0, 0, 0.863);
-  font-size: 25px;
+
+input[type="file"] {
+  display: none;
 }
