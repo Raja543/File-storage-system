@@ -4,6 +4,7 @@ import { ethers } from "ethers";
 import Navbar from "./Navbar";
 import { useState, useEffect } from "react";
 import "./Secondfile.css";
+import "./FileUpload.css"
 import FileUpload from "./FileUpload";
 import Modal from "./Modal";
 import Display from "./Display";
@@ -59,7 +60,12 @@ const Secondpage = () => {
 
       
       <div className="file-container">
-        <button className="upload-file-button"></button>
+      <h1>How The Image Uploading Works</h1>
+      <FileUpload
+            account={account}
+            provider={provider}
+            contract={contract}
+          ></FileUpload>
       </div>
 
       <div className="brief-detail">

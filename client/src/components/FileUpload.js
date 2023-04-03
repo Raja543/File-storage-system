@@ -38,36 +38,52 @@ const FileUpload = ({ contract, account, provider }) => {
   };
 
   const retrieveFile = (e) => {
-    const data = e.target.files[0]; //files array of files object
-    const imageUrl = URL.createObjectURL(data);
-    setFile(e.target.files[0]);
-    setFileName(e.target.files[0].name);
-    setImageUrl(imageUrl);
-    e.preventDefault();
+    const input = document.getElementById("myfile");
+    const label = document.getElementById("fileLabel");
+    if (input && input.files && input.files.length > 0) {
+      const file = input.files[0];
+      setFile(file);
+      const fileName = file.name;
+      const extension = fileName.split(".").pop(); // get file extension
+      let truncatedName = fileName.split(".").shift(); // get file name without extension
+      truncatedName = truncatedName.substring(0, 10); // truncate file name to first 10 characters
+      const truncatedFileName = truncatedName + "." + extension; // combine truncated name and extension
+      label.textContent = truncatedFileName;
+    } else {
+      label.textContent = "Choose a file";
+    }
   };
 
   return (
     <>
       <div className="top">
-        <form className="form" onSubmit={handleSubmit}>
-          <label htmlFor="file-upload" className="choose">
-            Choose Image
-          </label>
-          <input
-            disabled={!account}
-            type="file"
-            id="file-upload"
-            name="data"
-            onChange={retrieveFile}
-          />
-          {imageUrl && <img src={imageUrl} alt="Selected file" height={100} width={100}/>}
-          {/* <button type="submit" className="upload" disabled={!file}>
-            Upload File
-          </button> */}
-        </form>
-        <button type="submit" className="upload" disabled={!file}>
-            Upload File
-          </button>
+        <div className="form-wrapper">
+          <form className="form" onSubmit={handleSubmit}>
+            <div className="button-container">
+              <label htmlFor="file-upload" className="choose"></label>
+              <input
+                type="file"
+                id="myfile"
+                name="myfile"
+                disabled={!account}
+                onChange={retrieveFile}
+              />
+              <label
+                htmlFor="myfile"
+                id="fileLabel"
+                className="custom-file-upload"
+              >
+                Choose a file
+              </label>
+              <span id="fileName"></span>
+              <div className="button-wrapper">
+                <button type="submit" className="upload" hidden={!file}>
+                  Upload File
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </>
   );
