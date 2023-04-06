@@ -6,16 +6,14 @@
 
 .file-container {
   height: 75vh;
-  background-color: rgba(0, 0, 0, 0.863);
+  /* background-color: rgba(0, 0, 0, 0.863); */
   font-size: 25px;
 }
 
 .file-container h1 {
   color: #08fdd8;
   font-family: "Roboto Mono", monospace;
-  position: absolute;
-  top: 80px;
-  left: 25%;
+  text-align : center;
 }
 
 .brief-detail {
