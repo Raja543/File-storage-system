@@ -74,7 +74,7 @@ const FileUpload = ({ contract, account, provider }) => {
                 id="fileLabel"
                 className="custom-file-upload"
               >
-                Choose a file
+                Choose file
               </label>
               <span id="fileName"></span>
               <button type="submit" className="upload" disabled={!file}>

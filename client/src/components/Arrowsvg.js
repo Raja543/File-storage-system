@@ -2,11 +2,8 @@ import React from "react";
 import { ReactComponent as MySvg } from "./images/cloud-arrow-up-solid.svg";
 
 let styles = {
-  Svgcontainer: {
-    backgroundColor: "transparent"
-  },
   svg: {
-    fill: '#000',
+    fill: '#08fdd8',
     width: "40px",
     height: "50px",
   }

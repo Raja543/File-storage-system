@@ -36,12 +36,15 @@ function Herofirst() {
         </div>
 
         <p className="animate-para">
-          SecureShareX is building the next generation of infrastructure for
-          Web3 interoperability, scalability, and privacy through advanced
-          Zero-knowledge proof (ZKP) technology. Polyhedra Network provides
-          trust-minimized and highly-efficient interoperability solutions for
-          asset transfers, message passing, and data sharing between various
-          Web2 and Web3 systems.
+          SecureShareX is a decentralized file storage system that uses
+          blockchain technology to ensure secure and transparent data storage
+          and retrieval. Users have complete control over their data and can
+          share it with others using advanced encryption and access control
+          mechanisms. It provides a secure and reliable platform for users to
+          store and share files without compromising privacy or security. With
+          SecureShareX, data management becomes decentralized and transparent, a
+          revolutionary alternative to traditional centralized file storage
+          systems.
         </p>
       </div>
 

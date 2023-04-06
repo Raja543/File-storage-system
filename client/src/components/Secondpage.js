@@ -69,7 +69,7 @@ const Secondpage = () => {
       </div>
 
       <div className="brief-detail">
-        <h1>How The Image Uploading Works</h1>
+        <h1>What services we offered</h1>
       </div>
 
       <div className="upload-check-section">

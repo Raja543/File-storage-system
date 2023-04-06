@@ -9,7 +9,7 @@ const Navbar = () => {
       <ul className="nav-list">
         <li className="nav-item">
           <NavLink className="nav-link" exact to="/">
-            SharkSecureX
+            SecureShareX
           </NavLink>
         </li>
         <li className="nav-item">
