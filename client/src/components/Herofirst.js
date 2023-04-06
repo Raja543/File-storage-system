@@ -8,7 +8,7 @@ import Twittersvg from "./Twittersvg";
 import Instagramsvg from "./Instagramsvg";
 import Animation1 from "./Animation1";
 
-const Herofirst = () => {
+function Herofirst() {
   return (
     <>
       <div className="hero">
@@ -31,7 +31,10 @@ const Herofirst = () => {
       </div>
       {/* aninate section */}
       <div className="animate-section">
-        <h2 className="animate-heading">What is SecureShareX ?</h2>
+        <div className="lineUp">
+          <h2 className="animate-heading">What is SecureShareX ?</h2>
+        </div>
+
         <p className="animate-para">
           SecureShareX is building the next generation of infrastructure for
           Web3 interoperability, scalability, and privacy through advanced
@@ -44,35 +47,39 @@ const Herofirst = () => {
 
       {/* Product section */}
       <div className="product-section">
-      <h2 className="product-head">ZK Full Stack for web3</h2>
+        <h2 className="product-head">
+          Benefits of Blockchain-based File Storage
+        </h2>
         <div className="right-image">
           <Animation1 />
         </div>
         <div className="product-detail">
           <div className="Para-1">
-            <h3 className="para1-heading">Interoperability</h3>
+            <h3 className="para1-heading">Immutability</h3>
             <p className="para1-detail">
-              Polyhedra Network implements infrastructures for Web3
-              interoperability across heterogeneous systems which guarantee
-              strong security without extra trust assumptions.
+              The blockchain provides a tamper-proof and immutable record of the
+              file. Once a file is stored on the blockchain, it cannot be
+              altered or deleted, ensuring the integrity of the data.
             </p>
           </div>
           <hr className="my-hr" />
           <div className="Para-2">
-            <h3 className="para2-heading">Scalability</h3>
+            <h3 className="para2-heading">Decentralization</h3>
             <p className="para2-detail">
-              Polyhedra Network designs and develops scalable and efficient
-              zero-knowledge proof protocols for large-scale ZKP systems with
-              distributed computing networks.
+              The file is stored on a decentralized network of computers,
+              meaning that there is no single point of failure or control. This
+              ensures that the file remains accessible and secure even if one or
+              more nodes fail.
             </p>
           </div>
           <hr className="my-hr" />
           <div className="Para-3">
-            <h3 className="para3-heading">Fine-grained Privacy</h3>
+            <h3 className="para3-heading">Transparency</h3>
             <p className="para3-detail">
-              Polyhedra Network provides fine-grained privacy extensions for
-              Web3 with stealth address models, meeting both privacy-preserving
-              needs and compliance policies.
+              All transactions on the blockchain are transparent and publicly
+              visible. This means that anyone can view the transaction history
+              of the file and verify its authenticity, providing a high level of
+              trust and accountability.
             </p>
           </div>
         </div>
@@ -123,6 +130,6 @@ const Herofirst = () => {
       </div>
     </>
   );
-};
+}
 
 export default Herofirst;

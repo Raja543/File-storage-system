@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import Arrowsvg from "./Arrowsvg";
 
 const FileUpload = ({ contract, account, provider }) => {
   const [file, setFile] = useState(null);
@@ -18,8 +19,8 @@ const FileUpload = ({ contract, account, provider }) => {
           url: "https://api.pinata.cloud/pinning/pinFileToIPFS",
           data: formData,
           headers: {
-            pinata_api_key: `6ad940fc59b65ae76c6c`,
-            pinata_secret_api_key: `ae08b726d1bb8f8a20b599fe041f65105fc3def5ac14069e20ee93d047432833`,
+            pinata_api_key: `d8e75fd482b741579e0f`,
+            pinata_secret_api_key: `e7d96f8eaaef222aa83f114eafdec35066da1f510484562a855ee2dda97414c8`,
             "Content-Type": "multipart/form-data",
           },
         });
@@ -76,11 +77,9 @@ const FileUpload = ({ contract, account, provider }) => {
                 Choose a file
               </label>
               <span id="fileName"></span>
-              <div className="button-wrapper">
-                <button type="submit" className="upload" hidden={!file}>
-                  Upload File
-                </button>
-              </div>
+              <button type="submit" className="upload" disabled={!file}>
+                <Arrowsvg />
+              </button>
             </div>
           </form>
         </div>

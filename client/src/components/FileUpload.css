@@ -19,17 +19,9 @@
     flex-direction: row;
   }
   
-  .button-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .custom-file-upload,
-  .upload {
+  .custom-file-upload {
     border: 1px solid #ccc;
-    padding: 6px 12px;
+    padding: 16px 12px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
     border-color: #08fdd8;
@@ -39,14 +31,22 @@
     cursor: pointer;
     margin-left: 11px;
   }
-  
-  .upload {
-    width: 86px;
-    height: 44px;
-    padding: 1px;
+  .upload{
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
+    border-color: #08fdd8;
+    border-radius: 12px;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 11px;
+    font-size: 25px;
   }
   
   .button-container {
     display: flex;
     justify-content: center;
+    margin-top: 100px;
   }

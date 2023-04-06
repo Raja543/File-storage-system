@@ -9,12 +9,17 @@ const Navbar = () => {
       <ul className="nav-list">
         <li className="nav-item">
           <NavLink className="nav-link" exact to="/">
-            Home
+            SharkSecureX
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink className="nav-link" to="/about">
-            About
+            Working
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/contact">
+            Allowlist
           </NavLink>
         </li>
         <li className="nav-item">

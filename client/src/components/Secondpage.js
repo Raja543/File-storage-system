@@ -4,7 +4,7 @@ import { ethers } from "ethers";
 import Navbar from "./Navbar";
 import { useState, useEffect } from "react";
 import "./Secondfile.css";
-import "./FileUpload.css"
+import "./FileUpload.css";
 import FileUpload from "./FileUpload";
 import Modal from "./Modal";
 import Display from "./Display";
@@ -16,6 +16,7 @@ const Secondpage = () => {
   const [account, setAccount] = useState("");
   const [contract, setContract] = useState(null);
   const [provider, setProvider] = useState(null);
+  const [data, setData] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
@@ -58,22 +59,21 @@ const Secondpage = () => {
         <Navbar />
       </div>
 
-      
       <div className="file-container">
-      <h1>How The Image Uploading Works</h1>
-      <FileUpload
-            account={account}
-            provider={provider}
-            contract={contract}
-          ></FileUpload>
+        <h1>How The Image Uploading Works</h1>
+        <FileUpload
+          account={account}
+          provider={provider}
+          contract={contract}
+        ></FileUpload>
       </div>
 
       <div className="brief-detail">
         <h1>How The Image Uploading Works</h1>
       </div>
 
-      <div className="upload-check-sectionS">
-        
+      <div className="upload-check-section">
+        <Display contract={contract} account={account}></Display>
       </div>
 
       <div className="footer-section">
