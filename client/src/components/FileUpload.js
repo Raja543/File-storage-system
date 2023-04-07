@@ -50,6 +50,7 @@ const FileUpload = ({ contract, account, provider }) => {
       truncatedName = truncatedName.substring(0, 10); // truncate file name to first 10 characters
       const truncatedFileName = truncatedName + "." + extension; // combine truncated name and extension
       label.textContent = truncatedFileName;
+      setImageUrl(URL.createObjectURL(file)); // set the imageUrl state to the URL of the selected file
     } else {
       label.textContent = "Choose a file";
     }
@@ -80,6 +81,16 @@ const FileUpload = ({ contract, account, provider }) => {
               <button type="submit" className="upload" disabled={!file}>
                 <Arrowsvg />
               </button>
+            </div>
+            <div>
+              {imageUrl && (
+                <img
+                  src={imageUrl}
+                  alt="Selected file"
+                  height={100}
+                  width={100}
+                />
+              )}
             </div>
           </form>
         </div>

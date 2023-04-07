@@ -3,9 +3,10 @@ import "./Secondfile.css";
 
 const Display = ({ contract, account }) => {
   const [data, setData] = useState("");
+  const [showData, setShowData] = useState(false); // added state variable
+
   const getdata = async () => {
     let dataArray;
-    // const Otheraddress = document.querySelector(".address").value;
     const addressInput = document.querySelector(".address");
     const Otheraddress = addressInput ? addressInput.value : "";
     try {
@@ -40,26 +41,39 @@ const Display = ({ contract, account }) => {
         );
       });
       setData(images);
+      setShowData(true); // set showData to true when data is fetched
     } else {
       alert("No image to display");
     }
   };
+
+  const toggleData = () => {
+    setShowData(!showData); // toggle showData on button click
+  };
+  const closeContainer = () => {
+    setShowData(false);
+  };
+
   return (
     <>
-      <div class="search-bar">
+      <div className="search-bar">
         <input
           type="text"
-          classname="address"
+          className="address"
           placeholder="Enter the Account address "
         />
-        <button onClick={getdata}>
-          <i class="fa-solid fa-magnifying-glass"></i>
+        <button onClick={() => { getdata(); toggleData(true); }}> {/* added onClick for toggleData */}
+          <i className="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
-      <div className="blank-container">
-        <div class="image-grid">{data}</div>
-      </div>
+      {showData && ( /* conditionally render blank-container based on showData */
+        <div className="blank-container">
+          <button onClick={closeContainer}><i class="fa-sharp fa-solid fa-circle-xmark fa-2xl"></i></button>
+          <div className="image-grid">{data}</div>
+        </div>
+      )}
     </>
   );
 };
+
 export default Display;
