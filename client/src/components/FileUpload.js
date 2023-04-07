@@ -145,7 +145,7 @@ const FileUpload = ({ contract, account, provider }) => {
               </label>
               <span id="fileName"></span>
               <button type="submit" className="upload" disabled={!file}>
-                <Arrowsvg />
+                
               </button>
             </div>
           </form>
