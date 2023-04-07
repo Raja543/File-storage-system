@@ -7,28 +7,28 @@ import Discordsvg from "./Discordsvg";
 import Twittersvg from "./Twittersvg";
 import Instagramsvg from "./Instagramsvg";
 import Animation1 from "./Animation1";
+import myVideo from "./videos/network-12716.mp4";
 
 function Herofirst() {
   return (
     <>
       <div className="hero">
-        <div className="bg-animate">
-          <h1 className="hero-heading">
-            Revolutionize Your File Storage with Decentralization
-          </h1>
-          <h1 className="hero-subheading"> Your Data, Your Control</h1>
-          <p className="hero__description">
-            Join the movement towards a more decentralized web, where users own
-            and control their data, and where censorship and surveillance are a
-            thing of the past.
-          </p>
-          <button className="hero-button">
-            <Link className="hero-button-text" to="/secondpage">
-              Click here to Upload the file
-            </Link>
-          </button>
-        </div>
+        <h1 className="hero-heading">
+          Revolutionize Your File Storage with Decentralization
+        </h1>
+        <h1 className="hero-subheading"> Your Data, Your Control</h1>
+        <p className="hero__description">
+          Join the movement towards a more decentralized web, where users own
+          and control their data, and where censorship and surveillance are a
+          thing of the past.
+        </p>
+        <button className="hero-button">
+          <Link className="hero-button-text" to="/secondpage">
+            Click here to Upload the file
+          </Link>
+        </button>
       </div>
+
       {/* aninate section */}
       <div className="animate-section">
         <div className="lineUp">
