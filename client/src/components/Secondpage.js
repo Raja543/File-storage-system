@@ -73,7 +73,10 @@ const Secondpage = () => {
       </div>
 
       <div className="upload-check-section">
-        <Display contract={contract} account={account}></Display>
+        <Display 
+        contract={contract} 
+        account={account}
+        ></Display>
       </div>
 
       <div className="footer-section">

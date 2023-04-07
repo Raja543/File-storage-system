@@ -49,6 +49,7 @@ const FileUpload = ({ contract, account, provider }) => {
       truncatedName = truncatedName.substring(0, 10); // truncate file name to first 10 characters
       const truncatedFileName = truncatedName + "." + extension; // combine truncated name and extension
       label.textContent = truncatedFileName;
+      setImageUrl(URL.createObjectURL(file)); // set the imageUrl state to the URL of the selected file
     } else {
       label.textContent = "Choose a file";
     }
@@ -123,31 +124,32 @@ const FileUpload = ({ contract, account, provider }) => {
 
   return (
     <>
-      <div className="wrapper">
-        <header>File Uploader JavaScript</header>
-        <form className="form" onSubmit={handleSubmit}>
-          <label htmlFor="file-upload" className="choose"></label>
-          <label
-            htmlFor="my-file"
-            id="fileLabel"
-            className="custom-file-upload"
-          >
-            Choose file
-          </label>
-          <input
-            type="file"
-            id="my-file"
-            name="myfile"
-            disabled={!account}
-            onChange={retrieveFile}
-          />
-          <p>Browse File to Upload</p>
-          <button type="submit" className="upload" hidden={!file}>
-            <i class="fas fa-cloud-upload-alt"></i>
-          </button>
-          <section className="progress-area"></section>
-          <section className="uploaded-area"></section>
-        </form>
+      <div className="top">
+        <div className="form-wrapper">
+          <form className="form" onSubmit={handleSubmit}>
+            <div className="button-container">
+              <label htmlFor="file-upload" className="choose"></label>
+              <input
+                type="file"
+                id="myfile"
+                name="myfile"
+                disabled={!account}
+                onChange={retrieveFile}
+              />
+              <label
+                htmlFor="myfile"
+                id="fileLabel"
+                className="custom-file-upload"
+              >
+                Choose file
+              </label>
+              <span id="fileName"></span>
+              <button type="submit" className="upload" disabled={!file}>
+                
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </>
   );
