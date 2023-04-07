@@ -124,32 +124,31 @@ const FileUpload = ({ contract, account, provider }) => {
 
   return (
     <>
-      <div className="top">
-        <div className="form-wrapper">
-          <form className="form" onSubmit={handleSubmit}>
-            <div className="button-container">
-              <label htmlFor="file-upload" className="choose"></label>
-              <input
-                type="file"
-                id="myfile"
-                name="myfile"
-                disabled={!account}
-                onChange={retrieveFile}
-              />
-              <label
-                htmlFor="myfile"
-                id="fileLabel"
-                className="custom-file-upload"
-              >
-                Choose file
-              </label>
-              <span id="fileName"></span>
-              <button type="submit" className="upload" disabled={!file}>
-                
-              </button>
-            </div>
-          </form>
-        </div>
+      <div className="wrapper">
+        <header>File Uploader JavaScript</header>
+        <form className="form" onSubmit={handleSubmit}>
+          <label htmlFor="file-upload" className="choose"></label>
+          <label
+            htmlFor="my-file"
+            id="fileLabel"
+            className="custom-file-upload"
+          >
+            Choose file
+          </label>
+          <input
+            type="file"
+            id="my-file"
+            name="myfile"
+            disabled={!account}
+            onChange={retrieveFile}
+          />
+          <p>Browse File to Upload</p>
+          <button type="submit" className="upload" hidden={!file}>
+            <i class="fas fa-cloud-upload-alt"></i>
+          </button>
+          <section className="progress-area"></section>
+          <section className="uploaded-area"></section>
+        </form>
       </div>
     </>
   );
