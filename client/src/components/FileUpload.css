@@ -2,51 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-} 
-
-/* 
-.form-wrapper {
-  display: flex;
-  height: 60vh;
-  width: 40%;
-  border: 2px solid gray;
-  margin-top: 120px;
 }
 
-.form {
- 
-}
-
-.custom-file-upload {
-  border: 1px solid #08fdd8;
-  padding: 10px 12px;
-  border-radius: 15px;
-  text-align: center;
-  cursor: pointer;
-  margin-left: 11px;
-  margin-top : 10px;
-  margin-right: 10px;
-  margin-bottom : 10px;
-  color : #08fdd8;
-}
-.upload {
-  border: 1px solid #08fdd8;
-  padding: 2px 10px;
-  border-radius: 20px;
-  text-align: center;
-  cursor: pointer;
-  margin-left: 11px;
-  margin-top : 10px;
-  margin-right: 10px;
-  margin-bottom : 10px;
-  color : #08fdd8;
-}
-h3{
-  color : #fff;
-  font-size : 15px;
-}
-
-<<<<<<< HEAD
 .button-container {
   display: flex;
   justify-content: center;
@@ -55,32 +12,30 @@ h3{
   border: 2px solid red;
   margin-bottom: 10px;
   background: transparent;
-=======
- */
+}
 
-
-
-::selection{
+::selection {
   color: #fff;
-  background: #6990F2;
+  background: #6990f2;
 }
 
-.wrapper{
+.wrapper {
   width: 430px;
-  background: #fff;
-  border-radius: 5px;
-  padding: 30px;
-  box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
-  margin : auto;
-  margin-top : 20px;
+  background: transparent;
+  border-radius: 15px;
+  border: 2px solid gray;
+  padding: 20px 30px 20px 30px;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+  margin: auto;
+  margin-top: 20px;
 }
-.wrapper header{
-  color: #6990F2;
-  font-size: 27px;
-  font-weight: 600;
+.wrapper h3 {
+  color: #6990f2;
+  font-size: 24px;
+  font-weight: 400;
   text-align: center;
 }
-.wrapper form{
+.wrapper form {
   height: 167px;
   display: flex;
   cursor: pointer;
@@ -89,22 +44,28 @@ h3{
   justify-content: center;
   flex-direction: column;
   border-radius: 5px;
-  border: 2px dashed #6990F2;
+  border: 2px dashed #6990f2;
 }
-form :where(i, p){
-  color: #6990F2;
+.first-desc {
+  color: #6990f2;
+  font-size: 16px;
+  margin-top: 10px;
 }
-form i{
+
+form :where(i, p) {
+  color: #6990f2;
+}
+form i {
   font-size: 50px;
 }
-form p{
+form p {
   margin-top: 15px;
   font-size: 16px;
 }
 
-section .row{
+section .row {
   margin-bottom: 10px;
-  background: #E9F0FF;
+  background: #e9f0ff;
   list-style: none;
   padding: 15px 20px;
   border-radius: 5px;
@@ -112,59 +73,72 @@ section .row{
   align-items: center;
   justify-content: space-between;
 }
-section .row i{
-  color: #6990F2;
+section .row i {
+  color: #6990f2;
   font-size: 30px;
 }
-section .details span{
+section .details span {
   font-size: 14px;
 }
-.progress-area .row .content{
+.upload {
+  background: transparent;
+  border-color: #08fdd8;
+  border-radius: 15px;
+  padding: 10px;
+  margin: auto;
+  display: block;
+  text-align: center;
+  width: 100px;
+  font-size: 16px;
+  color: #6990f2;
+  cursor: pointer;
+}
+.progress-area .row .content {
   width: 100%;
   margin-left: 15px;
 }
-.progress-area .details{
+.progress-area .details {
   display: flex;
   align-items: center;
   margin-bottom: 7px;
   justify-content: space-between;
 }
-.progress-area .content .progress-bar{
+.progress-area .content .progress-bar {
   height: 6px;
   width: 100%;
   margin-bottom: 4px;
   background: #fff;
   border-radius: 30px;
 }
-.content .progress-bar .progress{
+.content .progress-bar .progress {
   height: 100%;
   width: 0%;
-  background: #6990F2;
+  background: #6990f2;
   border-radius: inherit;
 }
-.uploaded-area{
+.uploaded-area {
   max-height: 232px;
   overflow-y: scroll;
 }
-.uploaded-area.onprogress{
+.uploaded-area.onprogress {
   max-height: 150px;
 }
-.uploaded-area::-webkit-scrollbar{
+.uploaded-area::-webkit-scrollbar {
   width: 0px;
 }
-.uploaded-area .row .content{
+.uploaded-area .row .content {
   display: flex;
   align-items: center;
 }
-.uploaded-area .row .details{
+.uploaded-area .row .details {
   display: flex;
   margin-left: 15px;
   flex-direction: column;
 }
-.uploaded-area .row .details .size{
+.uploaded-area .row .details .size {
   color: #404040;
   font-size: 11px;
 }
-.uploaded-area i.fa-check{
+.uploaded-area i.fa-check {
   font-size: 16px;
 }

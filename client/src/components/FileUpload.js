@@ -49,18 +49,15 @@ const FileUpload = ({ contract, account, provider }) => {
       truncatedName = truncatedName.substring(0, 10); // truncate file name to first 10 characters
       const truncatedFileName = truncatedName + "." + extension; // combine truncated name and extension
       label.textContent = truncatedFileName;
-      setImageUrl(URL.createObjectURL(file)); // set the imageUrl state to the URL of the selected file
     } else {
       label.textContent = "Choose a file";
     }
   };
 
-
-  const form = document.querySelector("form"),
-    fileInput = document.querySelector(".file-input"),
-    progressArea = document.querySelector(".progress-area"),
-    uploadedArea = document.querySelector(".uploaded-area");
-    
+  // const form = document.querySelector("form"),
+  //   fileInput = document.querySelector(".file-input"),
+  //   progressArea = document.querySelector(".progress-area"),
+  //   uploadedArea = document.querySelector(".uploaded-area");
 
   // form.addEventListener("click", () => {
   //   fileInput.click();
@@ -78,62 +75,68 @@ const FileUpload = ({ contract, account, provider }) => {
   //   }
   // };
 
-//   function uploadFile(name) {
-//   let xhr = new XMLHttpRequest();
-//   xhr.open("POST", "php/upload.php");
-//   xhr.upload.addEventListener("progress", ({ loaded, total }) => {
-//     let fileLoaded = Math.floor((loaded / total) * 100);
-//     let fileTotal = Math.floor(total / 1000);
-//     let fileSize;
-//     fileTotal < 1024
-//       ? (fileSize = fileTotal + " KB")
-//       : (fileSize = (loaded / (1024 * 1024)).toFixed(2) + " MB");
-//     let progressHTML = `<li class="row">
-//                           <i class="fas fa-file-alt"></i>
-//                           <div class="content">
-//                             <div class="details">
-//                               <span class="name">${name} • Uploading</span>
-//                               <span class="percent">${fileLoaded}%</span>
-//                             </div>
-//                             <div class="progress-bar">
-//                               <div class="progress" style="width: ${fileLoaded}%"></div>
-//                             </div>
-//                           </div>
-//                         </li>`;
-//     uploadedArea.classList.add("onprogress");
-//     progressArea.innerHTML = progressHTML;
-//     if (loaded === total) {
-//       progressArea.innerHTML = "";
-//       let uploadedHTML = `<li class="row">
-//                             <div class="content upload">
-//                               <i class="fas fa-file-alt"></i>
-//                               <div class="details">
-//                                 <span class="name">${name} • Uploaded</span>
-//                                 <span class="size">${fileSize}</span>
-//                               </div>
-//                             </div>
-//                             <i class="fas fa-check"></i>
-//                           </li>`;
-//       uploadedArea.classList.remove("onprogress");
-//       uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML);
-//     }
-//   });
-//   let data = new FormData(form);
-//   xhr.send(data);
-// }
+  //   function uploadFile(name) {
+  //   let xhr = new XMLHttpRequest();
+  //   xhr.open("POST", "php/upload.php");
+  //   xhr.upload.addEventListener("progress", ({ loaded, total }) => {
+  //     let fileLoaded = Math.floor((loaded / total) * 100);
+  //     let fileTotal = Math.floor(total / 1000);
+  //     let fileSize;
+  //     fileTotal < 1024
+  //       ? (fileSize = fileTotal + " KB")
+  //       : (fileSize = (loaded / (1024 * 1024)).toFixed(2) + " MB");
+  //     let progressHTML = `<li class="row">
+  //                           <i class="fas fa-file-alt"></i>
+  //                           <div class="content">
+  //                             <div class="details">
+  //                               <span class="name">${name} • Uploading</span>
+  //                               <span class="percent">${fileLoaded}%</span>
+  //                             </div>
+  //                             <div class="progress-bar">
+  //                               <div class="progress" style="width: ${fileLoaded}%"></div>
+  //                             </div>
+  //                           </div>
+  //                         </li>`;
+  //     uploadedArea.classList.add("onprogress");
+  //     progressArea.innerHTML = progressHTML;
+  //     if (loaded === total) {
+  //       progressArea.innerHTML = "";
+  //       let uploadedHTML = `<li class="row">
+  //                             <div class="content upload">
+  //                               <i class="fas fa-file-alt"></i>
+  //                               <div class="details">
+  //                                 <span class="name">${name} • Uploaded</span>
+  //                                 <span class="size">${fileSize}</span>
+  //                               </div>
+  //                             </div>
+  //                             <i class="fas fa-check"></i>
+  //                           </li>`;
+  //       uploadedArea.classList.remove("onprogress");
+  //       uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML);
+  //     }
+  //   });
+  //   let data = new FormData(form);
+  //   xhr.send(data);
+  // }
 
   return (
     <>
       <div className="wrapper">
-        <header>File Uploader JavaScript</header>
-        <form className="form" onSubmit={handleSubmit}>
-          <label htmlFor="file-upload" className="choose"></label>
+        <h3>Upload Your image</h3>
+        <p className="first-desc">
+          File supported type : PNG , JPEG , JPG , WEBP{" "}
+        </p>
+        <form
+          className="form"
+          onClick={() => document.getElementById("my-file").click()}
+          onSubmit={handleSubmit}
+        >
           <label
             htmlFor="my-file"
             id="fileLabel"
             className="custom-file-upload"
           >
-            Choose file
+            <i class="fas fa-cloud-upload-alt"></i>
           </label>
           <input
             type="file"
@@ -141,14 +144,30 @@ const FileUpload = ({ contract, account, provider }) => {
             name="myfile"
             disabled={!account}
             onChange={retrieveFile}
+            style={{ display: "none" }}
           />
-          <p>Browse File to Upload</p>
-          <button type="submit" className="upload" hidden={!file}>
-            <i class="fas fa-cloud-upload-alt"></i>
-          </button>
-          <section className="progress-area"></section>
-          <section className="uploaded-area"></section>
+          {file && (
+            <img
+              src={URL.createObjectURL(file)}
+              alt="Uploaded file"
+              className="preview-image"
+              height={100}
+              width={100}
+            />
+          )}
+          <p>Browse or Drag here to upload</p>
         </form>
+        <button
+          type="submit"
+          className="upload"
+          disabled={!file}
+          onClick={handleSubmit}
+        >
+          Upload
+        </button>
+
+        <section className="progress-area"></section>
+        <section className="uploaded-area"></section>
       </div>
     </>
   );

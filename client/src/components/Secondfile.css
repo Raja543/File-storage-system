@@ -6,7 +6,7 @@
 
 .file-container {
   height: 75vh;
-  background-color: rgba(0, 0, 0, 0.863);
+  background-color: rgba(0, 0, 0, 0.952);
   font-size: 25px;
 }
 
@@ -19,7 +19,7 @@
 .brief-detail {
   padding: 25px 30px;
   height: 57vh;
-  background-color: rgba(0, 0, 0, 0.863);
+  background-color: rgba(0, 0, 0, 0.952);
   font-size: 25px;
   text-align: center;
   color: #08fdd8;
@@ -92,13 +92,13 @@ input[type="file"] {
 
 .upload-check-section {
   height: auto;
-  background-color: rgba(0, 0, 0, 0.863);
+  background-color: rgba(0, 0, 0, 0.952);
   font-size: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: auto;
-  min-height: auto; /* set a minimum height */
+  min-height: auto; 
   justify-content: center;
   padding-bottom: 150px;
   padding-top: 150px;

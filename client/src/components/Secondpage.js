@@ -60,7 +60,7 @@ const Secondpage = () => {
       </div>
 
       <div className="file-container">
-        <h1>How The Image Uploading Works</h1>
+        <h1>Store your image with high-security</h1>
         <FileUpload
           account={account}
           provider={provider}
