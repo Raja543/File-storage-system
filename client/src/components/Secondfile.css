@@ -69,6 +69,7 @@ input[type="file"] {
   grid-gap: 20px;
   width: 700px;
   margin: auto;
+  margin-top: 15px;
   border: 2px solid turquoise;
 }
 .image-grid img {
@@ -77,10 +78,15 @@ input[type="file"] {
   border-radius: 5px;
   margin: 15px 15px 15px 15px;
 }
+.blank-container {
+  position: relative;
+}
 .blank-container button {
   background: none;
   border: none;
-  /* padding: 10px 20px; */
+  position: absolute;
+  top: 0;
+  right: 26%;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
