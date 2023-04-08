@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Roboto+Mono:wght@100&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,18 +13,18 @@
 }
 
 .file-container h1 {
-  color: #08fdd8;
+  color: #fff;
   font-family: "Roboto Mono", monospace;
-  text-align : center;
+  text-align: center;
 }
 
 .brief-detail {
   padding: 25px 30px;
-  height: 57vh;
+  height: 67vh;
   background-color: rgba(0, 0, 0, 0.952);
   font-size: 25px;
   text-align: center;
-  color: #08fdd8;
+  color: #fff;
   font-family: "Roboto Mono", monospace;
 }
 
@@ -30,8 +32,8 @@ input[type="file"] {
   display: none;
 }
 
-.blank-container{
-  border : none
+.blank-container {
+  border: none;
 }
 
 .search-bar {
@@ -65,7 +67,7 @@ input[type="file"] {
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
   width: 700px;
-  margin-top : 10px;
+  margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -75,7 +77,7 @@ input[type="file"] {
   height: auto;
   border-radius: 5px;
 }
-.blank-container button{
+.blank-container button {
   background: none;
   border: none;
   padding: 10px 20px;
@@ -98,101 +100,86 @@ input[type="file"] {
   flex-direction: column;
   align-items: center;
   padding: auto;
-  min-height: auto; 
+  min-height: auto;
   justify-content: center;
   padding-bottom: 150px;
   padding-top: 150px;
 }
 
-
-
-.services-container {
+.container {
   display: flex;
-}
-
-.service-card {
-  display: flex;
-  flex: 1;
-  background-color: #1d1a1a;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  font-family: "Baloo Thambi 2", cursive;
   margin-top: 20px;
-  padding-bottom: 26px;
 }
 
-.flex-column {
+.card {
+  position: relative;
+  width: 250px;
+  height: 330px;
+  background-color: rgb(29, 34, 37);
+  border-radius: 20px;
+  padding: 10px;
+  color: #fff;
+  box-shadow: 0px 0px 25px #000;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
+  flex-direction: column;
+  margin: 20px;
+  transition: all 0.2s ease-in;
 }
 
-.circule-img-container {
-  width: 60px;
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  width: 75px;
+  height: 70px;
+  color: rgb(255, 255, 255);
   border-radius: 50%;
   display: flex;
-  background-color: #f0f2fd;
-  margin: 24px 0px 18px 0px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  margin: 15px 0;
 }
 
-.circule-img-container img {
-  width: 100%;
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
-.button-info-container {
+.card p {
+  text-align: center;
+  font-size: 16px;
+}
+
+.card .btn {
+  padding: 10px 20px;
+  background-color: rgb(61, 111, 218);
+  border-radius: 25px;
+  margin: 20px;
   text-decoration: none;
-  color: #e17982;
+  color: #fff;
+  font-size: 1rem;
   font-weight: bold;
-  padding: 6px 12px;
-  background-color: #ffffff;
-  border: solid #e17982 1px;
-  border-radius: 6px;
 }
 
-.button-info-container:hover {
-  color: #ffffff;
-  background-color: #e17982;
+.card .btn:hover {
+  background-color: rgb(17, 42, 97);
 }
-
-.service-margin {
-  margin-right: 24px;
+.card .standard {
+  /* background-color: rgb(147, 61, 218); */
 }
-
-.button-margin-top {
-  margin-top: 16px;
+.card .btn.standard:hover {
+  background-color: rgb(65, 18, 104);
 }
-
-@media (max-width: 640px) {
-  .services-container {
-    flex-direction: column;
-  }
-  
-  .service-margin {
-    margin-bottom: 24px;
-    margin-right: 0px;
-  }
-  
-  .main-container {
-    padding: 0px 24px;
-  }
-  
-  .service-card {
-    flex-direction: row;
-    padding-right: 26px;
-  }
-  
-  .flex-column {
-    align-items: flex-start;
-    margin-left: 24px;
-    padding-top: 24px;
-    text-align: left;
-  }
-  
-  .circule-img-container {
-    width: 100px;
-    margin-left: 24px;
-    background: transparent;
-  }
-  
+.card .premium {
+  /* background-color: rgb(61, 218, 113); */
+}
+.card .btn.premium:hover {
+  background-color: rgb(23, 143, 63);
 }

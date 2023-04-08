@@ -11,9 +11,9 @@ import Display from "./Display";
 import Discordsvg from "./Discordsvg";
 import Twittersvg from "./Twittersvg";
 import Instagramsvg from "./Instagramsvg";
-import SecureUpload from "./images/SecureUpload.jpeg";
-import ShareShield from "./images/Sharesheild.jpeg";
-import AccessLock from "./images/Accesslock.jpeg";
+import SecureUpload from "./images/Secure Upload.png";
+import ShareShield from "./images/Share Shield.png";
+import AccessLock from "./images/Acesslock.png";
 
 const Secondpage = () => {
   const [account, setAccount] = useState("");
@@ -72,56 +72,47 @@ const Secondpage = () => {
       </div>
 
       <div className="brief-detail">
-        <h1>What services we offered</h1>
-
-        <div className="services-container">
-          <div className="service-card service-margin">
-            <div className="circule-img-container">
-              <img src={SecureUpload} alt="logo" />
-            </div>
-            <div className="flex-column">
-              <span className="card-head">Secure Upload</span>
-              <p className="card-para">
-                A feature that allows users to upload files to the platform
-                securely and with ease.
-              </p>
-              <a href="#" class="button-info-container button-margin-top">
-                More info
-              </a>
-            </div>
-          </div>
-          <div className="service-card service-margin">
-            <div className="circule-img-container">
+        <h1>What Services We Provide</h1>
+        <div class="container">
+          <section class="card">
+            <img src={SecureUpload} alt="logo" />
+            <h3>Secure Upload</h3>
+            <p>
+              A feature that allows users to upload files to the platform
+              securely and with ease.
+            </p>
+            <a href="#" class="btn">
+              More info
+            </a>
+          </section>
+          <section class="card">
+            <div class="icon standard">
               <img src={ShareShield} alt="logo" />
             </div>
-            <div className="flex-column">
-              <span className="card-head">ShareShield</span>
-              <p className="card-para">
-                A feature that enables users to share files with others on the
-                network while maintaining complete control over who can access
-                them.
-              </p>
-              <a href="#" class="button-info-container button-margin-top">
-                More info
-              </a>
-            </div>
-          </div>
-          <div className="service-card service-margin">
-            <div className="circule-img-container">
+            <h3>Share Shield</h3>
+            <p>
+              A feature that enables users to share files with others on the
+              network while maintaining complete control over who can access
+              them.
+            </p>
+            <a href="#" class="btn standard">
+              More info
+            </a>
+          </section>
+          <section class="card">
+            <div class="icon premium">
               <img src={AccessLock} alt="logo" />
             </div>
-            <div className="flex-column">
-              <span className="card-head">AccessLock</span>
-              <p className="card-para">
-                A feature that provides advanced access control mechanisms,
-                allowing users to revoke permissions from anyone they have
-                shared their files with.
-              </p>
-              <a href="#" class="button-info-container button-margin-top">
-                More info
-              </a>
-            </div>
-          </div>
+            <h3>Acess Lock</h3>
+            <p>
+              A feature that provides advanced access control mechanisms,
+              allowing users to revoke permissions from anyone they have shared
+              their files with.
+            </p>
+            <a href="#" class="btn premium">
+              More info
+            </a>
+          </section>
         </div>
       </div>
 
