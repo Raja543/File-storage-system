@@ -46,6 +46,33 @@
   border-radius: 5px;
   border: 2px dashed #6990f2;
 }
+.share-wrapper {
+  width: 430px;
+  background: transparent;
+  border-radius: 15px;
+  border: 2px solid gray;
+  padding: 20px 30px 20px 30px;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+  margin: auto;
+  margin-top: 20px;
+}
+.share-wrapper h3 {
+  color: #6990f2;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+.share-wrapper form {
+  height: 167px;
+  display: flex;
+  cursor: pointer;
+  margin: 30px 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed #6990f2;
+}
 .first-desc {
   color: #6990f2;
   font-size: 16px;

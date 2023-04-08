@@ -1,10 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
+import Modal from "./Modal";
 
 const FileUpload = ({ contract, account, provider }) => {
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState("No image selected");
   const [imageUrl, setImageUrl] = useState(null);
+  const [currentButton, setCurrentButton] = useState("upload");
+  const [modalOpen, setModalOpen] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -54,123 +57,76 @@ const FileUpload = ({ contract, account, provider }) => {
     }
   };
 
-  // const form = document.querySelector("form"),
-  //   fileInput = document.querySelector(".file-input"),
-  //   progressArea = document.querySelector(".progress-area"),
-  //   uploadedArea = document.querySelector(".uploaded-area");
-
-  // form.addEventListener("click", () => {
-  //   fileInput.click();
-  // });
-
-  // fileInput.onchange = ({ target }) => {
-  //   let file = target.files[0];
-  //   if (file) {
-  //     let fileName = file.name;
-  //     if (fileName.length >= 12) {
-  //       let splitName = fileName.split(".");
-  //       fileName = splitName[0].substring(0, 13) + "... ." + splitName[1];
-  //     }
-  //     uploadFile(fileName);
-  //   }
-  // };
-
-  //   function uploadFile(name) {
-  //   let xhr = new XMLHttpRequest();
-  //   xhr.open("POST", "php/upload.php");
-  //   xhr.upload.addEventListener("progress", ({ loaded, total }) => {
-  //     let fileLoaded = Math.floor((loaded / total) * 100);
-  //     let fileTotal = Math.floor(total / 1000);
-  //     let fileSize;
-  //     fileTotal < 1024
-  //       ? (fileSize = fileTotal + " KB")
-  //       : (fileSize = (loaded / (1024 * 1024)).toFixed(2) + " MB");
-  //     let progressHTML = `<li class="row">
-  //                           <i class="fas fa-file-alt"></i>
-  //                           <div class="content">
-  //                             <div class="details">
-  //                               <span class="name">${name} • Uploading</span>
-  //                               <span class="percent">${fileLoaded}%</span>
-  //                             </div>
-  //                             <div class="progress-bar">
-  //                               <div class="progress" style="width: ${fileLoaded}%"></div>
-  //                             </div>
-  //                           </div>
-  //                         </li>`;
-  //     uploadedArea.classList.add("onprogress");
-  //     progressArea.innerHTML = progressHTML;
-  //     if (loaded === total) {
-  //       progressArea.innerHTML = "";
-  //       let uploadedHTML = `<li class="row">
-  //                             <div class="content upload">
-  //                               <i class="fas fa-file-alt"></i>
-  //                               <div class="details">
-  //                                 <span class="name">${name} • Uploaded</span>
-  //                                 <span class="size">${fileSize}</span>
-  //                               </div>
-  //                             </div>
-  //                             <i class="fas fa-check"></i>
-  //                           </li>`;
-  //       uploadedArea.classList.remove("onprogress");
-  //       uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML);
-  //     }
-  //   });
-  //   let data = new FormData(form);
-  //   xhr.send(data);
-  // }
+  const handleUploadClick = () => setCurrentButton("upload");
+  const handleShareClick = () => {
+    setCurrentButton("share");
+    setModalOpen(true);
+  };
 
   return (
     <>
-      <div className="wrapper">
-        <h3>Upload Your image</h3>
-        <p className="first-desc">
-          File supported type : PNG , JPEG , JPG , WEBP{" "}
-        </p>
-        <form
-          className="form"
-          onClick={() => document.getElementById("my-file").click()}
-          onSubmit={handleSubmit}
-        >
-          <label
-            htmlFor="my-file"
-            id="fileLabel"
-            className="custom-file-upload"
-          >
-            <i class="fas fa-cloud-upload-alt"></i>
-          </label>
-          <input
-            type="file"
-            id="my-file"
-            name="myfile"
-            disabled={!account}
-            onChange={retrieveFile}
-            style={{ display: "none" }}
-          />
-          {file && (
-            <img
-              src={URL.createObjectURL(file)}
-              alt="Uploaded file"
-              className="preview-image"
-              height={100}
-              width={100}
-            />
-          )}
-          <p>Browse or Drag here to upload</p>
-        </form>
-        <button
-          type="submit"
-          className="upload"
-          disabled={!file}
-          onClick={handleSubmit}
-        >
-          Upload
-        </button>
+      <button onClick={handleUploadClick}>Upload</button>
+      <button onClick={handleShareClick}>Share</button>
+      {currentButton === "upload" && (
+          <div className="wrapper">
+            <h3>Upload Your image</h3>
+            <p className="first-desc">
+              File supported type : PNG , JPEG , JPG , WEBP{" "}
+            </p>
+            <form
+              className="form"
+              onClick={() => document.getElementById("my-file").click()}
+              onSubmit={handleSubmit}
+            >
+              <label
+                htmlFor="my-file"
+                id="fileLabel"
+                className="custom-file-upload"
+              >
+                <i class="fas fa-cloud-upload-alt"></i>
+              </label>
+              <input
+                type="file"
+                id="my-file"
+                name="myfile"
+                disabled={!account}
+                onChange={retrieveFile}
+                style={{ display: "none" }}
+              />
+              {file && (
+                <img
+                  src={URL.createObjectURL(file)}
+                  alt="Uploaded file"
+                  className="preview-image"
+                  height={100}
+                  width={100}
+                />
+              )}
+              <p>Browse or Drag here to upload</p>
+            </form>
+            <button
+              type="submit"
+              className="upload"
+              disabled={!file}
+              onClick={handleSubmit}
+            >
+              Upload
+            </button>
 
-        <section className="progress-area"></section>
-        <section className="uploaded-area"></section>
-      </div>
+            <section className="progress-area"></section>
+            <section className="uploaded-area"></section>
+          </div>
+        
+      )}
+      {currentButton === "share" && (
+        <div className="share-wrapper">
+          <h3>Share Your image</h3>
+          {modalOpen && (
+            <Modal setModalOpen={setModalOpen} contract={contract}></Modal>
+          )}
+        </div>
+      )}
     </>
   );
 };
-
 export default FileUpload;
