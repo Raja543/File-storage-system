@@ -117,6 +117,16 @@ const Secondpage = () => {
       </div>
 
       <div className="upload-check-section">
+        <h2 className="check-head">My Uploads</h2>
+        <p className="check-para">
+          "Welcome to the 'My Uploads' section of our decentralized image
+          storage platform. Here, you can view all the images you have uploaded
+          to the system simply clicking the search button.Also, To view an image
+          that has been shared with you, simply enter the account address of the
+          user who shared it into the search bar field in this 'My Uploads'
+          section. You will then be able to view all the images that have been
+          shared with you by that user.
+        </p>
         <Display contract={contract} account={account}></Display>
       </div>
 

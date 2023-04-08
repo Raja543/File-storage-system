@@ -62,13 +62,20 @@ const Display = ({ contract, account }) => {
           className="address"
           placeholder="Enter the Account address "
         />
-        <button onClick={() => { getdata(); toggleData(true); }}> {/* added onClick for toggleData */}
+        <button
+          onClick={() => {
+            getdata();
+            toggleData(true);
+          }}
+        >
           <i className="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
-      {showData && ( /* conditionally render blank-container based on showData */
+      {showData && (
         <div className="blank-container">
-          <button onClick={closeContainer}><i class="fa-sharp fa-solid fa-circle-xmark fa-2xl"></i></button>
+          <button onClick={closeContainer}>
+            <i class="fa-sharp fa-solid fa-circle-xmark fa-2xl"></i>
+          </button>
           <div className="image-grid">{data}</div>
         </div>
       )}
