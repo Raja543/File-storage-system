@@ -4,12 +4,10 @@ const Modal = ({ setModalOpen, contract }) => {
   const sharing = async () => {
     const address = document.querySelector(".address").value;
     await contract.allow(address);
-    setModalOpen(false);
   };
   const removeallow = async () => {
     const address = document.querySelector(".address").value;
     await contract.disallow(address);
-    setModalOpen(true);
   };
   useEffect(() => {
     const accessList = async () => {
@@ -45,14 +43,6 @@ const Modal = ({ setModalOpen, contract }) => {
             </select>
           </form>
           <div className="footer">
-            <button
-              onClick={() => {
-                setModalOpen(false);
-              }}
-              id="cancelBtn"
-            >
-              Cancel
-            </button>
             <button onClick={() => sharing()}>Share</button>
             <button onClick={() => removeallow()}>Disallow</button>
           </div>
