@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+
 .button-container {
   display: flex;
   justify-content: center;
@@ -27,7 +28,7 @@
   padding: 20px 30px 20px 30px;
   box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
   margin: auto;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .wrapper h3 {
   color: #6990f2;
@@ -168,4 +169,31 @@ section .details span {
 }
 .uploaded-area i.fa-check {
   font-size: 16px;
+}
+
+
+.button-wrapper {
+  display :flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.currentButton {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.currentButton:last-child {
+  margin-right: 0;
+}
+
+.button-wrapper button.active {
+  background-color: black;
+  color: white;
 }

@@ -14,6 +14,7 @@ import Instagramsvg from "./Instagramsvg";
 import SecureUpload from "./images/Secure Upload.png";
 import ShareShield from "./images/Share Shield.png";
 import AccessLock from "./images/Acesslock.png";
+import myvideo from "./videos/video-pc-homepage.mp4";
 
 const Secondpage = () => {
   const [account, setAccount] = useState("");
@@ -55,6 +56,16 @@ const Secondpage = () => {
     provider && loadProvider();
   }, []);
 
+  const [currentButton, setCurrentButton] = useState("upload");
+
+  const handleUploadClick = () => {
+    setCurrentButton("upload");
+  };
+
+  const handleShareClick = () => {
+    setCurrentButton("share");
+  };
+
   return (
     <>
       {/* Navbar section */}
@@ -74,7 +85,7 @@ const Secondpage = () => {
       <div className="brief-detail">
         <h1>What Services We Provide</h1>
         <div class="container">
-          <section class="card">
+          <div class="card">
             <img src={SecureUpload} alt="logo" />
             <h3>Secure Upload</h3>
             <p>
@@ -84,8 +95,8 @@ const Secondpage = () => {
             <a href="#" class="btn">
               More info
             </a>
-          </section>
-          <section class="card">
+          </div>
+          <div class="card">
             <div class="icon standard">
               <img src={ShareShield} alt="logo" />
             </div>
@@ -98,8 +109,8 @@ const Secondpage = () => {
             <a href="#" class="btn standard">
               More info
             </a>
-          </section>
-          <section class="card">
+          </div>
+          <div class="card">
             <div class="icon premium">
               <img src={AccessLock} alt="logo" />
             </div>
@@ -112,7 +123,7 @@ const Secondpage = () => {
             <a href="#" class="btn premium">
               More info
             </a>
-          </section>
+          </div>
         </div>
       </div>
 
