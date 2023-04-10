@@ -145,6 +145,7 @@
 
 .para1-heading {
   font-size: 26px;
+  font-family: "Poppins", sans-serif;
 }
 
 .para1-detail {
@@ -152,6 +153,7 @@
   margin-top: 10px;
   color: rgb(199, 195, 195);
   text-align: inherit;
+  font-family: "Baloo Thambi 2", cursive;
 }
 .Para-2 {
   margin-top: 10px;
@@ -167,6 +169,7 @@
   margin-top: 10px;
   color: rgb(199, 195, 195);
   text-align: inherit;
+  font-family: "Baloo Thambi 2", cursive;
 }
 
 .Para-3 {
@@ -183,10 +186,12 @@
   margin-top: 10px;
   color: rgb(199, 195, 195);
   text-align: inherit;
+  font-family: "Baloo Thambi 2", cursive;
 }
 
 .right-image {
   float: right;
+  margin-top : 30px;
 }
 
 /* about-section */
