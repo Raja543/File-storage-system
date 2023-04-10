@@ -87,7 +87,7 @@ const FileUpload = ({ contract, account, provider }) => {
             <p className="first-desc">
               File supported type : PNG , JPEG , JPG , WEBP{" "}
             </p>
-            <form
+            <div
               className="form"
               onClick={() => document.getElementById("my-file").click()}
               onSubmit={handleSubmit}
@@ -117,7 +117,7 @@ const FileUpload = ({ contract, account, provider }) => {
                 />
               )}
               <p>Browse or Drag here to upload</p>
-            </form>
+            </div>
             <button
               type="submit"
               className="upload"

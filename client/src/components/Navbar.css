@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -40,9 +41,10 @@ body::-webkit-scrollbar {
   padding: 20px;
   font-family: "Baloo Thambi 2", cursive;
 }
-.space:hover {
-  color: #08fdd8;
-  border-bottom: 2px solid #08fdd8;
+.space:hover{
+ color: aqua;
+ /* text-decoration: underline; */
+ border-bottom : 2px solid;
 }
 
 .connect-btn {

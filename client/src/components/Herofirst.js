@@ -27,7 +27,7 @@ function Herofirst() {
             and control their data, and where censorship and surveillance are a
             thing of the past.
           </p>
-          <button className="hero-button">
+          <button className="hero-button" onClick={() => { window.location.href = "/secondpage" }}>
             <Link className="hero-button-text" to="/secondpage">
               Click here to Upload the file
             </Link>

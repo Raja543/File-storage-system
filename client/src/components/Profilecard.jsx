@@ -15,8 +15,6 @@ const Card = () => {
         <p>
           User interface designer and <br /> front-end developer
         </p>
-        <div className="skills">
-        </div>
       </div>
     </>
   );

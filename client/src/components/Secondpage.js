@@ -83,7 +83,7 @@ const Secondpage = () => {
       </div>
 
       <div className="brief-detail">
-        <h1>What Services We Provide</h1>
+        <h1 className="brief-head">What Services We Provide</h1>
         <div class="container">
           <div class="card">
             <img src={SecureUpload} alt="logo" />
