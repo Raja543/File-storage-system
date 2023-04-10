@@ -6,7 +6,6 @@ const FileUpload = ({ contract, account, provider }) => {
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState("No image selected");
   const [imageUrl, setImageUrl] = useState(null);
-  const [currentButton, setCurrentButton] = useState("upload");
   const [modalOpen, setModalOpen] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -57,17 +56,32 @@ const FileUpload = ({ contract, account, provider }) => {
     }
   };
 
-  const handleUploadClick = () => setCurrentButton("upload");
+  const [currentButton, setCurrentButton] = useState("upload");
+
+  const handleUploadClick = () => {
+    setCurrentButton("upload");
+  };
+
   const handleShareClick = () => {
     setCurrentButton("share");
-    setModalOpen(true);
   };
 
   return (
     <>
-      <button onClick={handleUploadClick}>Upload</button>
-      <button onClick={handleShareClick}>Share</button>
-      {currentButton === "upload" && (
+      <div className="button-wrapper">
+        <button
+          className={currentButton === "upload" ? "active" : ""}
+          onClick={handleUploadClick}
+        >
+          Upload
+        </button>
+        <button
+          className={currentButton === "share" ? "active" : ""}
+          onClick={handleShareClick}
+        >
+          Share
+        </button>
+        {currentButton === "upload" && (
           <div className="wrapper">
             <h3>Upload Your image</h3>
             <p className="first-desc">
@@ -116,16 +130,14 @@ const FileUpload = ({ contract, account, provider }) => {
             <section className="progress-area"></section>
             <section className="uploaded-area"></section>
           </div>
-        
-      )}
-      {currentButton === "share" && (
-        <div className="share-wrapper">
-          <h3>Share Your image</h3>
-          {modalOpen && (
-            <Modal setModalOpen={setModalOpen} contract={contract}></Modal>
-          )}
-        </div>
-      )}
+        )}
+        {currentButton === "share" && (
+          <div className="share-wrapper">
+            <h3>Share Your image</h3>
+            <Modal />
+          </div>
+        )}
+      </div>
     </>
   );
 };

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 .card-container {
-  background-color: #000;
+  background-color:  rgb(29, 34, 37);
   border-radius: 25px;
   box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
   color: #b3b8cd;
@@ -21,6 +21,9 @@
   border: 1px solid #03bfcb;
   border-radius: 50%;
   padding: 7px;
+}
+.card-container:hover{
+  transform: scale(1.05);
 }
 
 .card-container h3 {

@@ -7,34 +7,37 @@ import Discordsvg from "./Discordsvg";
 import Twittersvg from "./Twittersvg";
 import Instagramsvg from "./Instagramsvg";
 import Animation1 from "./Animation1";
-import myVideo from "./videos/network-12716.mp4";
+import myvideo from "./videos/first.mp4";
 
 function Herofirst() {
   return (
     <>
       <div className="hero">
-        <h1 className="hero-heading">
-          Revolutionize Your File Storage with Decentralization
-        </h1>
-        <h1 className="hero-subheading"> Your Data, Your Control</h1>
-        <p className="hero__description">
-          Join the movement towards a more decentralized web, where users own
-          and control their data, and where censorship and surveillance are a
-          thing of the past.
-        </p>
-        <button className="hero-button">
-          <Link className="hero-button-text" to="/secondpage">
-            Click here to Upload the file
-          </Link>
-        </button>
+        <div className="video-background">
+          <video autoPlay muted loop>
+            <source src={myvideo} type="video/mp4" />
+          </video>
+
+          <h1 className="hero-heading">
+            Revolutionize Your File Storage with Decentralization
+          </h1>
+          <h1 className="hero-subheading"> Your Data, Your Control</h1>
+          <p className="hero__description">
+            Join the movement towards a more decentralized web, where users own
+            and control their data, and where censorship and surveillance are a
+            thing of the past.
+          </p>
+          <button className="hero-button">
+            <Link className="hero-button-text" to="/secondpage">
+              Click here to Upload the file
+            </Link>
+          </button>
+        </div>
       </div>
 
       {/* aninate section */}
       <div className="animate-section">
-        <div className="lineUp">
-          <h2 className="animate-heading">What is SecureShareX ?</h2>
-        </div>
-
+        <h2 className="animate-heading">What is SecureShareX ?</h2>
         <p className="animate-para">
           SecureShareX is a decentralized file storage system that uses
           blockchain technology to ensure secure and transparent data storage
@@ -47,6 +50,7 @@ function Herofirst() {
           systems.
         </p>
       </div>
+     
 
       {/* Product section */}
       <div className="product-section">

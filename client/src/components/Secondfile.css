@@ -70,7 +70,7 @@ input[type="file"] {
   width: 700px;
   margin: auto;
   margin-top: 15px;
-  border: 2px solid turquoise;
+  border: 2px solid rgb(54, 251, 231);
 }
 .image-grid img {
   width: 100%;
@@ -100,7 +100,7 @@ input[type="file"] {
   background-color: rgba(0, 0, 0, 0.952);
   font-size: 25px;
   padding: auto;
-  min-height: auto;
+  min-height: 50vh;
   padding-bottom: 15px;
   padding-top: 10px;
 }
@@ -142,7 +142,6 @@ input[type="file"] {
 }
 
 .card {
-  position: relative;
   width: 250px;
   height: 330px;
   background-color: rgb(29, 34, 37);
@@ -186,7 +185,8 @@ input[type="file"] {
   padding: 10px 20px;
   background-color: rgb(61, 111, 218);
   border-radius: 25px;
-  margin: 20px;
+  margin-top: auto;
+  margin-bottom: 9px;
   text-decoration: none;
   color: #fff;
   font-size: 1rem;
