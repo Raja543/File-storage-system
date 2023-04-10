@@ -134,7 +134,7 @@ const FileUpload = ({ contract, account, provider }) => {
         {currentButton === "share" && (
           <div className="share-wrapper">
             <h3>Share Your image</h3>
-            <Modal />
+            <Modal contract={contract}/>
           </div>
         )}
       </div>
