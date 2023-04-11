@@ -36,7 +36,7 @@
   font-weight: 400;
   text-align: center;
 }
-.wrapper form {
+.form {
   height: 167px;
   display: flex;
   cursor: pointer;
@@ -198,3 +198,21 @@ section .details span {
   background-color: black;
   color: white;
 }
+
+.upload-share-container {
+  flex-direction: column;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  margin-right: 10px;
+  flex-grow: 1;
+}
+
+/* input[type="file"] {
+  display: none;
+} */

@@ -20,8 +20,8 @@ const FileUpload = ({ contract, account, provider }) => {
           url: "https://api.pinata.cloud/pinning/pinFileToIPFS",
           data: formData,
           headers: {
-            pinata_api_key: `d8e75fd482b741579e0f`,
-            pinata_secret_api_key: `e7d96f8eaaef222aa83f114eafdec35066da1f510484562a855ee2dda97414c8`,
+            pinata_api_key: `4d9e2d5c3d861a75209c`,
+            pinata_secret_api_key: `d6eb128460bddf184df549bd494ccb999a09f723ea14a53ca3c1d50ad5af7383`,
             "Content-Type": "multipart/form-data",
           },
         });
@@ -68,19 +68,26 @@ const FileUpload = ({ contract, account, provider }) => {
 
   return (
     <>
-      <div className="button-wrapper">
-        <button
-          className={currentButton === "upload" ? "active" : ""}
-          onClick={handleUploadClick}
-        >
-          Upload
-        </button>
-        <button
-          className={currentButton === "share" ? "active" : ""}
-          onClick={handleShareClick}
-        >
-          Share
-        </button>
+      {/* Updated things */}
+      <div className="upload-share-container">
+        <div className="button-wrapper">
+          <button
+            className={`upload-button ${
+              currentButton === "upload" ? "active" : ""
+            }`}
+            onClick={() => setCurrentButton("upload")}
+          >
+            Upload
+          </button>
+          <button
+            className={`share-button ${
+              currentButton === "share" ? "active" : ""
+            }`}
+            onClick={() => setCurrentButton("share")}
+          >
+            Share
+          </button>
+        </div>
         {currentButton === "upload" && (
           <div className="wrapper">
             <h3>Upload Your image</h3>
@@ -105,7 +112,7 @@ const FileUpload = ({ contract, account, provider }) => {
                 name="myfile"
                 disabled={!account}
                 onChange={retrieveFile}
-                style={{ display: "none" }}
+                // style={{ display: "none" }}
               />
               {file && (
                 <img
@@ -134,7 +141,7 @@ const FileUpload = ({ contract, account, provider }) => {
         {currentButton === "share" && (
           <div className="share-wrapper">
             <h3>Share Your image</h3>
-            <Modal contract={contract}/>
+            <Modal contract={contract} />
           </div>
         )}
       </div>

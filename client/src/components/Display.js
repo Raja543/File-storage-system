@@ -3,7 +3,7 @@ import "./Secondfile.css";
 
 const Display = ({ contract, account }) => {
   const [data, setData] = useState("");
-  const [showData, setShowData] = useState(false); // added state variable
+  const [showData, setShowData] = useState(false);
 
   const getdata = async () => {
     let dataArray;
@@ -28,28 +28,42 @@ const Display = ({ contract, account }) => {
       console.log(str_array);
       const images = str_array.map((item, i) => {
         return (
-          <a href={item} key={i} target="_blank" rel="noreferrer">
-            <img
-              key={i}
-              src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
-              alt="new"
-              className="image-list"
-              width={100}
-              height={100}
-            ></img>
-          </a>
+          <div key={i} className="image-container">
+            <button onClick={() => deleteImage(i)}>Delete</button>
+            <a href={item} target="_blank" rel="noreferrer">
+              <img
+                src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
+                alt="new"
+                className="image-list"
+                width={100}
+                height={100}
+              />
+            </a>
+          </div>
         );
       });
+
       setData(images);
-      setShowData(true); // set showData to true when data is fetched
+      setShowData(true);
     } else {
       alert("No image to display");
     }
   };
 
-  const toggleData = () => {
-    setShowData(!showData); // toggle showData on button click
+  const deleteImage = async (index) => {
+    try {
+      await contract.deleteUrl(index);
+      alert("Image deleted successfully");
+      getdata();
+    } catch (e) {
+      alert("Error deleting image");
+    }
   };
+
+  const toggleData = () => {
+    setShowData(!showData);
+  };
+
   const closeContainer = () => {
     setShowData(false);
   };
