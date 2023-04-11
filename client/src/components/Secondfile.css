@@ -209,3 +209,13 @@ input[type="file"] {
 .card .btn.premium:hover {
   background-color: rgb(17, 42, 97);
 }
+
+.image-container {
+  position: relative;
+}
+
+.image-container button {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
