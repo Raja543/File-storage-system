@@ -85,7 +85,7 @@ const Display = ({ contract, account }) => {
           <i className="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
-      {showData && (
+      {showData && data.length > 0 && (
         <div className="blank-container">
           <button onClick={closeContainer}>
             <i class="fa-sharp fa-solid fa-circle-xmark fa-2xl"></i>
