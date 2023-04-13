@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
+import "./AccessListPage.css";
 
 const AccessListPage = ({ contract }) => {
   const [accessList, setAccessList] = useState([]);
@@ -14,8 +15,32 @@ const AccessListPage = ({ contract }) => {
 
   const handleAllow = async (address) => {
     await contract.allow(address);
-    setAccessList([...accessList, { user: address, access: true }]);
+    const addressObj = { user: address, access: true };
+    if (accessList.some(item => item.user === address)) {
+      setAccessList(
+        accessList.map((item) => {
+          if (item.user === address) {
+            return { ...item, access: true };
+          }
+          return item;
+        })
+      );
+    } else {
+      setAccessList([...accessList, addressObj]);
+    }
   };
+  
+
+  // const handleDisallow = async (address) => {
+  //   await contract.disallow(address);
+  //   const updatedList = accessList.map((item) => {
+  //     if (item.user === address) {
+  //       return { ...item, access: false };
+  //     }
+  //     return item;
+  //   });
+  //   setAccessList(updatedList);
+  // };
 
   const handleDisallow = async (address) => {
     await contract.disallow(address);
@@ -27,7 +52,9 @@ const AccessListPage = ({ contract }) => {
         return item;
       })
     );
+    // setAccessList(updatedList);
   };
+  
 
   return (
     <div>
@@ -35,26 +62,7 @@ const AccessListPage = ({ contract }) => {
       <div className="navbar-section">
         <Navbar />
       </div>
-
-      <h1>Access List</h1>
-      {accessList.length > 0 ? (
-        <ul>
-          {accessList.map((item) => (
-            <li key={item.user}>
-              {item.user} - {item.access ? "allowed" : "not allowed"}
-              {item.access ? (
-                <button onClick={() => handleDisallow(item.user)}>
-                  Disallow
-                </button>
-              ) : (
-                <button onClick={() => handleAllow(item.user)}>Allow</button>
-              )}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No addresses with access.</p>
-      )}
+      <h1 className="accesslist-h1">Access List</h1>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -62,10 +70,48 @@ const AccessListPage = ({ contract }) => {
           handleAllow(address);
           e.target.reset();
         }}
+        className="accesslist-form"
       >
-        <input type="text" name="address" placeholder="Enter Address" />
-        <button type="submit">Allow</button>
+        <input
+          className="accesslist-input"
+          type="text"
+          name="address"
+          placeholder="Enter Address"
+        />
+        <button type="submit" className="accesslist-button">
+          Allow
+        </button>
       </form>
+
+      {accessList.length > 0 ? (
+        <ul>
+          {accessList.map((item) => (
+            <li key={item.user} className="accesslist-container">
+              <div className="address">{item.user}</div>
+              <div className="status">
+                {item.access ? "allowed" : "not allowed"}
+              </div>
+              {item.access ? (
+                <button
+                  className="accesslist-button"
+                  onClick={() => handleDisallow(item.user)}
+                >
+                  Disallow
+                </button>
+              ) : (
+                <button
+                  className="accesslist-button"
+                  onClick={() => handleAllow(item.user)}
+                >
+                  Allow
+                </button>
+              )}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No addresses with access.</p>
+      )}
     </div>
   );
 };
