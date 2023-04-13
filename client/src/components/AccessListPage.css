@@ -1,0 +1,70 @@
+.accesslist-h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.accesslist-form {
+  margin: 30px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.accesslist-input[type="text"] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 34%;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.accesslist-button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.accesslist-button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.accesslist-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.address {
+  flex: 1;
+}
+
+.status {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.accesslist-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.accesslist-button:hover {
+  background-color: #3e8e41;
+}
