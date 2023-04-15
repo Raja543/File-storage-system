@@ -6,87 +6,12 @@
   padding: 0;
 }
 
-/* .hero {
-  height: 99vh;
-  background-color: rgba(0, 0, 0, 0.952);
-  position: relative;
-  z-index: 1;
-}
-.video-background {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.video-background video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-}
-
-
-.hero-heading {
-  font-family: "Poppins", sans-serif;
-  font-size: 50px;
-  color: #fff;
-  text-align: center;
-  margin-top: 150px;
-}
-
-.hero-subheading {
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-  font-size: 25px;
-  letter-spacing: 0.2rem;
-  color: #fff;
-  margin-top: 5px;
-}
-
-.hero__description {
-  color: #ffffffc6;
-  padding: 0.5rem;
-  max-width: 45em;
-  font-family: "Poppins", sans-serif;
-  font-size: 26px;
-  margin: auto;
-  margin-top: 50px;
-  text-align: center;
-}
-
-.hero-button {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
-  border-color: #08fdd8;
-  border-radius: 15px;
-  padding: 10px;
-  margin: auto;
-  display: block;
-  text-align: center;
-  width: 366px;
-  height: 54px;
-  cursor: pointer;
-  margin-top: 50px;
-}
-
-.hero-button-text {
-  font-family: "Open Sans", sans-serif;
-  font-size: 22px;
-  color: #000;
-  text-decoration: none;
-} */
 body::-webkit-scrollbar {
   display: none;
 }
 
 .hero {
-  height: 100vh;
+  height: 90vh;
   background-color: rgba(0, 0, 0, 0.952);
   position: relative;
   z-index: 1;
@@ -148,8 +73,8 @@ body::-webkit-scrollbar {
   margin: auto;
   display: block;
   text-align: center;
-  width: 25vw;
-  height: 10vh;
+  width: 25%;
+  height: 8vh;
   cursor: pointer;
   margin-top: 5vh;
 }
@@ -165,25 +90,26 @@ body::-webkit-scrollbar {
 .animate-section {
   height: 70vh;
   background-color: rgba(0, 0, 0, 0.952);
-  padding-top: 10px;
+  padding-top: 1rem;
 }
+
 .animate-heading {
   font-family: "Poppins", sans-serif;
-  font-size: 50px;
+  font-size: 3rem; 
   color: #fff;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 
 .animate-para {
   color: #ffffffc6;
   padding: 0.5rem;
-  max-width: 40em;
   font-family: "Poppins", sans-serif;
-  font-size: 26px;
+  font-size: 1.7rem;
+  margin-top: 2rem;
   margin: auto;
-  margin-top: 30px;
   text-align: center;
+  max-width: 90vw;
 }
 
 /* product-section */
