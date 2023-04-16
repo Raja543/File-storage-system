@@ -6,7 +6,7 @@ import Card from "./Profilecard";
 import Discordsvg from "./Discordsvg";
 import Twittersvg from "./Twittersvg";
 import Instagramsvg from "./Instagramsvg";
-import Animation1 from "./Animation1";
+// import Animation1 from "./Animation1";
 import myvideo from "./videos/first.mp4";
 import Navbar from "./Navbar";
 
@@ -61,9 +61,9 @@ const Firstpage = () => {
         <h2 className="product-head">
           Benefits of Blockchain-based File Storage
         </h2>
-        <div className="right-image">
+        {/* <div className="right-image">
           <Animation1 />
-        </div>
+        </div> */}
         <div className="product-detail">
           <div className="Para-1">
             <h3 className="para1-heading">Immutability</h3>

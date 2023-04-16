@@ -12,7 +12,7 @@ const Card = () => {
         />
         <h3>Raja Kumar</h3>
         <h6>India</h6>
-        <p>
+        <p className="card-para">
           User interface designer and <br /> front-end developer
         </p>
       </div>

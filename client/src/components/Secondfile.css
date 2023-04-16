@@ -144,6 +144,7 @@ input[type="file"] {
   margin: auto;
   font-family: "Baloo Thambi 2", cursive;
   margin-top: 20px;
+  min-height: auto;
 }
 
 .card {

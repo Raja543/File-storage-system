@@ -4,6 +4,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+body{
+  min-height: 100%;
+  max-width: 100vw;
 }
 
 body::-webkit-scrollbar {
@@ -95,7 +100,7 @@ body::-webkit-scrollbar {
 
 .animate-heading {
   font-family: "Poppins", sans-serif;
-  font-size: 3rem; 
+  font-size: 3rem;
   color: #fff;
   text-align: center;
   margin-top: 2rem;
@@ -106,8 +111,8 @@ body::-webkit-scrollbar {
   padding: 0.5rem;
   font-family: "Poppins", sans-serif;
   font-size: 1.7rem;
-  margin-top: 2rem;
   margin: auto;
+  margin-top: 20px;
   text-align: center;
   max-width: 90vw;
 }
@@ -117,76 +122,51 @@ body::-webkit-scrollbar {
   color: #fff;
   height: 95vh;
   background-color: rgba(0, 0, 0, 0.952);
-  padding-top: 10px;
+  padding-top: 1.5%;
 }
+
 .product-head {
   font-family: "Poppins", sans-serif;
-  font-size: 40px;
+  font-size: 2.5rem;
   color: #fff;
-  margin-top: 30px;
+  margin-top: 10px;
   text-align: center;
 }
 
 .product-detail {
-  max-width: 40em;
+  width: 50%;
   float: left;
-  margin-left: 80px;
-  margin-top: 40px;
+  margin-left: 5%;
+  margin-top: 5px;
 }
+
 .my-hr {
   border: none;
-  height: 2px;
+  height: 0.2em;
   background-color: #817c7c;
-  margin: 25px;
+  margin: 2.5%;
 }
 
-.Para-1 {
-  margin-top: 10px;
-  margin-left: 20px;
+.Para-1,
+.Para-2,
+.Para-3 {
+  margin-top: 1%;
+  margin-left: 2%;
   max-width: 40em;
 }
 
-.para1-heading {
-  font-size: 26px;
+.para1-heading,
+.para2-heading,
+.para3-heading {
+  font-size: 2rem;
   font-family: "Poppins", sans-serif;
 }
 
-.para1-detail {
-  font-size: 18px;
-  margin-top: 10px;
-  color: rgb(199, 195, 195);
-  text-align: inherit;
-  font-family: "Baloo Thambi 2", cursive;
-}
-.Para-2 {
-  margin-top: 10px;
-  margin-left: 20px;
-  max-width: 40em;
-}
-.para2-heading {
-  font-size: 26px;
-}
-
-.para2-detail {
-  font-size: 18px;
-  margin-top: 10px;
-  color: rgb(199, 195, 195);
-  text-align: inherit;
-  font-family: "Baloo Thambi 2", cursive;
-}
-
-.Para-3 {
-  margin-top: 10px;
-  margin-left: 20px;
-  max-width: 40em;
-}
-.para3-heading {
-  font-size: 26px;
-}
-
+.para1-detail,
+.para2-detail,
 .para3-detail {
-  font-size: 18px;
-  margin-top: 10px;
+  font-size: 1.2rem;
+  margin-top: 1%;
   color: rgb(199, 195, 195);
   text-align: inherit;
   font-family: "Baloo Thambi 2", cursive;
@@ -194,97 +174,100 @@ body::-webkit-scrollbar {
 
 .right-image {
   float: right;
-  margin-top: 30px;
+  margin-top: 3%;
+  width : 40%;
 }
 
 /* about-section */
 .about {
   height: 88vh;
   background-color: rgba(0, 0, 0, 0.952);
-  padding-top: 5px;
+  padding-top: 0.5%;
 }
 
 .about-heading {
   font-family: "Poppins", sans-serif;
-  font-size: 60px;
-  letter-spacing: 0.5rem;
+  font-size: 4rem;
+  letter-spacing: 0.5em;
   color: #fff;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .about-text {
-  color: #f2efefc8;
+  color: rgba(242, 239, 239, 0.78);
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: auto;
-  margin-top: 10px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-top: 1%;
+  margin-left: 5%;
+  margin-right: 5%;
   text-align: center;
 }
 
 .profile-card {
-  grid-gap: 25px;
+  grid-gap: 1.5rem;
   width: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 2%;
 }
 
 /* footer-section */
 .footer-section {
-  padding: 5px;
+  padding: 0.5rem;
   background: rgba(0, 0, 0, 0.959);
-  height: 25vh;
-}
-.columns {
+  height: 42vh;
+  }
+  
+  .columns {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin: 5px 0;
+  margin: 0.5rem 0;
   color: #fff;
-}
-
-.column {
+  }
+  
+  .column {
   flex: 1;
-  margin: 10px;
-  padding: 10px;
-  margin-top: 20px;
-}
-.column1-heading {
+  margin: 1rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  }
+  
+  .column1-heading {
   text-align: center;
-  font-size: 24px;
-}
-
-.column1-para {
+  font-size: 2.4rem;
+  }
+  
+  .column1-para {
   text-align: center;
-  font-size: 18px;
-  margin-top: 28px;
+  font-size: 1.8rem;
+  margin-top: 2.8rem;
   color: rgb(113, 112, 112);
-}
-
-.column2-text {
+  }
+  
+  .column2-text {
   text-align: center;
-  font-size: 24px;
-}
-
-.social-icons {
+  font-size: 2.4rem;
+  }
+  
+  .social-icons {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  margin-top: 20px;
-}
-
-.Colum3-heading {
+  margin-top: 2rem;
+  }
+  
+  .Colum3-heading {
   text-align: center;
-  font-size: 24px;
-}
-
-.Column3-text {
+  font-size: 2.4rem;
+  }
+  
+  .Column3-text {
   text-align: center;
-  font-size: 18px;
-  margin-top: 28px;
-}
+  font-size: 1.8rem;
+  margin-top: 2.8rem;
+  }
