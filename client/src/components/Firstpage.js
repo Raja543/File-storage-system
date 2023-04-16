@@ -6,13 +6,13 @@ import Card from "./Profilecard";
 import Discordsvg from "./Discordsvg";
 import Twittersvg from "./Twittersvg";
 import Instagramsvg from "./Instagramsvg";
-// import Animation1 from "./Animation1";
+import Animation1 from "./Animation1";
 import myvideo from "./videos/first.mp4";
 import Navbar from "./Navbar";
 
 const Firstpage = () => {
   return (
-    <>
+    <div>
       <div className="navbar-section">
         <Navbar />
       </div>
@@ -21,21 +21,27 @@ const Firstpage = () => {
           <video autoPlay muted loop>
             <source src={myvideo} type="video/mp4" />
           </video>
-
-          <h1 className="hero-heading">
-            Revolutionize Your File Storage with Decentralization
-          </h1>
-          <h1 className="hero-subheading"> Your Data, Your Control</h1>
-          <p className="hero__description">
-            Join the movement towards a more decentralized web, where users own
-            and control their data, and where censorship and surveillance are a
-            thing of the past.
-          </p>
-          <button className="hero-button" onClick={() => { window.location.href = "/secondpage" }}>
-            <Link className="hero-button-text" to="/secondpage">
-              Click here to Upload the file
-            </Link>
-          </button>
+          <div className="hero-content">
+            <h1 className="hero-heading">
+              Revolutionize Your File Storage with Decentralization
+            </h1>
+            <h1 className="hero-subheading"> Your Data, Your Control</h1>
+            <p className="hero__description">
+              Join the movement towards a more decentralized web, where users
+              own and control their data, and where censorship and surveillance
+              are a thing of the past.
+            </p>
+            <button
+              className="hero-button"
+              onClick={() => {
+                window.location.href = "/secondpage";
+              }}
+            >
+              <Link className="hero-button-text" to="/secondpage">
+                Click here to Upload the file
+              </Link>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -54,16 +60,15 @@ const Firstpage = () => {
           systems.
         </p>
       </div>
-     
 
       {/* Product section */}
       <div className="product-section">
         <h2 className="product-head">
           Benefits of Blockchain-based File Storage
         </h2>
-        {/* <div className="right-image">
+        <div className="right-image">
           <Animation1 />
-        </div> */}
+        </div>
         <div className="product-detail">
           <div className="Para-1">
             <h3 className="para1-heading">Immutability</h3>
@@ -110,11 +115,121 @@ const Firstpage = () => {
           ensure that your data is encrypted, tamper-proof, and always
           available, even in the face of network outages or attacks.
         </p>
-        <div className="profile-card">
-          <Card /> <Card /> <Card />
+
+        {/* profile card */}
+        <div className="profile-body">
+          <div className="photo">
+            <img
+              src="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg"
+              className="image--cover"
+            />
+          </div>
+          <div className="profile">
+            <div id="rating-stars" align="center">
+              <div className="stars">
+                <label
+                  aria-label="first-star"
+                  className="star-label"
+                  htmlFor="rate-1"
+                >
+                  <i className="rate-icon star-icon fa fa-star"></i>
+                </label>
+                <input
+                  className="rate-input"
+                  name="rating"
+                  id="rate-1"
+                  value="1"
+                  type="radio"
+                />
+                <label
+                  aria-label="second-star"
+                  className="star-label"
+                  htmlFor="rate-2"
+                >
+                  <i className="rate-icon star-icon fa fa-star"></i>
+                </label>
+                <input
+                  className="rate-input"
+                  name="rating"
+                  id="rate-2"
+                  value="2"
+                  type="radio"
+                />
+                <label
+                  aria-label="third-star"
+                  className="star-label"
+                  htmlFor="rate-3"
+                >
+                  <i className="rate-icon star-icon fa fa-star"></i>
+                </label>
+                <input
+                  className="rate-input"
+                  name="rating"
+                  id="rate-3"
+                  value="3"
+                  type="radio"
+                />
+                <label
+                  aria-label="fourth-star"
+                  className="star-label"
+                  htmlFor="rate-4"
+                >
+                  <i className="rate-icon star-icon fa fa-star"></i>
+                </label>
+                <input
+                  className="rate-input"
+                  name="rating"
+                  id="rate-4"
+                  value="4"
+                  type="radio"
+                />
+                <label
+                  aria-label="fifth-star"
+                  className="star-label"
+                  htmlFor="rate-5"
+                >
+                  <i className="rate-icon star-icon fa fa-star"></i>
+                </label>
+                <input
+                  className="rate-input"
+                  name="rating"
+                  id="rate-5"
+                  value="5"
+                  type="radio"
+                />
+              </div>
+            </div>
+            <h1 className="username">Joane Doe</h1>
+            <h2 className="profession"> Designer </h2>
+            <h3 className="locationname">
+              <i className="fas fa-map-marker-alt"></i> Paris, France{" "}
+            </h3>
+            <p className="descricao">
+              Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu
+              conheço uma cachacis que pode alegrar sua vidis. Quem manda na
+              minha terra sou euzis! Nullam volutpat risus nec leo commodo, ut
+              interdum diam laoreet. Sed non consequat odio. Suco de cevadiss, é
+              um leite divinis, qui tem lupuliz, matis, aguis e fermentis.
+            </p>
+            <div className="socialmedia">
+              <a href="#" className="button-facebook">
+                <i className="fab fa-facebook-square"></i>
+              </a>
+              <a href="#" className="button-instagram">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="#" className="button-twitter">
+                <i className="fab fa-twitter-square"></i>
+              </a>
+              <a href="#" className="button-whatsapp">
+                <i className="fab fa-whatsapp-square"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
+      {/* footer-section */}
       <div className="footer-section">
         <div className="columns">
           <div className="column">
@@ -139,7 +254,7 @@ const Firstpage = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
