@@ -61,7 +61,6 @@ body::-webkit-scrollbar {
   font-family: "Poppins", sans-serif;
   text-align: center;
   font-size: 2vw;
-  letter-spacing: 0.2rem;
   color: #fff;
   margin-top: 1vh;
 }
@@ -97,33 +96,76 @@ body::-webkit-scrollbar {
 }
 
 /* Media queries for smaller screens */
-@media (max-width: 768px) {
+@media only screen and (max-width: 600px) {
+  .hero {
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.952);
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-heading {
+    font-size: 8vw;
+    margin-top: 10vh;
+  }
+
+  .hero-subheading {
+    font-size: 5vw;
+    margin-top: 1vh;
+  }
+
+  .hero__description {
+    font-size: 4vw;
+    margin-top: 5vh;
+  }
+
+  .hero-button {
+    padding: 2%;
+    margin-top: 2.5rem;
+    width: 40%;
+  }
+
+  .hero-button-text {
+    font-size: 2.8vw;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .hero {
+    height: 55vh;
+    background-color: rgba(0, 0, 0, 0.952);
+    position: relative;
+    z-index: 1;
+  }
+
   .hero-heading {
     font-size: 6vw;
+    margin-top: 10vh;
   }
 
   .hero-subheading {
     font-size: 4vw;
+    margin-top: 1vh;
   }
 
   .hero__description {
     font-size: 3vw;
-    margin-top: 2vh;
+    margin-top: 4vh;
   }
 
   .hero-button {
-    width: 40%;
     padding: 2vw;
+    margin-top: 1.5rem;
+    width: 30%;
   }
 
   .hero-button-text {
-    font-size: 2vw;
+    font-size: 1.8vw;
   }
 }
 
 /* animate-section */
 .animate-section {
-  height: 70vh;
+  height: 55vh;
   background-color: rgba(0, 0, 0, 0.952);
 }
 
@@ -138,11 +180,34 @@ body::-webkit-scrollbar {
   color: #ffffffc6;
   padding: 0.5rem;
   font-family: "Poppins", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   margin: auto;
   margin-top: 20px;
   text-align: center;
   max-width: 90vw;
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .animate-heading {
+    font-size: 1.8rem;
+  }
+
+  .animate-para {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+/* Medium screens */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .animate-heading {
+    font-size: 2.5rem;
+  }
+
+  .animate-para {
+    font-size: 1.4rem;
+  }
 }
 
 /* product-section */
@@ -160,10 +225,10 @@ body::-webkit-scrollbar {
 }
 
 .product-detail {
-  width: 50%;
-  float: left;
-  margin-left: 5%;
-  margin-top: 5px;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 5%;
+  box-sizing: border-box;
 }
 
 .my-hr {
@@ -201,15 +266,81 @@ body::-webkit-scrollbar {
 .right-image {
   float: right;
   margin-top: 3%;
-  width: 40%;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 lottie {
-  width: 200px;
-  height: 250px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* Media queries for responsive design */
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .product-head {
+    font-size: 1.5rem;
+  }
+
+  .product-detail {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 0 5%;
+  }
+
+  .my-hr {
+    margin: 1.5%;
+  }
+
+  .right-image {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 5%;
+  }
+  .para1-heading,
+  .para2-heading,
+  .para3-heading {
+    font-size: 1.5rem;
+  }
+
+  .para1-detail,
+  .para2-detail,
+  .para3-detail {
+    font-size: 0.9rem;
+  }
+}
+
+/* Medium screens */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .product-head {
+    font-size: 2rem;
+  }
+
+  .product-detail {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 0 5%;
+  }
+
+  .my-hr {
+    margin: 2%;
+  }
+
+  .right-image {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 3%;
+  }
 }
 /* about-section */
 .about {
-  height: 91vh;
+  height: 96vh;
   background-color: rgba(0, 0, 0, 0.952);
 }
 
@@ -231,128 +362,40 @@ lottie {
   text-align: center;
 }
 
-/* profile-card */
-.profile-body {
-  margin-top: 40px;
+/* small screen */
+@media only screen and (max-width: 768px) {
+  .about {
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  .about-heading {
+    font-size: 2.5rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
 
-.profile {
-  margin-top: -45px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 25px;
-  background-color: #ddd;
-  padding: 20px;
-  z-index: 0;
-}
+/* medium screen */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .about {
+    height: 80vh;
+  }
 
-.socialmedia {
-  text-align: center;
-}
+  .about-heading {
+    font-size: 3rem;
+  }
 
-.photo {
-  margin: 25px;
+  .about-text {
+    font-size: 1.1rem;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
 }
-
-.image--cover {
-  width: 170px;
-  height: 170px;
-  border: #fff 3px solid;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-  margin-top: -40px;
-}
-
-.username,
-.profession,
-.locationname,
-.descricao {
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  padding: 0;
-  margin: 1px;
-}
-
-.username {
-  font-size: 20pt;
-  margin: 2px;
-}
-
-.profession {
-  font-size: 14pt;
-}
-
-.locationname {
-  font-size: 14pt;
-  margin: 2px;
-}
-
-.descricao {
-  border-top: #969696 solid 1px;
-  padding: 10px;
-  font-size: 11pt;
-  margin: 5px;
-}
-
-.button-facebook,
-.button-instagram,
-.button-twitter,
-.button-whatsapp {
-  padding: 5px;
-  font-size: 30pt;
-}
-.button-facebook {
-  color: #3c5a99;
-}
-.button-instagram {
-  color: #893dc2;
-}
-.button-twitter {
-  color: #1da1f2;
-}
-.button-whatsapp {
-  color: #4ac959;
-}
-
-#rating-stars {
-  margin: 4px;
-}
-
-#rating-stars .stars {
-  display: inline-flex;
-}
-#rarate-input {
-  pointer-events: none;
-}
-#rating-stars .rate-input {
-  position: absolute;
-  left: -9999px;
-}
-#rating-stars label {
-  cursor: pointer;
-  padding: 1px;
-  font-size: 20pt;
-}
-#rating-stars .star-icon {
-  color: orange;
-}
-
-#rating-stars .rate-input:checked ~ .star-label .star-icon {
-  color: #999;
-}
-#rating-stars .stars:hover .star-label .star-icon {
-  color: orange;
-}
-#rating-stars .rate-input:hover ~ .star-label .star-icon {
-  color: #999;
-}
-
-
 /* footer-section */
 .footer-section {
   background: rgba(0, 0, 0, 0.959);
@@ -406,4 +449,66 @@ lottie {
   text-align: center;
   font-size: 1.8rem;
   margin-top: 2.8rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    flex-direction: row;
+  }
+
+  .column {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .column1-para {
+    margin-top: 1rem;
+  }
+
+  .social-icons {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .columns {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .column {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .column1-para {
+    margin-top: 1rem;
+  }
+
+  .social-icons {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .columns {
+    justify-content: space-around;
+  }
+
+  .column {
+    margin: 1rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .column1-para {
+    margin-top: 2.8rem;
+  }
+
+  .social-icons {
+    margin-top: 2rem;
+  }
 }

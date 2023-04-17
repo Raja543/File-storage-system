@@ -116,7 +116,7 @@ const Firstpage = () => {
         </p>
 
         {/* profile card */}
-        <div className="profile-body">
+        {/* <div className="profile-body">
           <div className="photo">
             <img
               src="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg"
@@ -198,10 +198,10 @@ const Firstpage = () => {
                 />
               </div>
             </div>
-            <h1 className="username">Joane Doe</h1>
-            <h2 className="profession"> Designer </h2>
+            <h1 className="username">Raja Kumar</h1>
+            <h2 className="profession"> Developer </h2>
             <h3 className="locationname">
-              <i className="fas fa-map-marker-alt"></i> Paris, France{" "}
+              <i className="fas fa-map-marker-alt"></i>New Delhi , India
             </h3>
             <p className="descricao">
               Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu
@@ -225,7 +225,7 @@ const Firstpage = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* footer-section */}
