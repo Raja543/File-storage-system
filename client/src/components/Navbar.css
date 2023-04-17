@@ -189,7 +189,7 @@ input[type="checkbox"] {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #333;
+  background-color: black;
   color: #fff;
 }
 
@@ -216,10 +216,12 @@ input[type="checkbox"] {
   list-style: none;
   padding: 0;
   margin: 0;
+  
 }
 
 .navbar-menu li {
   padding: 10px 0;
+  list-style: none;
 }
 
 .navbar-menu a {
@@ -240,9 +242,26 @@ input[type="checkbox"] {
   height: 3px;
   background-color: #fff;
 }
+
+.connect-btn {
+  background-color: #007bff;
+  font-family: "Baloo Thambi 2", cursive;
+  color: #fff;
+  border-radius: 15px;
+  margin-right: 30px;
+  padding: 10px ;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.connect-btn:hover {
+  background-color: #0069d9;
+}
+
 @media screen and (min-width: 768px) {
   .navbar-menu {
-    display: block;
+    display: flex;
     position: static;
     background-color: transparent;
   }
@@ -265,6 +284,7 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 767px) {
+  
   .navbar-menu.show {
     display: block;
     position: absolute;
