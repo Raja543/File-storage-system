@@ -98,7 +98,7 @@ body::-webkit-scrollbar {
 /* Media queries for smaller screens */
 @media only screen and (max-width: 600px) {
   .hero {
-    height: 70vh;
+    height: 65vh;
     background-color: rgba(0, 0, 0, 0.952);
     position: relative;
     z-index: 1;
@@ -110,7 +110,7 @@ body::-webkit-scrollbar {
   }
 
   .hero-subheading {
-    font-size: 5vw;
+    font-size: 4vw;
     margin-top: 1vh;
   }
 
@@ -165,7 +165,7 @@ body::-webkit-scrollbar {
 
 /* animate-section */
 .animate-section {
-  height: 55vh;
+  height: 60vh;
   background-color: rgba(0, 0, 0, 0.952);
 }
 
@@ -189,6 +189,10 @@ body::-webkit-scrollbar {
 
 /* Small screens */
 @media only screen and (max-width: 600px) {
+  .animate-section {
+    height: 58vh;
+    background-color: rgba(0, 0, 0, 0.952);
+  }
   .animate-heading {
     font-size: 1.8rem;
   }
@@ -201,6 +205,9 @@ body::-webkit-scrollbar {
 
 /* Medium screens */
 @media only screen and (min-width: 601px) and (max-width: 900px) {
+  .animate-section {
+    height: 40vh;
+  }
   .animate-heading {
     font-size: 2.5rem;
   }
@@ -279,9 +286,11 @@ lottie {
 }
 
 /* Media queries for responsive design */
-
 /* Small screens */
 @media only screen and (max-width: 600px) {
+  .product-section {
+    height: 100vh;
+  }
   .product-head {
     font-size: 1.5rem;
   }
@@ -317,6 +326,9 @@ lottie {
 
 /* Medium screens */
 @media only screen and (min-width: 601px) and (max-width: 900px) {
+  .product-section {
+    height: 65vh;
+  }
   .product-head {
     font-size: 2rem;
   }
@@ -363,14 +375,13 @@ lottie {
 }
 
 /* small screen */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .about {
-    height: auto;
-    padding-bottom: 50px;
+    height: 65vh;
   }
 
   .about-heading {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .about-text {
@@ -383,7 +394,7 @@ lottie {
 /* medium screen */
 @media only screen and (min-width: 601px) and (max-width: 900px) {
   .about {
-    height: 80vh;
+    height: 30vh;
   }
 
   .about-heading {
@@ -413,7 +424,7 @@ lottie {
   flex: 1;
   margin: 1rem;
   padding: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .column1-heading {
@@ -425,7 +436,6 @@ lottie {
   text-align: center;
   font-size: 1.8rem;
   margin-top: 2.8rem;
-  color: rgb(113, 112, 112);
 }
 
 .column2-text {
@@ -449,21 +459,43 @@ lottie {
   text-align: center;
   font-size: 1.8rem;
   margin-top: 2.8rem;
+  color: rgb(113, 112, 112);
 }
 
 @media only screen and (max-width: 600px) {
+  .footer-section {
+    height: 43vh;
+  }
+
   .columns {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .column {
-    margin: 0;
-    padding: 0;
     text-align: center;
   }
-
+  .column1-heading {
+    text-align: center;
+    font-size: 2.5rem;
+  }
   .column1-para {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .column2-text {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: -1.8rem;
+  }
+  .Colum3-heading {
+    display: none;
+  }
+
+  .Column3-text {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: -1.5rem;
   }
 
   .social-icons {
@@ -472,43 +504,45 @@ lottie {
 }
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
+  .footer-section {
+    height: auto;
+  }
   .columns {
     flex-direction: row;
     justify-content: space-around;
   }
 
   .column {
-    margin: 0;
-    padding: 0;
+    margin: 20px;
+    padding: 10px;
     text-align: center;
   }
 
+  .column1-heading {
+    text-align: center;
+    font-size: 1.5rem;
+  }
   .column1-para {
     margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  .column2-text {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .Colum3-heading {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .Column3-text {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 2rem;
   }
 
   .social-icons {
     margin-top: 1rem;
-  }
-}
-
-@media only screen and (min-width: 901px) {
-  .columns {
-    justify-content: space-around;
-  }
-
-  .column {
-    margin: 1rem;
-    padding: 1rem;
-    margin-top: 2rem;
-    text-align: center;
-  }
-
-  .column1-para {
-    margin-top: 2.8rem;
-  }
-
-  .social-icons {
-    margin-top: 2rem;
   }
 }

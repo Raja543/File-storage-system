@@ -232,10 +232,8 @@ const Firstpage = () => {
       <div className="footer-section">
         <div className="columns">
           <div className="column">
-            <h2 className="column1-heading">SecureShareX</h2>
-            <p className="column1-para">
-              © 2023 Secure ShareX. All rights reserved
-            </p>
+            <h2 className="column1-heading">Contact Us</h2>
+            <p className="column1-para">SecureShareX@gmail.com</p>
           </div>
 
           <div className="column">
@@ -248,8 +246,10 @@ const Firstpage = () => {
           </div>
 
           <div className="column">
-            <h2 className="Colum3-heading">Contact Us</h2>
-            <p className="Column3-text">SecureShareX@gmail.com</p>
+            <h2 className="Colum3-heading">SecureShareX</h2>
+            <p className="Column3-text">
+              © 2023 Secure ShareX. All rights reserved
+            </p>
           </div>
         </div>
       </div>
