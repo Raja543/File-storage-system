@@ -15,7 +15,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* Default styles for desktop and larger screens */
 .hero {
   height: 90vh;
   background-color: rgba(0, 0, 0, 0.952);
@@ -79,7 +78,9 @@ body::-webkit-scrollbar {
 .hero-button {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
-  border-radius: 2vw;
+  border-radius: 2.5vw;
+  border-color: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
   padding: 1vw;
   margin-top: 1.5rem;
   width: 20%;
@@ -95,74 +96,114 @@ body::-webkit-scrollbar {
   text-align: center;
 }
 
-/* Media queries for smaller screens */
-@media only screen and (max-width: 600px) {
+/* For smaller phone viewpoints */
+@media only screen and (min-width: 320px) {
   .hero {
-    height: 65vh;
-    background-color: rgba(0, 0, 0, 0.952);
-    position: relative;
-    z-index: 1;
+    height: 50vh;
   }
-
   .hero-heading {
-    font-size: 8vw;
-    margin-top: 10vh;
+    font-size: 6vw;
+    margin-top: 5vh;
   }
-
   .hero-subheading {
     font-size: 4vw;
-    margin-top: 1vh;
   }
-
   .hero__description {
-    font-size: 4vw;
-    margin-top: 5vh;
+    font-size: 3.5vw;
+    margin-top: 2vh;
   }
 
   .hero-button {
     padding: 2%;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
     width: 40%;
   }
 
   .hero-button-text {
-    font-size: 2.8vw;
+    font-size: 2.6vw;
   }
 }
-@media only screen and (min-width: 601px) and (max-width: 900px) {
-  .hero {
-    height: 55vh;
-    background-color: rgba(0, 0, 0, 0.952);
-    position: relative;
-    z-index: 1;
-  }
 
+/* For small devices and most phones */
+@media only screen and (min-width: 480px) {
+  .hero {
+    height: 65vh;
+  }
   .hero-heading {
     font-size: 6vw;
-    margin-top: 10vh;
+    margin-top: 5vh;
   }
-
   .hero-subheading {
-    font-size: 4vw;
-    margin-top: 1vh;
+    font-size: 3.5vw;
   }
-
   .hero__description {
     font-size: 3vw;
-    margin-top: 4vh;
+    margin-top: 2vh;
   }
 
   .hero-button {
-    padding: 2vw;
+    padding: 2%;
     margin-top: 1.5rem;
-    width: 30%;
+    width: 40%;
   }
 
   .hero-button-text {
-    font-size: 1.8vw;
+    font-size: 2.6vw;
   }
 }
 
+/* For most tablets */
+@media only screen and (min-width: 768px) {
+  .hero{
+    height : 70vh;
+  }
+  .hero-heading {
+    font-size: 5vw;
+  }
+  .hero-subheading {
+    font-size: 3vw;
+  }
+  .hero__description {
+    font-size: 2.5vw;
+  }
+  .hero-button {
+    padding: 1rem;
+    margin-top: 1.5rem;
+    width: 35%;
+  }
+
+  .hero-button-text {
+    font-size: 2vw;
+  }
+}
+
+/* For smaller desktop viewpoints */
+@media only screen and (min-width: 992px) {
+  .hero-heading {
+    font-size: 3.5vw;
+    margin-top: 20vh;
+  }
+  .hero-subheading {
+    font-size: 2vw;
+  }
+  .hero__description {
+    font-size: 1.5vw;
+    margin-top: 5vh;
+  }
+}
+
+/* For large devices and wide screens */
+@media only screen and (min-width: 1200px) {
+  .hero-heading {
+    font-size: 3vw;
+  }
+  .hero-subheading {
+    font-size: 1.8vw;
+  }
+  .hero__description {
+    font-size: 1.3vw;
+  }
+}
 /* animate-section */
 .animate-section {
   height: 60vh;
