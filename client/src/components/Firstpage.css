@@ -225,7 +225,7 @@ body::-webkit-scrollbar {
   }
 
   .hero-button-text {
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
 }
 
@@ -253,40 +253,10 @@ body::-webkit-scrollbar {
   max-width: 90vw;
 }
 
-/* Small screens */
-/* @media only screen and (max-width: 600px) {
-  .animate-section {
-    height: 58vh;
-    background-color: rgba(0, 0, 0, 0.952);
-  }
-  .animate-heading {
-    font-size: 1.8rem;
-  }
-
-  .animate-para {
-    font-size: 1rem;
-    text-align: center;
-  }
-} */
-
-/* Medium screens */
-/* @media only screen and (min-width: 601px) and (max-width: 900px) {
-  .animate-section {
-    height: 40vh;
-  }
-  .animate-heading {
-    font-size: 2.5rem;
-  }
-
-  .animate-para {
-    font-size: 1.4rem;
-  }
-} */
-
 /* For smaller phone viewpoints */
 @media only screen and (min-width: 320px) {
   .animate-section {
-    height: 58vh;
+    height: 68vh;
   }
 
   .animate-heading {
@@ -302,7 +272,7 @@ body::-webkit-scrollbar {
 /* For small devices and most phones */
 @media only screen and (min-width: 480px) {
   .animate-section {
-    height: 50vh;
+    height: 45vh;
   }
 
   .animate-heading {
@@ -318,7 +288,7 @@ body::-webkit-scrollbar {
 /* For most tablets */
 @media only screen and (min-width: 768px) {
   .animate-section {
-    height: 50vh;
+    height: 40vh;
   }
 
   .animate-heading {
@@ -334,7 +304,7 @@ body::-webkit-scrollbar {
 /* For smaller desktop viewpoints */
 @media only screen and (min-width: 992px) {
   .animate-section {
-    height: 60vh;
+    height: 50vh;
   }
 
   .animate-heading {
@@ -420,20 +390,16 @@ body::-webkit-scrollbar {
   float: right;
   margin-top: 3%;
   width: 100%;
-  max-width: 400px;
+  max-width: 00px;
   margin-left: auto;
   margin-right: auto;
 }
 
-lottie {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
+
 
 /* Media queries for responsive design */
 /* Small screens */
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .product-section {
     height: 100vh;
   }
@@ -468,10 +434,10 @@ lottie {
   .para3-detail {
     font-size: 0.9rem;
   }
-}
+} */
 
 /* Medium screens */
-@media only screen and (min-width: 601px) and (max-width: 900px) {
+/* @media only screen and (min-width: 601px) and (max-width: 900px) {
   .product-section {
     height: 65vh;
   }
@@ -495,7 +461,27 @@ lottie {
     max-width: 400px;
     margin-top: 3%;
   }
-}
+} */
+
+/* For smaller phone viewpoints */
+@media only screen and (min-width: 320px) {}
+
+
+/* For small devices and most phones */
+@media only screen and (min-width: 480px) {}
+
+/* For most tablets */
+@media only screen and (min-width: 768px) {}
+
+/* For smaller desktop viewpoints */
+@media only screen and (min-width: 992px){}
+
+
+/* For large devices and wide screens */
+@media only screen and (min-width: 1200px) {}
+
+
+
 /* about-section */
 .about {
   height: 96vh;
