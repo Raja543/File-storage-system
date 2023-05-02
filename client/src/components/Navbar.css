@@ -16,6 +16,7 @@ body::-webkit-scrollbar {
   background-color: black;
   color: #fff;
   z-index: 4;
+  position: relative;
 }
 
 .navbar-logo {
