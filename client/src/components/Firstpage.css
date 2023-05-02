@@ -154,8 +154,8 @@ body::-webkit-scrollbar {
 
 /* For most tablets */
 @media only screen and (min-width: 768px) {
-  .hero{
-    height : 70vh;
+  .hero {
+    height: 70vh;
   }
   .hero-heading {
     font-size: 5vw;
@@ -179,31 +179,56 @@ body::-webkit-scrollbar {
 
 /* For smaller desktop viewpoints */
 @media only screen and (min-width: 992px) {
+  .hero {
+    height: 85vh;
+  }
   .hero-heading {
-    font-size: 3.5vw;
-    margin-top: 20vh;
+    font-size: 4.5vw;
+    margin-top: 10vh;
   }
   .hero-subheading {
     font-size: 2vw;
   }
   .hero__description {
-    font-size: 1.5vw;
+    font-size: 2vw;
     margin-top: 5vh;
+  }
+  .hero-button {
+    padding: 1rem;
+    margin-top: 1.5rem;
+    width: 35%;
+  }
+
+  .hero-button-text {
+    font-size: 2vw;
   }
 }
 
 /* For large devices and wide screens */
 @media only screen and (min-width: 1200px) {
+  .hero {
+    height: 86vh;
+  }
   .hero-heading {
-    font-size: 3vw;
+    font-size: 3.5vw;
   }
   .hero-subheading {
-    font-size: 1.8vw;
+    font-size: 2vw;
   }
   .hero__description {
-    font-size: 1.3vw;
+    font-size: 1.8vw;
+  }
+  .hero-button {
+    padding: 1rem;
+    margin-top: 2rem;
+    width: 30%;
+  }
+
+  .hero-button-text {
+    font-size: 2vw;
   }
 }
+
 /* animate-section */
 .animate-section {
   height: 60vh;
@@ -223,13 +248,13 @@ body::-webkit-scrollbar {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
   max-width: 90vw;
 }
 
 /* Small screens */
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .animate-section {
     height: 58vh;
     background-color: rgba(0, 0, 0, 0.952);
@@ -242,10 +267,10 @@ body::-webkit-scrollbar {
     font-size: 1rem;
     text-align: center;
   }
-}
+} */
 
 /* Medium screens */
-@media only screen and (min-width: 601px) and (max-width: 900px) {
+/* @media only screen and (min-width: 601px) and (max-width: 900px) {
   .animate-section {
     height: 40vh;
   }
@@ -255,6 +280,86 @@ body::-webkit-scrollbar {
 
   .animate-para {
     font-size: 1.4rem;
+  }
+} */
+
+/* For smaller phone viewpoints */
+@media only screen and (min-width: 320px) {
+  .animate-section {
+    height: 58vh;
+  }
+
+  .animate-heading {
+    font-size: 1.5rem;
+  }
+
+  .animate-para {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+/* For small devices and most phones */
+@media only screen and (min-width: 480px) {
+  .animate-section {
+    height: 50vh;
+  }
+
+  .animate-heading {
+    font-size: 1.5rem;
+  }
+
+  .animate-para {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+/* For most tablets */
+@media only screen and (min-width: 768px) {
+  .animate-section {
+    height: 50vh;
+  }
+
+  .animate-heading {
+    font-size: 2rem;
+  }
+
+  .animate-para {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+/* For smaller desktop viewpoints */
+@media only screen and (min-width: 992px) {
+  .animate-section {
+    height: 60vh;
+  }
+
+  .animate-heading {
+    font-size: 2.3rem;
+  }
+
+  .animate-para {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
+
+/* For large devices and wide screens */
+@media only screen and (min-width: 1200px) {
+  .animate-section {
+    height: 50vh;
+  }
+
+  .animate-heading {
+    font-size: 2.5rem;
+  }
+
+  .animate-para {
+    font-size: 1.5rem;
+    text-align: center;
   }
 }
 
