@@ -13,7 +13,7 @@ const App = () => {
     const connectToContract = async () => {
       try {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
-        await window.ethereum.enable();
+        // await window.ethereum.enable();
         const signer = provider.getSigner();
         const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; // replace with your contract address
         const abi = [{

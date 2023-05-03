@@ -35,7 +35,7 @@ const Secondpage = () => {
         window.ethereum.on("accountsChanged", () => {
           window.location.reload();
         });
-        await provider.send("eth_requestAccounts", []);
+        // await provider.send("eth_requestAccounts", []);
         const signer = provider.getSigner();
         const address = await signer.getAddress();
         setAccount(address);
