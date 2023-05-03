@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   min-height: 100%;
   max-width: 100vw;
@@ -101,13 +102,16 @@ body::-webkit-scrollbar {
   .hero {
     height: 50vh;
   }
+
   .hero-heading {
     font-size: 6vw;
     margin-top: 5vh;
   }
+
   .hero-subheading {
     font-size: 4vw;
   }
+
   .hero__description {
     font-size: 3.5vw;
     margin-top: 2vh;
@@ -129,13 +133,16 @@ body::-webkit-scrollbar {
   .hero {
     height: 65vh;
   }
+
   .hero-heading {
     font-size: 6vw;
     margin-top: 5vh;
   }
+
   .hero-subheading {
     font-size: 3.5vw;
   }
+
   .hero__description {
     font-size: 3vw;
     margin-top: 2vh;
@@ -157,15 +164,19 @@ body::-webkit-scrollbar {
   .hero {
     height: 70vh;
   }
+
   .hero-heading {
     font-size: 5vw;
   }
+
   .hero-subheading {
     font-size: 3vw;
   }
+
   .hero__description {
     font-size: 2.5vw;
   }
+
   .hero-button {
     padding: 1rem;
     margin-top: 1.5rem;
@@ -182,17 +193,21 @@ body::-webkit-scrollbar {
   .hero {
     height: 85vh;
   }
+
   .hero-heading {
     font-size: 4.5vw;
     margin-top: 10vh;
   }
+
   .hero-subheading {
     font-size: 2vw;
   }
+
   .hero__description {
     font-size: 2vw;
     margin-top: 5vh;
   }
+
   .hero-button {
     padding: 1rem;
     margin-top: 1.5rem;
@@ -209,15 +224,19 @@ body::-webkit-scrollbar {
   .hero {
     height: 86vh;
   }
+
   .hero-heading {
     font-size: 3.5vw;
   }
+
   .hero-subheading {
     font-size: 2vw;
   }
+
   .hero__description {
     font-size: 1.8vw;
   }
+
   .hero-button {
     padding: 1rem;
     margin-top: 2rem;
@@ -374,6 +393,7 @@ body::-webkit-scrollbar {
 .para3-heading {
   font-size: 2rem;
   font-family: "Poppins", sans-serif;
+  cursor: pointer;
 }
 
 .para1-detail,
@@ -390,95 +410,174 @@ body::-webkit-scrollbar {
   float: right;
   margin-top: 3%;
   width: 100%;
-  max-width: 00px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
 
-
-/* Media queries for responsive design */
-/* Small screens */
-/* @media only screen and (max-width: 600px) {
+/* For smaller phone viewpoints */
+@media only screen and (min-width: 320px) {
   .product-section {
-    height: 100vh;
+    height: 115vh;
   }
+
   .product-head {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
-  .product-detail {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 500px;
-    padding: 0 5%;
-  }
-
-  .my-hr {
-    margin: 1.5%;
-  }
-
-  .right-image {
-    width: 100%;
-    max-width: 300px;
-    margin-top: 5%;
-  }
   .para1-heading,
   .para2-heading,
   .para3-heading {
+    margin-top: 10px;
+    font-size: 1.3rem;
+  }
+
+  .para1-detail,
+  .para2-detail,
+  .para3-detail {
+    font-size: 1rem;
+  }
+
+  .right-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+}
+
+/* For small devices and most phones */
+@media only screen and (min-width: 480px) {
+  .product-section {
+    height: 135vh;
+  }
+
+  .product-head {
+    font-size: 1.7rem;
+  }
+
+  .para1-heading,
+  .para2-heading,
+  .para3-heading {
+    margin-top: 10px;
     font-size: 1.5rem;
   }
 
   .para1-detail,
   .para2-detail,
   .para3-detail {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
-} */
 
-/* Medium screens */
-/* @media only screen and (min-width: 601px) and (max-width: 900px) {
-  .product-section {
-    height: 65vh;
+  .right-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
   }
+}
+
+/* For most tablets */
+@media only screen and (min-width: 768px) {
+  .product-section {
+    height: 155vh;
+  }
+
   .product-head {
     font-size: 2rem;
   }
 
-  .product-detail {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 700px;
-    padding: 0 5%;
+  .para1-heading,
+  .para2-heading,
+  .para3-heading {
+    margin-top: 10px;
+    font-size: 1.6rem;
   }
 
-  .my-hr {
-    margin: 2%;
+  .para1-detail,
+  .para2-detail,
+  .para3-detail {
+    font-size: 1.3rem;
   }
 
   .right-image {
-    width: 100%;
-    max-width: 400px;
-    margin-top: 3%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
   }
-} */
-
-/* For smaller phone viewpoints */
-@media only screen and (min-width: 320px) {}
-
-
-/* For small devices and most phones */
-@media only screen and (min-width: 480px) {}
-
-/* For most tablets */
-@media only screen and (min-width: 768px) {}
+}
 
 /* For smaller desktop viewpoints */
-@media only screen and (min-width: 992px){}
+@media only screen and (min-width: 992px) {
+  .product-section {
+    height: 170vh;
+  }
 
+  .profuct-detail {
+    width: 705
+  }
+
+  .product-head {
+    font-size: 2rem;
+  }
+
+  .para1-heading,
+  .para2-heading,
+  .para3-heading {
+    margin-top: 10px;
+    font-size: 1.6rem;
+  }
+
+  .para1-detail,
+  .para2-detail,
+  .para3-detail {
+    font-size: 1.4rem;
+  }
+
+  .right-image {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+}
 
 /* For large devices and wide screens */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+  .product-section {
+    height: 100vh;
+  }
+
+  .profuct-detail {
+    width: 705
+  }
+
+  .product-head {
+    font-size: 3rem;
+  }
+
+  .para1-heading,
+  .para2-heading,
+  .para3-heading {
+    margin-top: 10px;
+    font-size: 1.6rem;
+  }
+
+  .para1-detail,
+  .para2-detail,
+  .para3-detail {
+    font-size: 1.4rem;
+  }
+
+  .right-image {
+    width: 60%;
+  }
+}
 
 
 
@@ -506,27 +605,71 @@ body::-webkit-scrollbar {
   text-align: center;
 }
 
-/* small screen */
-@media only screen and (max-width: 600px) {
+/* For smaller phone viewpoints */
+@media only screen and (min-width: 320px) {
+  .about {
+    height: 69vh;
+  }
+
+  .about-heading {
+    font-size: 1.6rem;
+  }
+
+  .about-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* For small devices and most phones */
+@media only screen and (min-width: 480px) {
   .about {
     height: 65vh;
   }
 
   .about-heading {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 
   .about-text {
-    font-size: 1rem;
-    margin-left: 10%;
-    margin-right: 10%;
+    font-size: 1.3rem;
   }
 }
 
-/* medium screen */
-@media only screen and (min-width: 601px) and (max-width: 900px) {
+/* For most tablets */
+@media only screen and (min-width: 768px) {
   .about {
-    height: 30vh;
+    height: 54vh;
+  }
+
+  .about-heading {
+    font-size: 2.3rem;
+  }
+
+  .about-text {
+    font-size: 1.3rem;
+  }
+}
+
+/* For smaller desktop viewpoints */
+@media only screen and (min-width: 992px) {
+  .about {
+    height: 55vh;
+  }
+
+  .about-heading {
+    font-size: 2.8rem;
+  }
+
+  .about-text {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* For large devices and wide screens */
+@media only screen and (min-width: 1200px) {
+  .about {
+    height: 62vh;
   }
 
   .about-heading {
@@ -534,11 +677,12 @@ body::-webkit-scrollbar {
   }
 
   .about-text {
-    font-size: 1.1rem;
-    margin-left: 8%;
-    margin-right: 8%;
+    font-size: 1.7rem;
   }
 }
+
+
+
 /* footer-section */
 .footer-section {
   background: rgba(0, 0, 0, 0.959);
@@ -594,7 +738,8 @@ body::-webkit-scrollbar {
   color: rgb(113, 112, 112);
 }
 
-@media only screen and (max-width: 600px) {
+/* For smaller phone viewpoints */
+@media only screen and (min-width: 320px) {
   .footer-section {
     height: 43vh;
   }
@@ -606,10 +751,12 @@ body::-webkit-scrollbar {
   .column {
     text-align: center;
   }
+
   .column1-heading {
     text-align: center;
     font-size: 2.5rem;
   }
+
   .column1-para {
     margin-top: 0.5rem;
     font-size: 1.5rem;
@@ -620,6 +767,7 @@ body::-webkit-scrollbar {
     font-size: 1.5rem;
     margin-top: -1.8rem;
   }
+
   .Colum3-heading {
     display: none;
   }
@@ -635,10 +783,57 @@ body::-webkit-scrollbar {
   }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 900px) {
+/* For small devices and most phones */
+@media only screen and (min-width: 480px) {
+  .footer-section {
+    height: 43vh;
+  }
+
+  .columns {
+    flex-direction: column;
+  }
+
+  .column {
+    text-align: center;
+  }
+
+  .column1-heading {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .column1-para {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .column2-text {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: -1.8rem;
+  }
+
+  .Colum3-heading {
+    display: none;
+  }
+
+  .Column3-text {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: -1.5rem;
+  }
+
+  .social-icons {
+    margin-top: 1rem;
+  }
+}
+
+/* For most tablets */
+@media only screen and (min-width: 768px) {
   .footer-section {
     height: auto;
   }
+
   .columns {
     flex-direction: row;
     justify-content: space-around;
@@ -652,17 +847,116 @@ body::-webkit-scrollbar {
 
   .column1-heading {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
+
   .column1-para {
     margin-top: 1rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .column2-text {
     text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .Colum3-heading {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .Column3-text {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  .social-icons {
+    margin-top: 1rem;
+  }
+}
+
+/* For smaller desktop viewpoints */
+@media only screen and (min-width: 992px) {
+  .footer-section {
+    height: auto;
+  }
+
+  .columns {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .column {
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .column1-heading {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .column1-para {
+    margin-top: 1rem;
     font-size: 1.5rem;
   }
+
+  .column2-text {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .Colum3-heading {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .Column3-text {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .social-icons {
+    margin-top: 1rem;
+  }
+}
+
+
+/* For large devices and wide screens */
+@media only screen and (min-width: 1200px) {
+  .footer-section {
+    height: auto;
+  }
+
+  .columns {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .column {
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .column1-heading {
+    text-align: center;
+    font-size: 2.4rem;
+  }
+
+  .column1-para {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .column2-text {
+    text-align: center;
+    font-size: 2.4rem;
+  }
+
   .Colum3-heading {
     text-align: center;
     font-size: 1.5rem;
@@ -670,7 +964,7 @@ body::-webkit-scrollbar {
 
   .Column3-text {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.8rem;
     margin-top: 2rem;
   }
 
