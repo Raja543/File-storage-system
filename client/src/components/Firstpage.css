@@ -548,7 +548,7 @@ img {
 /* For large devices and wide screens */
 @media only screen and (min-width: 1200px) {
   .product-section {
-    height: 100vh;
+    height: auto;
   }
 
   .profuct-detail {

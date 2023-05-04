@@ -14,7 +14,7 @@ const FileUpload = ({ contract, account, provider }) => {
       try {
         const formData = new FormData();
         formData.append("file", file);
-
+  
         const resFile = await axios({
           method: "post",
           url: "https://api.pinata.cloud/pinning/pinFileToIPFS",
@@ -26,18 +26,23 @@ const FileUpload = ({ contract, account, provider }) => {
           },
         });
         const ImgHash = `ipfs://${resFile.data.IpfsHash}`;
-        //const signer = contract.connect(provider.getSigner());
         const signer = contract.connect(provider.getSigner());
         signer.add(account, ImgHash);
+        setFileName("No image selected");
+        setImageUrl(null);
+        // Show the icon and paragraph
+        const label = document.getElementById("fileLabel");
+        label.innerHTML = '<i class="fas fa-cloud-upload-alt"></i>';
+        document.getElementById("upload-para").style.display = "block";
       } catch (e) {
         alert("Unable to upload image to Pinata");
       }
     }
     alert("Successfully Image Uploaded");
-    setFileName("No image selected");
     setFile(null);
-    setImageUrl(null);
   };
+  
+  
 
   const retrieveFile = (e) => {
     const input = e.target;
@@ -45,14 +50,9 @@ const FileUpload = ({ contract, account, provider }) => {
     if (input && input.files && input.files.length > 0) {
       const file = input.files[0];
       setFile(file);
-      const fileName = file.name;
-      const extension = fileName.split(".").pop(); // get file extension
-      let truncatedName = fileName.split(".").shift(); // get file name without extension
-      truncatedName = truncatedName.substring(0, 10); // truncate file name to first 10 characters
-      const truncatedFileName = truncatedName + "." + extension; // combine truncated name and extension
-      label.textContent = truncatedFileName;
+      label.textContent = "";
     } else {
-      label.textContent = "Choose a file";
+      label.textContent = "";
     }
   };
 
@@ -66,32 +66,23 @@ const FileUpload = ({ contract, account, provider }) => {
     setCurrentButton("share");
   };
 
-  function handleFileUpload() {
-    var uploadPara = document.getElementById("upload-para");
-    var uploadInput = document.getElementById("my-file");
-  
-    // Check if any file is selected
-    if (uploadInput.files.length > 0) {
-      // Hide the upload text
-      uploadPara.style.display = "none";
-    }
-  }
-
   return (
     <>
       {/* Updated things */}
       <div className="upload-share-container">
         <div className="button-wrapper">
           <button
-            className={`upload-button ${currentButton === "upload" ? "active" : ""
-              }`}
+            className={`upload-button ${
+              currentButton === "upload" ? "active" : ""
+            }`}
             onClick={() => setCurrentButton("upload")}
           >
             Upload
           </button>
           <button
-            className={`share-button ${currentButton === "share" ? "active" : ""
-              }`}
+            className={`share-button ${
+              currentButton === "share" ? "active" : ""
+            }`}
             onClick={() => setCurrentButton("share")}
           >
             Share
@@ -115,15 +106,18 @@ const FileUpload = ({ contract, account, provider }) => {
               >
                 <i className="fas fa-cloud-upload-alt"></i>
               </label>
+              
               <input
                 type="file"
                 id="my-file"
                 name="myfile"
                 disabled={!account}
-                onChange={retrieveFile}
-                onchange={handleFileUpload}
-              // style={{ display: "none" }}
+                onChange={(e) => {
+                  retrieveFile(e);
+                  document.getElementById("upload-para").style.display = "none";
+                }}
               />
+
               {file && (
                 <img
                   src={URL.createObjectURL(file)}
@@ -133,7 +127,9 @@ const FileUpload = ({ contract, account, provider }) => {
                   width={100}
                 />
               )}
-              <p id="upload-para" className="upload-para">Browse or Drag here to upload</p>
+              <p id="upload-para" className="upload-para">
+                Browse or Drag here to upload
+              </p>
             </div>
             <button
               type="submit"
@@ -145,6 +141,7 @@ const FileUpload = ({ contract, account, provider }) => {
             </button>
           </div>
         )}
+
         {currentButton === "share" && (
           <div className="share-wrapper">
             <h3>Share Your image</h3>
