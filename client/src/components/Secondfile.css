@@ -7,14 +7,17 @@
 }
 
 .file-container {
-  height: 75vh;
-  background-color: rgba(0, 0, 0, 0.952);
+  height: 85vh;
+  background : url("./images/herobg.png");
+  background-size: cover;
   font-size: 25px;
 }
 
 .file-container h1 {
   color: #fff;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Baloo Thambi 2", cursive;
+  font-size: 3.5rem;
+  padding-top: 20px;
   text-align: center;
 }
 
@@ -102,7 +105,7 @@ input[type="file"] {
 
 .upload-check-section {
   height: auto;
-  background-color: rgba(0, 0, 0, 0.952);
+  background-color: rgba(2, 1, 2, 0.952);
   font-size: 25px;
   padding: auto;
   min-height: 50vh;

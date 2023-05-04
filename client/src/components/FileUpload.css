@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Roboto+Mono:wght@100&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -30,12 +31,14 @@
   margin: auto;
   margin-top: 40px;
 }
+
 .wrapper h3 {
-  color: #6990f2;
+  color: #9542ed;
   font-size: 24px;
   font-weight: 400;
   text-align: center;
 }
+
 .form {
   height: 167px;
   display: flex;
@@ -45,8 +48,9 @@
   justify-content: center;
   flex-direction: column;
   border-radius: 5px;
-  border: 2px dashed #6990f2;
+  border: 2px dashed #9542ed;
 }
+
 .share-wrapper {
   width: 430px;
   background: transparent;
@@ -57,12 +61,14 @@
   margin: auto;
   margin-top: 20px;
 }
+
 .share-wrapper h3 {
-  color: #6990f2;
+  color: #9542ed;
   font-size: 24px;
   font-weight: 400;
   text-align: center;
 }
+
 .share-wrapper form {
   height: 167px;
   display: flex;
@@ -72,45 +78,30 @@
   justify-content: center;
   flex-direction: column;
   border-radius: 5px;
-  border: 2px dashed #6990f2;
+  border: 2px dashed #9542ed;
 }
+
 .first-desc {
-  color: #6990f2;
+  color: #9542ed;
   font-size: 16px;
   margin-top: 10px;
 }
 
-form :where(i, p) {
-  color: #6990f2;
-}
-form i {
+
+i {
   font-size: 50px;
-}
-form p {
-  margin-top: 15px;
-  font-size: 16px;
+  color: #9542ed;
 }
 
-section .row {
-  margin-bottom: 10px;
-  background: #e9f0ff;
-  list-style: none;
-  padding: 15px 20px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.upload-para {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #9542ed;
 }
-section .row i {
-  color: #6990f2;
-  font-size: 30px;
-}
-section .details span {
-  font-size: 14px;
-}
+
 .upload {
   background: transparent;
-  border-color: #08fdd8;
+  border: 2px solid gray;
   border-radius: 15px;
   padding: 10px;
   margin: auto;
@@ -118,62 +109,12 @@ section .details span {
   text-align: center;
   width: 100px;
   font-size: 16px;
-  color: #6990f2;
+  color: #9542ed;
   cursor: pointer;
 }
-.progress-area .row .content {
-  width: 100%;
-  margin-left: 15px;
-}
-.progress-area .details {
-  display: flex;
-  align-items: center;
-  margin-bottom: 7px;
-  justify-content: space-between;
-}
-.progress-area .content .progress-bar {
-  height: 6px;
-  width: 100%;
-  margin-bottom: 4px;
-  background: #fff;
-  border-radius: 30px;
-}
-.content .progress-bar .progress {
-  height: 100%;
-  width: 0%;
-  background: #6990f2;
-  border-radius: inherit;
-}
-.uploaded-area {
-  max-height: 232px;
-  overflow-y: scroll;
-}
-.uploaded-area.onprogress {
-  max-height: 150px;
-}
-.uploaded-area::-webkit-scrollbar {
-  width: 0px;
-}
-.uploaded-area .row .content {
-  display: flex;
-  align-items: center;
-}
-.uploaded-area .row .details {
-  display: flex;
-  margin-left: 15px;
-  flex-direction: column;
-}
-.uploaded-area .row .details .size {
-  color: #404040;
-  font-size: 11px;
-}
-.uploaded-area i.fa-check {
-  font-size: 16px;
-}
-
 
 .button-wrapper {
-  display :flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
@@ -190,6 +131,7 @@ section .details span {
   margin-right: 10px;
   cursor: pointer;
 }
+
 .currentButton:last-child {
   margin-right: 0;
 }

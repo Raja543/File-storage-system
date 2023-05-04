@@ -45,7 +45,7 @@ function App() {
     } else {
       /* MetaMask is not installed */
       console.log("Please install MetaMask");
-      alert("Please Install Metamask!");
+
     }
   };
 

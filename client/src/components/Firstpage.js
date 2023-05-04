@@ -30,7 +30,7 @@ function Firstpage() {
           </video>
           <div className="hero-content">
             <h1 className="hero-heading">
-              Revolutionize Your File Storage with Decentralization
+            Innovate Your File Storage with Decentralization
             </h1>
             <h1 className="hero-subheading"> Your Data, Your Control</h1>
             <p className="hero__description">

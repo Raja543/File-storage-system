@@ -77,11 +77,9 @@ body::-webkit-scrollbar {
 }
 
 .hero-button {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
+  background: linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
+  border: none;
   border-radius: 2.5vw;
-  border-color: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
   padding: 1vw;
   margin-top: 1.5rem;
   width: 20%;
@@ -275,7 +273,7 @@ body::-webkit-scrollbar {
 /* For smaller phone viewpoints */
 @media only screen and (min-width: 320px) {
   .animate-section {
-    height: 68vh;
+    height: auto;
   }
 
   .animate-heading {
@@ -291,7 +289,7 @@ body::-webkit-scrollbar {
 /* For small devices and most phones */
 @media only screen and (min-width: 480px) {
   .animate-section {
-    height: 45vh;
+    height: auto;
   }
 
   .animate-heading {
@@ -307,7 +305,7 @@ body::-webkit-scrollbar {
 /* For most tablets */
 @media only screen and (min-width: 768px) {
   .animate-section {
-    height: 40vh;
+    height: auto;
   }
 
   .animate-heading {
@@ -323,7 +321,7 @@ body::-webkit-scrollbar {
 /* For smaller desktop viewpoints */
 @media only screen and (min-width: 992px) {
   .animate-section {
-    height: 50vh;
+    height: auto;
   }
 
   .animate-heading {
@@ -339,7 +337,7 @@ body::-webkit-scrollbar {
 /* For large devices and wide screens */
 @media only screen and (min-width: 1200px) {
   .animate-section {
-    height: 50vh;
+    height: auto;
   }
 
   .animate-heading {
@@ -423,7 +421,7 @@ img {
 /* For smaller phone viewpoints */
 @media only screen and (min-width: 320px) {
   .product-section {
-    height: 115vh;
+    height: auto;
   }
 
   .product-head {
@@ -454,7 +452,7 @@ img {
 /* For small devices and most phones */
 @media only screen and (min-width: 480px) {
   .product-section {
-    height: 135vh;
+    height: auto;
   }
 
   .product-head {
@@ -485,7 +483,7 @@ img {
 /* For most tablets */
 @media only screen and (min-width: 768px) {
   .product-section {
-    height: 155vh;
+    height: auto;
   }
 
   .product-head {
@@ -516,7 +514,7 @@ img {
 /* For smaller desktop viewpoints */
 @media only screen and (min-width: 992px) {
   .product-section {
-    height: 170vh;
+    height: auto;
   }
 
   .profuct-detail {
@@ -608,7 +606,7 @@ img {
 /* For smaller phone viewpoints */
 @media only screen and (min-width: 320px) {
   .about {
-    height: 69vh;
+    height: auto;
   }
 
   .about-heading {
@@ -623,7 +621,7 @@ img {
 /* For small devices and most phones */
 @media only screen and (min-width: 480px) {
   .about {
-    height: 65vh;
+    height: auto;
   }
 
   .about-heading {
@@ -638,7 +636,7 @@ img {
 /* For most tablets */
 @media only screen and (min-width: 768px) {
   .about {
-    height: 54vh;
+    height: auto;
   }
 
   .about-heading {
@@ -653,7 +651,7 @@ img {
 /* For smaller desktop viewpoints */
 @media only screen and (min-width: 992px) {
   .about {
-    height: 55vh;
+    height: auto;
   }
 
   .about-heading {
@@ -669,7 +667,7 @@ img {
 /* For large devices and wide screens */
 @media only screen and (min-width: 1200px) {
   .about {
-    height: 62vh;
+    height: auto;
   }
 
   .about-heading {
@@ -677,7 +675,8 @@ img {
   }
 
   .about-text {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+    padding-bottom: 30px;
   }
 }
 
@@ -741,7 +740,7 @@ img {
 /* For smaller phone viewpoints */
 @media only screen and (min-width: 320px) {
   .footer-section {
-    height: 43vh;
+    height: auto;
   }
 
   .columns {
@@ -786,7 +785,7 @@ img {
 /* For small devices and most phones */
 @media only screen and (min-width: 480px) {
   .footer-section {
-    height: 43vh;
+    height: auto;
   }
 
   .columns {

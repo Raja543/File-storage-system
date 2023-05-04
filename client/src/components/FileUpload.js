@@ -66,23 +66,32 @@ const FileUpload = ({ contract, account, provider }) => {
     setCurrentButton("share");
   };
 
+  function handleFileUpload() {
+    var uploadPara = document.getElementById("upload-para");
+    var uploadInput = document.getElementById("my-file");
+  
+    // Check if any file is selected
+    if (uploadInput.files.length > 0) {
+      // Hide the upload text
+      uploadPara.style.display = "none";
+    }
+  }
+
   return (
     <>
       {/* Updated things */}
       <div className="upload-share-container">
         <div className="button-wrapper">
           <button
-            className={`upload-button ${
-              currentButton === "upload" ? "active" : ""
-            }`}
+            className={`upload-button ${currentButton === "upload" ? "active" : ""
+              }`}
             onClick={() => setCurrentButton("upload")}
           >
             Upload
           </button>
           <button
-            className={`share-button ${
-              currentButton === "share" ? "active" : ""
-            }`}
+            className={`share-button ${currentButton === "share" ? "active" : ""
+              }`}
             onClick={() => setCurrentButton("share")}
           >
             Share
@@ -104,7 +113,7 @@ const FileUpload = ({ contract, account, provider }) => {
                 id="fileLabel"
                 className="custom-file-upload"
               >
-                <i class="fas fa-cloud-upload-alt"></i>
+                <i className="fas fa-cloud-upload-alt"></i>
               </label>
               <input
                 type="file"
@@ -112,7 +121,8 @@ const FileUpload = ({ contract, account, provider }) => {
                 name="myfile"
                 disabled={!account}
                 onChange={retrieveFile}
-                // style={{ display: "none" }}
+                onchange={handleFileUpload}
+              // style={{ display: "none" }}
               />
               {file && (
                 <img
@@ -123,7 +133,7 @@ const FileUpload = ({ contract, account, provider }) => {
                   width={100}
                 />
               )}
-              <p>Browse or Drag here to upload</p>
+              <p id="upload-para" className="upload-para">Browse or Drag here to upload</p>
             </div>
             <button
               type="submit"
@@ -133,9 +143,6 @@ const FileUpload = ({ contract, account, provider }) => {
             >
               Upload
             </button>
-
-            <section className="progress-area"></section>
-            <section className="uploaded-area"></section>
           </div>
         )}
         {currentButton === "share" && (
