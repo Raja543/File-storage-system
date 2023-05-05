@@ -32,7 +32,7 @@ const FileUpload = ({ contract, account, provider }) => {
         setImageUrl(null);
         // Show the icon and paragraph
         const label = document.getElementById("fileLabel");
-        label.innerHTML = '<i class="fas fa-cloud-upload-alt"></i>';
+        label.innerHTML = '<i class="fa-solid fa-cloud-arrow-up fa-bounce"></i>';
         document.getElementById("upload-para").style.display = "block";
       } catch (e) {
         alert("Unable to upload image to Pinata");
@@ -53,7 +53,7 @@ const FileUpload = ({ contract, account, provider }) => {
       setFileName(file.name);
       label.textContent = "";
     } else if (!file) {
-      label.innerHTML = '<i class="fas fa-cloud-upload-alt"></i>';
+      label.innerHTML = '<i class="fa-solid fa-cloud-arrow-up fa-bounce"></i>';
       document.getElementById("upload-para").style.display = "block";
     }
   };
@@ -106,7 +106,7 @@ const FileUpload = ({ contract, account, provider }) => {
                 id="fileLabel"
                 className="custom-file-upload"
               >
-                <i className="fas fa-cloud-upload-alt"></i>
+                <i class="fa-solid fa-cloud-arrow-up fa-bounce"></i>
               </label>
 
               <input
