@@ -68,7 +68,6 @@ const FileUpload = ({ contract, account, provider }) => {
 
   return (
     <>
-      {/* Updated things */}
       <div className="upload-share-container">
         <div className="button-wrapper">
           <button
