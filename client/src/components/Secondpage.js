@@ -14,7 +14,7 @@ import Instagramsvg from "./Instagramsvg";
 import SecureUpload from "./images/Secure Upload.png";
 import ShareShield from "./images/Share Shield.png";
 import AccessLock from "./images/Acesslock.png";
-import myvideo from "./videos/video-pc-homepage.mp4";
+
 
 const Secondpage = () => {
   const [account, setAccount] = useState("");
@@ -25,7 +25,7 @@ const Secondpage = () => {
 
   useEffect(() => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
-
+    let isRequestingAccounts = false;
     const loadProvider = async () => {
       if (provider) {
         window.ethereum.on("chainChanged", () => {
@@ -35,26 +35,33 @@ const Secondpage = () => {
         window.ethereum.on("accountsChanged", () => {
           window.location.reload();
         });
-        // await provider.send("eth_requestAccounts", []);
-        const signer = provider.getSigner();
-        const address = await signer.getAddress();
-        setAccount(address);
-        let contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 
-        const contract = new ethers.Contract(
-          contractAddress,
-          Upload.abi,
-          signer
-        );
-        //console.log(contract);
-        setContract(contract);
-        setProvider(provider);
+        if (!isRequestingAccounts) {
+          isRequestingAccounts = true;
+          try {
+            await provider.send("eth_requestAccounts", []);
+            const signer = provider.getSigner();
+            const address = await signer.getAddress();
+            setAccount(address);
+            let contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+            const contract = new ethers.Contract(contractAddress, Upload.abi, signer);
+            setContract(contract);
+            setProvider(provider);
+          } catch (error) {
+            console.error("Error requesting accounts:", error);
+          } finally {
+            isRequestingAccounts = false;
+          }
+        }
       } else {
         console.error("Metamask is not installed");
       }
     };
+
     provider && loadProvider();
   }, []);
+
+
 
   const [currentButton, setCurrentButton] = useState("upload");
 
@@ -66,15 +73,14 @@ const Secondpage = () => {
     setCurrentButton("share");
   };
 
+  const svgPath = "./images/herobg-min.svg";
   return (
     <>
       {/* Navbar section */}
       <div className="navbar-section">
         <Navbar />
       </div>
-
       <div className="file-container">
-        <h1> Store and Share Your Files with Ease</h1>
         <FileUpload
           account={account}
           provider={provider}
@@ -84,20 +90,20 @@ const Secondpage = () => {
 
       <div className="brief-detail">
         <h1 className="brief-head">What Services We Provide</h1>
-        <div class="container">
-          <div class="card">
+        <div className="container">
+          <div className="card">
             <img src={SecureUpload} alt="logo" />
             <h3>Secure Upload</h3>
             <p>
               A feature that allows users to upload files to the platform
               securely and with ease.
             </p>
-            <a href="#" class="btn">
+            <a href="#" className="btn">
               More info
             </a>
           </div>
-          <div class="card">
-            <div class="icon standard">
+          <div className="card">
+            <div className="icon standard">
               <img src={ShareShield} alt="logo" />
             </div>
             <h3>Share Shield</h3>
@@ -106,12 +112,12 @@ const Secondpage = () => {
               network while maintaining complete control over who can access
               them.
             </p>
-            <a href="#" class="btn standard">
+            <a href="#" className="btn standard">
               More info
             </a>
           </div>
-          <div class="card">
-            <div class="icon premium">
+          <div className="card">
+            <div className="icon premium">
               <img src={AccessLock} alt="logo" />
             </div>
             <h3>Acess Lock</h3>
@@ -120,7 +126,7 @@ const Secondpage = () => {
               allowing users to revoke permissions from anyone they have shared
               their files with.
             </p>
-            <a href="#" class="btn premium">
+            <a href="#" className="btn premium">
               More info
             </a>
           </div>

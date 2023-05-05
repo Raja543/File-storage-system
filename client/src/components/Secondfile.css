@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Roboto+Mono:wght@100&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +9,16 @@
 
 .file-container {
   height: 85vh;
-  background : url("./images/herobg.png");
+  /* background : url("./images/herobg-min.svg");
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center; */
+  /* background: #000;
+  background-size: cover; */
   font-size: 25px;
 }
+
+
 
 .file-container h1 {
   color: #fff;
@@ -62,6 +69,7 @@ input[type="file"] {
   margin-right: 10px;
   flex-grow: 1;
 }
+
 .search-bar button {
   background-color: #007bff;
   color: white;
@@ -71,6 +79,7 @@ input[type="file"] {
   font-size: 16px;
   cursor: pointer;
 }
+
 .image-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -80,15 +89,18 @@ input[type="file"] {
   margin-top: 15px;
   border: 2px solid rgb(54, 251, 231);
 }
+
 .image-grid img {
   width: 100%;
   height: auto;
   border-radius: 5px;
   margin: 15px 15px 15px 15px;
 }
+
 .blank-container {
   position: relative;
 }
+
 .blank-container button {
   background: none;
   border: none;
@@ -129,6 +141,7 @@ input[type="file"] {
   margin-top: 15px;
   text-align: center;
 }
+
 .check-para-note {
   color: #ffffffc6;
   padding: 0.5rem;
@@ -139,6 +152,7 @@ input[type="file"] {
   margin-top: 10px;
   text-align: center;
 }
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -168,6 +182,7 @@ input[type="file"] {
 .card:hover {
   transform: scale(1.05);
 }
+
 .card img {
   width: 75px;
   height: 70px;
