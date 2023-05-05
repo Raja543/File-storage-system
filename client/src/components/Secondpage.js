@@ -73,14 +73,15 @@ const Secondpage = () => {
     setCurrentButton("share");
   };
 
-  const svgPath = "./images/herobg-min.svg";
   return (
     <>
       {/* Navbar section */}
       <div className="navbar-section">
         <Navbar />
       </div>
+
       <div className="file-container">
+        <h1> Store and Share Your Files with Ease</h1>
         <FileUpload
           account={account}
           provider={provider}

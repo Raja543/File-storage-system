@@ -9,12 +9,9 @@
 
 .file-container {
   height: 85vh;
-  /* background : url("./images/herobg-min.svg");
+   background : url("./images/herobg-min.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center; */
-  /* background: #000;
-  background-size: cover; */
   font-size: 25px;
 }
 
