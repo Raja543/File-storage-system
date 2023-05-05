@@ -172,6 +172,12 @@ i {
   flex-grow: 1;
 }
 
+.preview-image{
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 10px;
+}
 /* input[type="file"] {
   display: none;
 } */

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Roboto+Mono:wght@100&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +9,13 @@
 
 .file-container {
   height: 85vh;
-  background : url("./images/herobg.png");
+  background: url("./images/herobg-min.png");
+  background-repeat: no-repeat;
   background-size: cover;
   font-size: 25px;
 }
+
+
 
 .file-container h1 {
   color: #fff;
@@ -62,6 +66,7 @@ input[type="file"] {
   margin-right: 10px;
   flex-grow: 1;
 }
+
 .search-bar button {
   background-color: #007bff;
   color: white;
@@ -71,6 +76,7 @@ input[type="file"] {
   font-size: 16px;
   cursor: pointer;
 }
+
 .image-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -80,15 +86,18 @@ input[type="file"] {
   margin-top: 15px;
   border: 2px solid rgb(54, 251, 231);
 }
+
 .image-grid img {
   width: 100%;
   height: auto;
   border-radius: 5px;
   margin: 15px 15px 15px 15px;
 }
+
 .blank-container {
   position: relative;
 }
+
 .blank-container button {
   background: none;
   border: none;
@@ -129,6 +138,7 @@ input[type="file"] {
   margin-top: 15px;
   text-align: center;
 }
+
 .check-para-note {
   color: #ffffffc6;
   padding: 0.5rem;
@@ -139,6 +149,7 @@ input[type="file"] {
   margin-top: 10px;
   text-align: center;
 }
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -168,6 +179,7 @@ input[type="file"] {
 .card:hover {
   transform: scale(1.05);
 }
+
 .card img {
   width: 75px;
   height: 70px;
@@ -214,12 +226,40 @@ input[type="file"] {
   background-color: rgb(17, 42, 97);
 }
 
-.image-container {
+/* .image-container {
   position: relative;
 }
 
 .image-container button {
   position: absolute;
-  top: 0;
+  top: 50;
   left: 0;
+} */
+
+.image-container {
+  /* Add your regular container styles here */
+  position: relative;
+  /* Needed for positioning the delete button */
+}
+
+/* .image-container:hover img {
+  border: 2px solid red;
+  opacity: 0.8;
+} */
+
+.delete-button {
+  /* Add your regular button styles here */
+  display: none;
+  z-index: 2;
+}
+
+.image-container:hover {
+  /* background-color: aquamarine; */
+}
+
+.image-container:hover .delete-button {
+  /* Add your hover effect styles for the delete button here */
+  /* For example, show the delete button on hover */
+  display: block;
+  margin: auto;
 }

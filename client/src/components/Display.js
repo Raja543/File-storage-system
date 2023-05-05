@@ -29,7 +29,7 @@ const Display = ({ contract, account }) => {
       const images = str_array.map((item, i) => {
         return (
           <div key={i} className="image-container">
-            <button onClick={() => deleteImage(i)}>Delete</button>
+            <button className="delete-button" onClick={() => deleteImage(i)}>Delete</button>
             <a href={item} target="_blank" rel="noreferrer">
               <img
                 src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
