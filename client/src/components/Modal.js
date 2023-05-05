@@ -29,20 +29,17 @@ const Modal = ({ contract }) => {
     <>
       <div className="modalBackground">
         <div className="modalContainer">
-          <div className="title">Share with</div>
-          <div className="body">
+          <div id="myForm" className="myform">
             <input
               type="text"
               className="address"
               placeholder="Enter Address"
             ></input>
-          </div>
-          <form id="myForm">
-              <h1 className="address">Share your files</h1>
-          </form>
-          <div className="footer">
-            <button onClick={() => sharing()}>Share</button>
-            <button onClick={() => removeallow()}>Disallow</button>
+
+            <div className="footer">
+              <button onClick={() => sharing()}>Share</button>
+              <button onClick={() => removeallow()}>Disallow</button>
+            </div>
           </div>
         </div>
       </div>
