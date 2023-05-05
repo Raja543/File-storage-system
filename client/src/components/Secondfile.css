@@ -253,13 +253,35 @@ input[type="file"] {
   z-index: 2;
 }
 
-.image-container:hover {
-  /* background-color: aquamarine; */
-}
+
 
 .image-container:hover .delete-button {
   /* Add your hover effect styles for the delete button here */
   /* For example, show the delete button on hover */
   display: block;
   margin: auto;
+}
+
+.image-grid {
+  /* Existing CSS for image-grid */
+}
+
+.image-grid .image-container {
+  position: relative;
+}
+
+.image-grid .image-container img {
+  /* Existing CSS for image-grid img */
+}
+
+.image-grid .image-container button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  padding-bottom: 3.2rem;
+  cursor: pointer;
 }
