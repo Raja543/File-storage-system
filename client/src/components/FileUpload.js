@@ -14,7 +14,7 @@ const FileUpload = ({ contract, account, provider }) => {
       try {
         const formData = new FormData();
         formData.append("file", file);
-  
+
         const resFile = await axios({
           method: "post",
           url: "https://api.pinata.cloud/pinning/pinFileToIPFS",
@@ -41,8 +41,8 @@ const FileUpload = ({ contract, account, provider }) => {
     alert("Successfully Image Uploaded");
     setFile(null);
   };
-  
-  
+
+
 
   const retrieveFile = (e) => {
     const input = e.target;
@@ -72,17 +72,15 @@ const FileUpload = ({ contract, account, provider }) => {
       <div className="upload-share-container">
         <div className="button-wrapper">
           <button
-            className={`upload-button ${
-              currentButton === "upload" ? "active" : ""
-            }`}
+            className={`upload-button ${currentButton === "upload" ? "active" : ""
+              }`}
             onClick={() => setCurrentButton("upload")}
           >
             Upload
           </button>
           <button
-            className={`share-button ${
-              currentButton === "share" ? "active" : ""
-            }`}
+            className={`share-button ${currentButton === "share" ? "active" : ""
+              }`}
             onClick={() => setCurrentButton("share")}
           >
             Share
@@ -106,7 +104,7 @@ const FileUpload = ({ contract, account, provider }) => {
               >
                 <i className="fas fa-cloud-upload-alt"></i>
               </label>
-              
+
               <input
                 type="file"
                 id="my-file"
@@ -123,8 +121,6 @@ const FileUpload = ({ contract, account, provider }) => {
                   src={URL.createObjectURL(file)}
                   alt="Uploaded file"
                   className="preview-image"
-                  height={100}
-                  width={100}
                 />
               )}
               <p id="upload-para" className="upload-para">

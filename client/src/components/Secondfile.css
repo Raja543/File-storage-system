@@ -9,7 +9,7 @@
 
 .file-container {
   height: 85vh;
-   background : url("./images/herobg-min.png");
+  background: url("./images/herobg-min.png");
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 25px;
@@ -226,12 +226,40 @@ input[type="file"] {
   background-color: rgb(17, 42, 97);
 }
 
-.image-container {
+/* .image-container {
   position: relative;
 }
 
 .image-container button {
   position: absolute;
-  top: 0;
+  top: 50;
   left: 0;
+} */
+
+.image-container {
+  /* Add your regular container styles here */
+  position: relative;
+  /* Needed for positioning the delete button */
+}
+
+/* .image-container:hover img {
+  border: 2px solid red;
+  opacity: 0.8;
+} */
+
+.delete-button {
+  /* Add your regular button styles here */
+  display: none;
+  z-index: 2;
+}
+
+.image-container:hover {
+  /* background-color: aquamarine; */
+}
+
+.image-container:hover .delete-button {
+  /* Add your hover effect styles for the delete button here */
+  /* For example, show the delete button on hover */
+  display: block;
+  margin: auto;
 }

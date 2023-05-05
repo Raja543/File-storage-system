@@ -39,7 +39,7 @@ const Secondpage = () => {
         if (!isRequestingAccounts) {
           isRequestingAccounts = true;
           try {
-            await provider.send("eth_requestAccounts", []);
+            // await provider.send("eth_requestAccounts", []);
             const signer = provider.getSigner();
             const address = await signer.getAddress();
             setAccount(address);
