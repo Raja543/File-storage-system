@@ -50,11 +50,15 @@ const FileUpload = ({ contract, account, provider }) => {
     if (input && input.files && input.files.length > 0) {
       const file = input.files[0];
       setFile(file);
+      setFileName(file.name);
       label.textContent = "";
-    } else {
-      label.textContent = "";
+    } else if (!file) {
+      label.innerHTML = '<i class="fas fa-cloud-upload-alt"></i>';
+      document.getElementById("upload-para").style.display = "block";
     }
   };
+  
+  
 
   const [currentButton, setCurrentButton] = useState("upload");
 
@@ -140,7 +144,7 @@ const FileUpload = ({ contract, account, provider }) => {
 
         {currentButton === "share" && (
           <div className="share-wrapper">
-            <h3>Share Your image</h3>
+            <h3>Share Your Files</h3>
             <Modal contract={contract} />
           </div>
         )}
