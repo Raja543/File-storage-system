@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const Modal = ({ setModalOpen, contract }) => {
+const Modal = ({ contract }) => {
   const sharing = async () => {
     const address = document.querySelector(".address").value;
     await contract.allow(address);
