@@ -1,50 +1,37 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Connectwallet from "./Connectwallet";
 
-function Navbar() {
-  const [showMenu, setShowMenu] = useState(false);
+const Navbar = () => {
 
-  const handleMenuClick = () => {
-    setShowMenu(!showMenu);
-  };
+  const [isMobile, setIsMobile] = useState(false);
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">SecureShareX</div>
-      <div className={`navbar-menu ${showMenu ? "show" : ""}`}>
-        <ul>
-          <li className="nav-item">
-            <NavLink className="nav-link space" to="/">
-              Home
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link space" to="/about">
-              Working
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link space" to="/accesslist">
-              Allowlist
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link space" to="/contact">
-              Contact
-            </NavLink>
-          </li>
-        </ul>
-        <li className="wallet-display">
-          <Connectwallet />
-        </li>
-      </div>
-      <div className="navbar-toggle" onClick={handleMenuClick}>
-        <div className="toggle-line"></div>
-        <div className="toggle-line"></div>
-        <div className="toggle-line"></div>
-      </div>
+      <h3 className="logo">SecureShareX</h3>
+      <ul className={isMobile ? "nav-links-mobile active" : "nav-links"} onClick={() => setIsMobile(false)}>
+        <Link to="/" className="home">
+          <li>Home</li>
+        </Link>
+        <Link to="/working" className="working">
+          <li>Working</li>
+        </Link>
+        <Link to="/accessList" className="allowlist">
+          <li>Allowlist</li>
+          </Link>
+        <Link className="about">
+          <li><Connectwallet /></li>
+        </Link>
+      </ul>
+      {/* <li className="wallet-display"><Connectwallet /></li> */}
+      <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
+        {isMobile ? (
+          <i className="fas fa-times"></i>
+        ) : (
+          <i className="fas fa-bars"></i>
+        )}
+      </button>
     </nav>
   );
 }
