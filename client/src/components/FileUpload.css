@@ -55,16 +55,6 @@
   text-align: center;
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  margin-top: 290px;
-  border: 2px solid red;
-  margin-bottom: 10px;
-  background: transparent;
-}
-
 .first-desc {
   color: #9542ed;
   font-size: 16px;
