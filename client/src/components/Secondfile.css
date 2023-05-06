@@ -15,8 +15,6 @@
   font-size: 25px;
 }
 
-
-
 .file-container h1 {
   color: #fff;
   font-family: "Baloo Thambi 2", cursive;
@@ -75,16 +73,6 @@ input[type="file"] {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-}
-
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-  width: 700px;
-  margin: auto;
-  margin-top: 15px;
-  border: 2px solid rgb(54, 251, 231);
 }
 
 .image-grid img {
@@ -226,52 +214,41 @@ input[type="file"] {
   background-color: rgb(17, 42, 97);
 }
 
-/* .image-container {
-  position: relative;
-}
-
-.image-container button {
-  position: absolute;
-  top: 50;
-  left: 0;
-} */
-
 .image-container {
-  /* Add your regular container styles here */
   position: relative;
-  /* Needed for positioning the delete button */
 }
-
-/* .image-container:hover img {
-  border: 2px solid red;
-  opacity: 0.8;
-} */
 
 .delete-button {
-  /* Add your regular button styles here */
   display: none;
   z-index: 2;
 }
 
-
-
 .image-container:hover .delete-button {
-  /* Add your hover effect styles for the delete button here */
-  /* For example, show the delete button on hover */
   display: block;
   margin: auto;
 }
 
 .image-grid {
-  /* Existing CSS for image-grid */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  width: 700px;
+  margin: auto;
+  margin-top: 15px;
+  border: 2px solid rgb(54, 251, 231);
 }
 
 .image-grid .image-container {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-grid .image-container img {
-  /* Existing CSS for image-grid img */
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
 }
 
 .image-grid .image-container button {
