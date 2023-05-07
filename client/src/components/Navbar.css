@@ -1,148 +1,103 @@
- @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-}
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap");
 
-body::-webkit-scrollbar {
-  display: none;
-}
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: black;
-  color: #fff;
-  z-index: 4;
-  position: relative;
-}
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
 
-.navbar-logo {
-  font-size: 24px;
-}
+ .navbar {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   height: 75px;
+   background-color: #00828c;
+   color: #fff;
+   z-index: 4;
+ }
 
-.navbar-menu {
-  display: none;
-}
+ .logo {
+   font-size: 30px;
+ }
 
-.navbar-menu.show {
-  display: block;
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  background-color: #333;
-  width: 200px;
-  padding: 20px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
+ .nav-links {
+   display: flex;
+   justify-content: flex-end;
+   list-style: none;
+   width: 75%;
+ }
 
-.navbar-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  
-}
+ .home,
+ .working,
+ .allowlist {
+   text-decoration: none;
+   color: #fff;
+   font-size: 20px;
+   padding: 10px 20px;
+   margin: 0 10px;
+   cursor: pointer;
+ }
 
-.navbar-menu li {
-  padding: 10px 0;
-  list-style: none;
-}
+ .mobile-menu-icon {
+   display: none;
+ }
 
-.navbar-menu a {
-  color: #fff;
-  text-decoration: none;
-}
+ .nav-links-mobile {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: auto;
+   text-align: center;
+   z-index: 4;
+ }
 
-.navbar-toggle {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 20px;
-  cursor: pointer;
-}
+ @media screen and (max-width : 768px) {
+   .logo {
+     display: flex;
+     position: absolute;
+     top: 15px;
+     left: 35px;
+   }
 
-.toggle-line {
-  width: 20px;
-  height: 3px;
-  background-color: #fff;
-}
+   .nav-links {
+     display: none;
+   }
 
-.connect-btn {
-  background-color: #007bff;
-  font-family: "Baloo Thambi 2", cursive;
-  color: #fff;
-  border-radius: 15px;
-  margin-right: 30px;
-  padding: 10px ;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.connect-btn:hover {
-  background-color: #0069d9;
-}
-
-@media screen and (min-width: 768px) {
-  .navbar-menu {
-    display: flex;
-    position: static;
-    background-color: transparent;
+   .nav-links-mobile {
+     position: absolute;
+     display: block;
+     list-style: none;
+     background-color: #005469;
+     opacity: 0.9;
+     right: 0;
+     top: 75px;
+     transition: all 0.5s ease;
+     width: 25%;
+   }
+   .nav-links-mobile.active {
+    right: 0; 
   }
-  .navbar-menu ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .navbar-menu li {
-    padding: 0;
-  }
-  .navbar-menu a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0 20px;
-  }
-  .navbar-toggle {
-    display: none;
-  }
-}
+   .home,
+   .working,
+   .allowlist {
+     color: #fff;
+     text-align: center;
+     padding: 32px;
+     width: 100%;
+     transition: all 0.5s ease;
+   }
 
-@media screen and (max-width: 767px) {
-  
-  .navbar-menu.show {
-    display: block;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #333;
-    width: 200px;
-    padding: 20px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  }
-  .navbar-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .navbar-menu li {
-    padding: 10px 0;
-  }
-  .navbar-menu a {
-    color: #fff;
-    text-decoration: none;
-  }
-  .navbar-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 20px;
-    cursor: pointer;
-  }
-  .toggle-line {
-    width: 20px;
-    height: 3px;
-    background-color: #fff;
-  }
-}
+   .mobile-menu-icon {
+     display: block;
+     position: absolute;
+     font-size: 30px;
+     color: #fff;
+     background-color: #00828c;
+     border: none;
+     outline: none;
+     top: 15px;
+     right: 25px;
+   }
+ }

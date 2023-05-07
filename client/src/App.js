@@ -5,6 +5,7 @@ import Firstpage from "./components/Firstpage";
 import Secondpage from "./components/Secondpage";
 import AccessList from "./components/AccessList";
 import "./App.css";
+import Working from "./components/Working";
 
 const App = () => {
   const [contract, setContract] = useState(null);
@@ -127,6 +128,7 @@ const App = () => {
           path="/accesslist"
           element={<AccessList contract={contract} />}
         />
+        <Route path="/Working" element={<Working/>} />
       </Routes>
     </>
   );

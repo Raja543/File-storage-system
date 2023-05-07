@@ -57,8 +57,8 @@ const FileUpload = ({ contract, account, provider }) => {
       document.getElementById("upload-para").style.display = "block";
     }
   };
-  
-  
+
+
 
   const [currentButton, setCurrentButton] = useState("upload");
 
@@ -107,7 +107,6 @@ const FileUpload = ({ contract, account, provider }) => {
               >
                 <i class="fa-solid fa-cloud-arrow-up fa-bounce"></i>
               </label>
-
               <input
                 type="file"
                 id="my-file"
