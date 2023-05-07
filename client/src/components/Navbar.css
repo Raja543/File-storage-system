@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap");
 
 
  * {
@@ -9,28 +9,30 @@
 
  .navbar {
    display: flex;
-   justify-content: space-around;
+   width: 100vw;
+   justify-content: space-between;
    align-items: center;
    height: 75px;
-   background-color: #00828c;
+   background-color: transparent;
    color: #fff;
    z-index: 4;
- }
+   position: fixed;
+   top: 0;
+    backdrop-filter: blur(6px);
+   }
 
  .logo {
    font-size: 30px;
+   margin-left: 10px;
  }
 
  .nav-links {
    display: flex;
    justify-content: flex-end;
    list-style: none;
-   width: 75%;
  }
 
- .home,
- .working,
- .allowlist {
+ .item {
    text-decoration: none;
    color: #fff;
    font-size: 20px;
@@ -38,6 +40,14 @@
    margin: 0 10px;
    cursor: pointer;
  }
+
+ .item :hover {
+   text-decoration: underline;
+   text-decoration-color: #00ffff;
+   text-decoration-thickness: 3px;
+   text-underline-offset: 8px;
+ }
+
 
  .mobile-menu-icon {
    display: none;
@@ -51,6 +61,32 @@
    height: auto;
    text-align: center;
    z-index: 4;
+ }
+
+ .connect-btn {
+   padding: 0.5rem 1rem;
+   background-color: transparent;
+   color: #fff;
+   border: 2px solid gray;
+   border-radius: 20px;
+   font-size: 20px;
+   cursor: pointer;
+   transition: all 0.2s ease-in-out;
+   margin-right: 10px;
+ }
+
+ .connect-btn:hover {
+   background-color: #00ffff;
+   color: #000;
+ }
+
+ .connect-btn span {
+   display: inline-block;
+   max-width: 180px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   margin-right: 0.5rem;
  }
 
  @media screen and (max-width : 768px) {
@@ -69,24 +105,25 @@
      position: absolute;
      display: block;
      list-style: none;
-     background-color: #005469;
+     background-color: #200234;
      opacity: 0.9;
      right: 0;
      top: 75px;
      transition: all 0.5s ease;
      width: 25%;
    }
+
    .nav-links-mobile.active {
-    right: 0; 
-  }
-   .home,
-   .working,
-   .allowlist {
+     right: 0;
+   }
+
+   .item {
      color: #fff;
      text-align: center;
      padding: 32px;
      width: 100%;
      transition: all 0.5s ease;
+     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
    }
 
    .mobile-menu-icon {
@@ -94,10 +131,14 @@
      position: absolute;
      font-size: 30px;
      color: #fff;
-     background-color: #00828c;
+     background-color: transparent;
      border: none;
      outline: none;
      top: 15px;
      right: 25px;
+   }
+
+   .connect-btn {
+     margin-bottom: 15px;
    }
  }

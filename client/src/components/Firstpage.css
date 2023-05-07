@@ -21,6 +21,7 @@ body::-webkit-scrollbar {
   background-color: rgba(0, 0, 0, 0.952);
   position: relative;
   z-index: 1;
+  margin-top: 80px;
 }
 
 .video-background {

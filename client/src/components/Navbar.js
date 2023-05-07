@@ -10,21 +10,20 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h3 className="logo">SecureShareX</h3>
-      <ul className={isMobile ? "nav-links-mobile active" : "nav-links"} onClick={() => setIsMobile(false)}>
-        <Link to="/" className="home">
+      <ul className={isMobile ? "nav-links-mobile active" : "nav-links"} onClick={() => isMobile(false)}>
+        <Link to="/" className="item">
           <li>Home</li>
         </Link>
-        <Link to="/working" className="working">
+        <Link to="/working" className="item">
           <li>Working</li>
         </Link>
-        <Link to="/accessList" className="allowlist">
+        <Link to="/accessList" className="item">
           <li>Allowlist</li>
           </Link>
         <Link className="about">
           <li><Connectwallet /></li>
         </Link>
       </ul>
-      {/* <li className="wallet-display"><Connectwallet /></li> */}
       <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
         {isMobile ? (
           <i className="fas fa-times"></i>
@@ -37,3 +36,5 @@ const Navbar = () => {
 }
 
 export default Navbar;
+
+
