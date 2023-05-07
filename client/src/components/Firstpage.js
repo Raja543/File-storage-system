@@ -6,9 +6,9 @@ import Discordsvg from "./Discordsvg";
 import Twittersvg from "./Twittersvg";
 import Instagramsvg from "./Instagramsvg";
 import myvideo from "./videos/first.mp4";
-import img1 from "./images/first-image.png";
-import img2 from "./images/second-image.png";
-import img3 from "./images/third-image.png";
+import img1 from "./images/first-image-min.png";
+import img2 from "./images/second-image-min.png";
+import img3 from "./images/third-image-min.png";
 import Navbar from "./Navbar";
 
 function Firstpage() {

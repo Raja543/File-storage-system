@@ -37,8 +37,8 @@ const Modal = ({ contract }) => {
             ></input>
 
             <div className="footer">
-              <button onClick={() => sharing()}>Share</button>
-              <button onClick={() => removeallow()}>Disallow</button>
+              <button onClick={() => sharing()} className="share-btn">Share</button>
+              <button onClick={() => removeallow()} className="disallow-btn">Disallow</button>
             </div>
           </div>
         </div>

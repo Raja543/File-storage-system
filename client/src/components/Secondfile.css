@@ -13,10 +13,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 25px;
-  margin-top: 50px;
+  margin-top: 70px;
 }
-
-
 
 .file-container h1 {
   color: #fff;
@@ -227,20 +225,8 @@ input[type="file"] {
   background-color: rgb(17, 42, 97);
 }
 
-/* .image-container {
-  position: relative;
-}
-
-.image-container button {
-  position: absolute;
-  top: 50;
-  left: 0;
-} */
-
 .image-container {
-  /* Add your regular container styles here */
   position: relative;
-  /* Needed for positioning the delete button */
 }
 
 /* .image-container:hover img {
@@ -249,31 +235,22 @@ input[type="file"] {
 } */
 
 .delete-button {
-  /* Add your regular button styles here */
   display: none;
   z-index: 2;
 }
 
-
-
 .image-container:hover .delete-button {
-  /* Add your hover effect styles for the delete button here */
-  /* For example, show the delete button on hover */
   display: block;
   margin: auto;
 }
 
-.image-grid {
-  /* Existing CSS for image-grid */
-}
+.image-grid {}
 
 .image-grid .image-container {
   position: relative;
 }
 
-.image-grid .image-container img {
-  /* Existing CSS for image-grid img */
-}
+.image-grid .image-container img {}
 
 .image-grid .image-container button {
   position: absolute;
