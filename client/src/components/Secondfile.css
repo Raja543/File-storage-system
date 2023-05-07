@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Roboto+Mono:wght@100&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap");
 
 * {
@@ -42,10 +41,6 @@ input[type="file"] {
   display: none;
 }
 
-.blank-container {
-  border: none;
-}
-
 .search-bar {
   display: flex;
   flex-direction: row;
@@ -65,7 +60,7 @@ input[type="file"] {
   flex-grow: 1;
 }
 
-.search-bar button {
+.search-bar .search-button {
   background-color: #007bff;
   color: white;
   border: none;
@@ -80,24 +75,6 @@ input[type="file"] {
   height: auto;
   border-radius: 5px;
   margin: 15px 15px 15px 15px;
-}
-
-.blank-container {
-  position: relative;
-}
-
-.blank-container button {
-  background: none;
-  border: none;
-  position: absolute;
-  top: 0;
-  right: 26%;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  height: 25px;
-  width: 25px;
-  color: #ebeef4;
 }
 
 .upload-check-section {
@@ -218,11 +195,6 @@ input[type="file"] {
   position: relative;
 }
 
-.delete-button {
-  display: none;
-  z-index: 2;
-}
-
 .image-container:hover .delete-button {
   display: block;
   margin: auto;
@@ -236,6 +208,9 @@ input[type="file"] {
   margin: auto;
   margin-top: 15px;
   border: 2px solid rgb(54, 251, 231);
+  padding: 10px;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 
 .image-grid .image-container {
@@ -251,7 +226,16 @@ input[type="file"] {
   border-radius: 5px;
 }
 
-.image-grid .image-container button {
+.delete-button {
+  display: none;
+}
+
+.image-container:hover .delete-button {
+  display: block;
+  margin: auto;
+}
+
+.image-container .delete-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -259,6 +243,39 @@ input[type="file"] {
   border: none;
   border-radius: 50%;
   font-size: 1.2rem;
-  padding-bottom: 3.2rem;
   cursor: pointer;
+  background: none;
+}
+
+.blank-container {
+  position: relative;
+  border: none;
+}
+
+.image-grid .close-container {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 26%;
+  border-radius: 5px;
+  font-size: 
+  16px;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  color: #ebeef4;
+}
+/* Adjust the position of close-container button for smaller screens */
+@media screen and (max-width: 768px) {
+  .image-grid .close-container {
+    right: 10%; /* Adjust the value as per your requirement */
+  }
+}
+
+/* Adjust the position of close-container button for even smaller screens */
+@media screen and (max-width: 480px) {
+  .image-grid .close-container {
+    right: 5%; /* Adjust the value as per your requirement */
+  }
 }

@@ -29,7 +29,12 @@ const Display = ({ contract, account }) => {
       const images = str_array.map((item, i) => {
         return (
           <div key={i} className="image-container">
-            <button className="delete-button" onClick={() => deleteImage(i)}><i class="fa-solid fa-trash fa-beat"></i></button>
+            <button
+              className="delete-button"
+              onClick={() => deleteImage(i)}
+            >
+              <i className="fa-solid fa-trash fa-beat"></i>
+            </button>
             <a href={item} target="_blank" rel="noreferrer">
               <img
                 src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
@@ -74,9 +79,10 @@ const Display = ({ contract, account }) => {
         <input
           type="text"
           className="address"
-          placeholder="Enter the Account address "
+          placeholder="Enter the Account address"
         />
         <button
+          className="search-button"
           onClick={() => {
             getdata();
             toggleData(true);
@@ -87,10 +93,12 @@ const Display = ({ contract, account }) => {
       </div>
       {showData && data.length > 0 && (
         <div className="blank-container">
-          <button onClick={closeContainer}>
-            <i class="fa-sharp fa-solid fa-circle-xmark fa-2xl"></i>
+          
+          <div className="image-grid">{data}
+          <button className="close-container" onClick={closeContainer}>
+            <i className="fa-sharp fa-solid fa-circle-xmark fa-2xl"></i>
           </button>
-          <div className="image-grid">{data}</div>
+          </div>
         </div>
       )}
     </>
