@@ -1,16 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link} from "react-router-dom";
 import Connectwallet from "./Connectwallet";
 
 const Navbar = () => {
-
   const [isMobile, setIsMobile] = useState(false);
+  const navLinksRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navLinksRef.current && !navLinksRef.current.contains(event.target)) {
+        setIsMobile(false);
+      }
+    };
+    window.addEventListener("click", handleClickOutside);
+    return () => window.removeEventListener("click", handleClickOutside);
+  }, []);
 
   return (
     <nav className="navbar">
       <h3 className="logo">SecureShareX</h3>
-      <ul className={isMobile ? "nav-links-mobile active" : "nav-links"} onClick={() => isMobile(false)}>
+      <ul className={isMobile ? "nav-links-mobile active" : "nav-links"} onClick={() => setIsMobile(false)}>
         <Link to="/" className="item">
           <li>Home</li>
         </Link>
@@ -19,7 +29,7 @@ const Navbar = () => {
         </Link>
         <Link to="/accessList" className="item">
           <li>Allowlist</li>
-          </Link>
+        </Link>
         <Link className="about">
           <li><Connectwallet /></li>
         </Link>
