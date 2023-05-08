@@ -1,26 +1,33 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Connectwallet from "./Connectwallet";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const navLinksRef = useRef(null);
 
+  // Listen for changes in screen size
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (navLinksRef.current && !navLinksRef.current.contains(event.target)) {
-        setIsMobile(false);
-      }
+    const handleResize = () => {
+      const isSmallScreen = window.innerWidth <= 768;
+      setIsMobile(isSmallScreen && isMobile); // Only update if small screen and already mobile view
     };
-    window.addEventListener("click", handleClickOutside);
-    return () => window.removeEventListener("click", handleClickOutside);
-  }, []);
+
+    window.addEventListener("resize", handleResize);
+
+    // Remove event listener on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isMobile]);
 
   return (
     <nav className="navbar">
       <h3 className="logo">SecureShareX</h3>
-      <ul className={isMobile ? "nav-links-mobile active" : "nav-links"} onClick={() => setIsMobile(false)}>
+      <ul
+        className={isMobile ? "nav-links-mobile active" : "nav-links"}
+        onClick={() => setIsMobile(false)}
+      >
         <Link to="/" className="item">
           <li>Home</li>
         </Link>
@@ -31,10 +38,15 @@ const Navbar = () => {
           <li>Allowlist</li>
         </Link>
         <Link className="about">
-          <li><Connectwallet /></li>
+          <li>
+            <Connectwallet />
+          </li>
         </Link>
       </ul>
-      <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
+      <button
+        className="mobile-menu-icon"
+        onClick={() => setIsMobile(!isMobile)}
+      >
         {isMobile ? (
           <i className="fas fa-times"></i>
         ) : (
@@ -43,8 +55,7 @@ const Navbar = () => {
       </button>
     </nav>
   );
-}
+};
 
 export default Navbar;
-
 
