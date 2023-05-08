@@ -24,7 +24,7 @@ const Working = () => {
                     After the image is pinned, Pinata generates a hash value for the file. This hash value
                     is a unique identifier that can be used to access the file on the IPFS network.
                 </p>
-                <div className="image">
+                <div className="image-1">
                     <img src={image1}  alt="first-image" />
                 </div>
             </div>
@@ -36,7 +36,7 @@ const Working = () => {
                 The hash can be stored on a public blockchain, such as Ethereum, or on a private
                 blockchain, depending on the user's needs.
             </p>
-            <div className="image">
+            <div className="image-2">
                 <img src={image2} alt="second-image" />
             </div>
             <div className="third-section"></div>
@@ -50,7 +50,7 @@ const Working = () => {
                 a permanent, reliable, and secure way to store and access files, with the added benefits of
                 decentralization and blockchain integration.
             </p>
-            <div className="image">
+            <div className="image-3">
                 <img src={image3} alt="first-image"></img>
             </div>
         </div>

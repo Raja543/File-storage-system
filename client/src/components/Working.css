@@ -69,7 +69,21 @@ body {
     margin-top: 30px;
 }
 
-.image img {
-    max-width:min-content;
-    height: auto;
+.image-1 img {
+    max-width:564px;
+    height: 360px;
+    margin-left: 146px;
+    float: right;
+}
+.image-2 img {
+    max-width:564px;
+    height: 360px;
+    margin-left: 129px;
+    float: right;
+}
+.image-3 img {
+    max-width:564px;
+    height: 360px;
+    margin-left: 129px;
+    float: right;
 }
