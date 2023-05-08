@@ -7,6 +7,7 @@ const FileUpload = ({ contract, account, provider }) => {
   const [fileName, setFileName] = useState("No image selected");
   const [imageUrl, setImageUrl] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState(0);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,15 +25,25 @@ const FileUpload = ({ contract, account, provider }) => {
             pinata_secret_api_key: `d6eb128460bddf184df549bd494ccb999a09f723ea14a53ca3c1d50ad5af7383`,
             "Content-Type": "multipart/form-data",
           },
+          onUploadProgress: (progressEvent) => {
+            const progressPercentage = Math.round(
+              (progressEvent.loaded * 100) / progressEvent.total
+            );
+            setUploadProgress(progressPercentage);
+          },
         });
+
         const ImgHash = `ipfs://${resFile.data.IpfsHash}`;
         const signer = contract.connect(provider.getSigner());
         signer.add(account, ImgHash);
+
         setFileName("No image selected");
         setImageUrl(null);
+
         // Show the icon and paragraph
         const label = document.getElementById("fileLabel");
-        label.innerHTML = '<i class="fa-solid fa-cloud-arrow-up fa-bounce"></i>';
+        label.innerHTML =
+          '<i class="fa-solid fa-cloud-arrow-up fa-bounce"></i>';
         document.getElementById("upload-para").style.display = "block";
       } catch (e) {
         alert("Unable to upload image to Pinata");
@@ -40,6 +51,7 @@ const FileUpload = ({ contract, account, provider }) => {
     }
     alert("Successfully Image Uploaded");
     setFile(null);
+    setUploadProgress(0);
   };
 
 
@@ -95,6 +107,9 @@ const FileUpload = ({ contract, account, provider }) => {
                 <img src={URL.createObjectURL(file)} alt="Uploaded file" className="preview-image" />
               )}
               <p id="upload-para" className="upload-para">Browse or Drag here to upload</p>
+              {uploadProgress > 0 && (
+                <progress value={uploadProgress} max={100} />
+              )}
             </div>
             <button type="submit" className="upload" disabled={!file} onClick={handleSubmit}>Upload</button>
           </div>

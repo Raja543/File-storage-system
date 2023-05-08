@@ -244,13 +244,13 @@ input[type="file"] {
   margin: auto;
 }
 
-.image-grid {}
+/* .image-grid {} */
 
 .image-grid .image-container {
   position: relative;
 }
 
-.image-grid .image-container img {}
+/* .image-grid .image-container img {} */
 
 .image-grid .image-container button {
   position: absolute;
