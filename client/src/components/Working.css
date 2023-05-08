@@ -21,69 +21,77 @@ body {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .first-para {
     font-size: 26px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #fff;
     line-height: 1.6;
-    float: left;
     max-width: 30em;
     margin-left: 40px;
     margin-top: 30px;
 }
 
-.image {
-    float: right;
-}
-
-.second-section{
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-}
-
-.second-para{
-    font-size: 26px;
-    color: #fff;
-    line-height: 1.6;
-    float: left;
-    max-width: 30em;
-    margin-left: 40px;
+.image-1 {
     margin-top: 30px;
-}
-
-.third-section{
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-}
-
-.third-para{
-    font-size: 26px;
-    color: #fff;
-    line-height: 1.6;
-    float: left;
-    max-width: 30em;
-    margin-left: 40px;
-    margin-top: 30px;
+    margin-left: 30px;
 }
 
 .image-1 img {
-    max-width:564px;
-    height: 360px;
-    margin-left: 146px;
-    float: right;
+    max-width: 620px;
+    height: 420px;
 }
+
+.second-section {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.second-para {
+    font-size: 26px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    max-width: 30em;
+    margin-left: 40px;
+    margin-right: 35px;
+    margin-top: 30px;
+}
+.image-2 {
+    margin-top: 0px;
+    margin-left: 30px;
+}
+
 .image-2 img {
-    max-width:564px;
-    height: 360px;
-    margin-left: 129px;
-    float: right;
+    max-width: 640px;
+    height: 320px;
+}
+
+.third-section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+.third-para {
+    font-size: 26px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    max-width: 30em;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.image-3 {
+    margin-top: 30px;
+    margin-left: 30px;
 }
 .image-3 img {
-    max-width:564px;
-    height: 360px;
-    margin-left: 129px;
-    float: right;
+    max-width: 650px;
+    height: 450px;
 }
