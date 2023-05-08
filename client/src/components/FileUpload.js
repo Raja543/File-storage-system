@@ -54,6 +54,8 @@ const FileUpload = ({ contract, account, provider }) => {
     setUploadProgress(0);
   };
 
+
+
   const retrieveFile = (e) => {
     const input = e.target;
     const label = document.getElementById("fileLabel");
@@ -68,6 +70,8 @@ const FileUpload = ({ contract, account, provider }) => {
     }
   };
 
+
+
   const [currentButton, setCurrentButton] = useState("upload");
 
   const handleUploadClick = () => {
@@ -81,31 +85,11 @@ const FileUpload = ({ contract, account, provider }) => {
   return (
     <>
       <div className="upload-share-container">
-<<<<<<< HEAD
-        <div className="button-wrapper">
-          <button
-            className={`upload-button ${
-              currentButton === "upload" ? "active" : ""
-            }`}
-            onClick={() => setCurrentButton("upload")}
-          >
-            Upload
-          </button>
-          <button
-            className={`share-button ${
-              currentButton === "share" ? "active" : ""
-            }`}
-            onClick={() => setCurrentButton("share")}
-          >
-            Share
-          </button>
-=======
         <div className="toggleWrapper">
           <input type="checkbox" className="dn" id="dn" />
           <label htmlFor="dn" className="toggle" onClick={() => setCurrentButton((currentButton === "share") ? "upload" : "share")}>
             <span className="toggle__handler"></span>
           </label>
->>>>>>> 821d871eeeaa7abbe3c104e0458a36eae9f0e025
         </div>
         {currentButton === "upload" && (
           <div className="wrapper">
@@ -122,16 +106,10 @@ const FileUpload = ({ contract, account, provider }) => {
               {file && (
                 <img src={URL.createObjectURL(file)} alt="Uploaded file" className="preview-image" />
               )}
-<<<<<<< HEAD
-              <p id="upload-para" className="upload-para">
-                Browse or Drag here to upload
-              </p>
+              <p id="upload-para" className="upload-para">Browse or Drag here to upload</p>
               {uploadProgress > 0 && (
                 <progress value={uploadProgress} max={100} />
               )}
-=======
-              <p id="upload-para" className="upload-para">Browse or Drag here to upload</p>
->>>>>>> 821d871eeeaa7abbe3c104e0458a36eae9f0e025
             </div>
             <button type="submit" className="upload" disabled={!file} onClick={handleSubmit}>Upload</button>
           </div>

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Roboto+Mono:wght@100&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap");
 
 * {
@@ -42,6 +43,10 @@ input[type="file"] {
   display: none;
 }
 
+.blank-container {
+  border: none;
+}
+
 .search-bar {
   display: flex;
   flex-direction: row;
@@ -61,7 +66,7 @@ input[type="file"] {
   flex-grow: 1;
 }
 
-.search-bar .search-button {
+.search-bar button {
   background-color: #007bff;
   color: white;
   border: none;
@@ -71,11 +76,39 @@ input[type="file"] {
   cursor: pointer;
 }
 
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  width: 700px;
+  margin: auto;
+  margin-top: 15px;
+  border: 2px solid rgb(54, 251, 231);
+}
+
 .image-grid img {
   width: 100%;
   height: auto;
   border-radius: 5px;
   margin: 15px 15px 15px 15px;
+}
+
+.blank-container {
+  position: relative;
+}
+
+.blank-container button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 26%;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  color: #ebeef4;
 }
 
 .upload-check-section {
@@ -196,8 +229,6 @@ input[type="file"] {
   position: relative;
 }
 
-<<<<<<< HEAD
-=======
 /* .image-container:hover img {
   border: 2px solid red;
   opacity: 0.8;
@@ -208,56 +239,20 @@ input[type="file"] {
   z-index: 2;
 }
 
->>>>>>> 821d871eeeaa7abbe3c104e0458a36eae9f0e025
 .image-container:hover .delete-button {
   display: block;
   margin: auto;
 }
 
-<<<<<<< HEAD
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-  width: 700px;
-  margin: auto;
-  margin-top: 15px;
-  border: 2px solid rgb(54, 251, 231);
-  padding: 10px;
-  border-radius: 5px;
-  box-sizing: border-box; /* Ensure padding and border are included in the width */
-}
-=======
-.image-grid {}
->>>>>>> 821d871eeeaa7abbe3c104e0458a36eae9f0e025
+/* .image-grid {} */
 
 .image-grid .image-container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-<<<<<<< HEAD
-.image-grid .image-container img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 5px;
-}
-=======
-.image-grid .image-container img {}
->>>>>>> 821d871eeeaa7abbe3c104e0458a36eae9f0e025
+/* .image-grid .image-container img {} */
 
-.delete-button {
-  display: none;
-}
-
-.image-container:hover .delete-button {
-  display: block;
-  margin: auto;
-}
-
-.image-container .delete-button {
+.image-grid .image-container button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -265,43 +260,6 @@ input[type="file"] {
   border: none;
   border-radius: 50%;
   font-size: 1.2rem;
+  padding-bottom: 3.2rem;
   cursor: pointer;
-<<<<<<< HEAD
-  background: none;
 }
-
-.blank-container {
-  position: relative;
-  border: none;
-}
-
-.image-grid .close-container {
-  background: none;
-  border: none;
-  position: absolute;
-  top: 0;
-  right: 26%;
-  border-radius: 5px;
-  font-size: 
-  16px;
-  cursor: pointer;
-  height: 25px;
-  width: 25px;
-  color: #ebeef4;
-}
-/* Adjust the position of close-container button for smaller screens */
-@media screen and (max-width: 768px) {
-  .image-grid .close-container {
-    right: 10%; /* Adjust the value as per your requirement */
-  }
-}
-
-/* Adjust the position of close-container button for even smaller screens */
-@media screen and (max-width: 480px) {
-  .image-grid .close-container {
-    right: 5%; /* Adjust the value as per your requirement */
-  }
-}
-=======
-}
->>>>>>> 821d871eeeaa7abbe3c104e0458a36eae9f0e025
