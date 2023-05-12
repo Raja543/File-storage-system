@@ -1,9 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap");
-
-* {
-    margin: 0;
-    padding: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
 
 body {
     background-color: #000;
@@ -11,7 +6,7 @@ body {
 
 .Work-heading {
     font-size: 3rem;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     color: #fff;
     margin-top: 90px;
     text-align: center;
@@ -25,12 +20,12 @@ body {
 }
 
 .first-para {
-    font-size: 26px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #fff;
+    font-size: 1.5rem;
     line-height: 1.6;
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
     max-width: 30em;
-    margin-left: 40px;
+    margin-left: 50px;
     margin-top: 30px;
 }
 
@@ -40,8 +35,7 @@ body {
 }
 
 .image-1 img {
-    max-width: 620px;
-    height: 420px;
+    max-width: 700px;
 }
 
 .second-section {
@@ -52,23 +46,23 @@ body {
 }
 
 .second-para {
-    font-size: 26px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #fff;
+    font-size: 1.5rem;
     line-height: 1.6;
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
     max-width: 30em;
     margin-left: 40px;
     margin-right: 35px;
     margin-top: 30px;
 }
+
 .image-2 {
     margin-top: 0px;
     margin-left: 30px;
 }
 
 .image-2 img {
-    max-width: 640px;
-    height: 320px;
+    max-width: 500px;
 }
 
 .third-section {
@@ -79,19 +73,20 @@ body {
 }
 
 .third-para {
-    font-size: 26px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #fff;
+    font-size: 1.5rem;
     line-height: 1.6;
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
     max-width: 30em;
     margin-left: 40px;
     margin-top: 30px;
 }
+
 .image-3 {
     margin-top: 30px;
     margin-left: 30px;
 }
+
 .image-3 img {
-    max-width: 650px;
-    height: 450px;
+    max-width: 700px;
 }
