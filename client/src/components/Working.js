@@ -4,6 +4,9 @@ import "./Working.css";
 import image1 from "./images/first-image-min.png";
 import image2 from "./images/second-image-min.png";
 import image3 from "./images/third-image-min.png";
+import Discordsvg from "./Discordsvg";
+import Twittersvg from "./Twittersvg";
+import Instagramsvg from "./Instagramsvg";
 
 
 const Working = () => {
@@ -25,33 +28,59 @@ const Working = () => {
                     is a unique identifier that can be used to access the file on the IPFS network.
                 </p>
                 <div className="image-1">
-                    <img src={image1}  alt="first-image" />
+                    <img src={image3} alt="first-image" />
                 </div>
             </div>
-            <div className="second-section"></div>
-            <p className="second-para">
-                The second step is to store the hash on the blockchain, along with any other relevant
-                metadata. This allows the user to associate the image with a specific blockchain
-                transaction, making it easier to verify the authenticity and ownership of the image.
-                The hash can be stored on a public blockchain, such as Ethereum, or on a private
-                blockchain, depending on the user's needs.
-            </p>
-            <div className="image-2">
-                <img src={image2} alt="second-image" />
+            <div className="second-section">
+                <p className="second-para">
+                    The second step is to store the hash on the blockchain, along with any other relevant
+                    metadata. This allows the user to associate the image with a specific blockchain
+                    transaction, making it easier to verify the authenticity and ownership of the image.
+                    The hash can be stored on a public blockchain, such as Ethereum, or on a private
+                    blockchain, depending on the user's needs.
+                </p>
+                <div className="image-2">
+                    <img src={image2} alt="second-image" />
+                </div>
             </div>
-            <div className="third-section"></div>
-            <p className="third-para">
-                The final step is to access the image on the IPFS network. To do this, the user simply needs to
-                provide the hash value to an IPFS client. This client can be a web browser with IPFS support, a
-                command-line tool, or a software application that integrates with IPFS. Once the client receives
-                the hash, it can retrieve the image from any node on the IPFS network that has a copy of the file.
-                Since the IPFS network is decentralized, there is no single point of failure, making it a reliable
-                and secure way to store and access files. Overall, using Pinata to store images on IPFS provides
-                a permanent, reliable, and secure way to store and access files, with the added benefits of
-                decentralization and blockchain integration.
-            </p>
-            <div className="image-3">
-                <img src={image3} alt="first-image"></img>
+            <div className="third-section">
+                <p className="third-para">
+                    The final step is to access the image on the IPFS network. To do this, the user simply needs to
+                    provide the hash value to an IPFS client. This client can be a web browser with IPFS support, a
+                    command-line tool, or a software application that integrates with IPFS. Once the client receives
+                    the hash, it can retrieve the image from any node on the IPFS network that has a copy of the file.
+                    Since the IPFS network is decentralized, there is no single point of failure, making it a reliable
+                    and secure way to store and access files. Overall, using Pinata to store images on IPFS provides
+                    a permanent, reliable, and secure way to store and access files, with the added benefits of
+                    decentralization and blockchain integration.
+                </p>
+                <div className="image-3">
+                    <img src={image1} alt="first-image"></img>
+                </div>
+            </div>
+
+            {/* footer section */}
+            <div className="footer-section">
+                <div className="column">
+                    <h2 className="column1-heading">Contact Us</h2>
+                    <p className="column1-para">SecureShareX@gmail.com</p>
+                </div>
+
+                <div className="column">
+                    <h2 className="column2-text">Get involved</h2>
+                    <div className="social-icons">
+                        <Discordsvg />
+                        <Twittersvg />
+                        <Instagramsvg />
+                    </div>
+                </div>
+
+                <div className="column">
+                    <h2 className="Colum3-heading">SecureShareX</h2>
+                    <p className="Column3-text">
+                        © 2023 Secure ShareX. All rights reserved
+                    </p>
+                </div>
             </div>
         </div>
     )

@@ -23,13 +23,15 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <h3 className="logo">SecureShareX</h3>
+      <h3 >
+        <Link to="/" className="logo">SecureShareX</Link>
+      </h3>
       <ul
         className={isMobile ? "nav-links-mobile active" : "nav-links"}
         onClick={() => setIsMobile(false)}
       >
-        <Link to="/" className="item">
-          <li>Home</li>
+        <Link to="/Secondpage" className="item">
+          <li>Upload</li>
         </Link>
         <Link to="/working" className="item">
           <li>Working</li>

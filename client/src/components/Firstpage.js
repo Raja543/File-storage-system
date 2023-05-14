@@ -30,7 +30,7 @@ function Firstpage() {
           </video>
           <div className="hero-content">
             <h1 className="hero-heading">
-            Innovate Your File Storage with Decentralization
+              Innovate Your File Storage with Decentralization
             </h1>
             <h1 className="hero-subheading"> Your Data, Your Control</h1>
             <p className="hero__description">
@@ -142,27 +142,25 @@ function Firstpage() {
 
       {/* footer-section */}
       <div className="footer-section">
-        <div className="columns">
-          <div className="column">
-            <h2 className="column1-heading">Contact Us</h2>
-            <p className="column1-para">SecureShareX@gmail.com</p>
-          </div>
+        <div className="column">
+          <h2 className="column1-heading">Contact Us</h2>
+          <p className="column1-para">SecureShareX@gmail.com</p>
+        </div>
 
-          <div className="column">
-            <h2 className="column2-text">Get involved</h2>
-            <div className="social-icons">
-              <Discordsvg />
-              <Twittersvg />
-              <Instagramsvg />
-            </div>
+        <div className="column">
+          <h2 className="column2-text">Get involved</h2>
+          <div className="social-icons">
+            <Discordsvg />
+            <Twittersvg />
+            <Instagramsvg />
           </div>
+        </div>
 
-          <div className="column">
-            <h2 className="Colum3-heading">SecureShareX</h2>
-            <p className="Column3-text">
-              © 2023 Secure ShareX. All rights reserved
-            </p>
-          </div>
+        <div className="column">
+          <h2 className="Colum3-heading">SecureShareX</h2>
+          <p className="Column3-text">
+            © 2023 Secure ShareX. All rights reserved
+          </p>
         </div>
       </div>
     </div>

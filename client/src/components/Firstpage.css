@@ -687,10 +687,9 @@ img {
 .footer-section {
   background: rgba(0, 0, 0, 0.959);
   height: 35vh;
-}
-
-.columns {
+  margin-top: 70px;
   display: flex;
+  flex-direction: row;
   flex-flow: row wrap;
   justify-content: center;
   color: #fff;
@@ -698,19 +697,16 @@ img {
 
 .column {
   flex: 1;
-  margin: 1rem;
-  padding: 1rem;
-  margin-top: 1rem;
 }
 
 .column1-heading {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 1rem;
 }
 
 .column1-para {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   margin-top: 2.8rem;
 }
 
@@ -723,7 +719,7 @@ img {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  margin-top: 2rem;
+  /* margin-top: 1rem; */
 }
 
 .Colum3-heading {
@@ -765,7 +761,6 @@ img {
   .column2-text {
     text-align: center;
     font-size: 1.5rem;
-    margin-top: -1.8rem;
   }
 
   .Colum3-heading {
@@ -775,11 +770,10 @@ img {
   .Column3-text {
     text-align: center;
     font-size: 1rem;
-    margin-top: -1.5rem;
   }
 
   .social-icons {
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
   }
 }
 
@@ -918,10 +912,6 @@ img {
     font-size: 1.5rem;
     margin-top: 2rem;
   }
-
-  .social-icons {
-    margin-top: 1rem;
-  }
 }
 
 
@@ -931,41 +921,38 @@ img {
     height: auto;
   }
 
-  .columns {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
   .column {
-    margin: 20px;
-    padding: 10px;
     text-align: center;
   }
 
   .column1-heading {
-    text-align: center;
-    font-size: 2.4rem;
+    font-size: 2rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .column1-para {
     margin-top: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    font-family: 'Nunito', sans-serif;
   }
 
   .column2-text {
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 2rem;
+    margin-top: 0.1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .Colum3-heading {
     text-align: center;
     font-size: 1.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .Column3-text {
     text-align: center;
-    font-size: 1.8rem;
-    margin-top: 2rem;
+    font-size: 1.4rem;
+    font-family: 'Nunito', sans-serif;
   }
 
   .social-icons {
