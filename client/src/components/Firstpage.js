@@ -142,12 +142,12 @@ function Firstpage() {
 
       {/* footer-section */}
       <div className="footer-section">
-        <div className="column">
+        <div className="column1">
           <h2 className="column1-heading">Contact Us</h2>
           <p className="column1-para">SecureShareX@gmail.com</p>
         </div>
 
-        <div className="column">
+        <div className="column2">
           <h2 className="column2-text">Get involved</h2>
           <div className="social-icons">
             <Discordsvg />
@@ -156,8 +156,7 @@ function Firstpage() {
           </div>
         </div>
 
-        <div className="column">
-          <h2 className="Colum3-heading">SecureShareX</h2>
+        <div className="column3">
           <p className="Column3-text">
             © 2023 Secure ShareX. All rights reserved
           </p>

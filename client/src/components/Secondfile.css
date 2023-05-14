@@ -240,7 +240,7 @@ input[type="file"] {
 }
 
 .image-container:hover .delete-button {
-  display: block;
+  display: relative;
   margin: auto;
 }
 

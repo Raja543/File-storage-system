@@ -76,7 +76,6 @@ const Working = () => {
                 </div>
 
                 <div className="column">
-                    <h2 className="Colum3-heading">SecureShareX</h2>
                     <p className="Column3-text">
                         © 2023 Secure ShareX. All rights reserved
                     </p>

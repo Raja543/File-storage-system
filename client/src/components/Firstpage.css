@@ -17,11 +17,11 @@ body::-webkit-scrollbar {
 }
 
 .hero {
-  height: 90vh;
+  height: 89vh;
   background-color: rgba(0, 0, 0, 0.952);
   position: relative;
   z-index: 1;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .video-background {
@@ -52,314 +52,84 @@ body::-webkit-scrollbar {
 
 .hero-heading {
   font-family: "Poppins", sans-serif;
-  font-size: 3.5vw;
+  font-size: 3.5rem;
   color: #fff;
   text-align: center;
-  margin-top: 20vh;
+  margin-top: 130px;
 }
 
 .hero-subheading {
   font-family: "Poppins", sans-serif;
   text-align: center;
-  font-size: 2vw;
+  font-size: 2rem;
   color: #fff;
-  margin-top: 1vh;
 }
 
 .hero__description {
   color: #ffffffc6;
-  padding: 0.5rem;
+  padding: 10px;
   max-width: 45em;
   font-family: "Poppins", sans-serif;
-  font-size: 1.8vw;
+  font-size: 1.7rem;
   margin: auto;
-  margin-top: 5vh;
+  margin-top: 20px;
   text-align: center;
 }
 
 .hero-button {
   background: linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
   border: none;
-  border-radius: 2.5vw;
-  padding: 1vw;
+  border-radius: 20px;
   margin-top: 1.5rem;
+  padding: 15px 10px;
   width: 20%;
   cursor: pointer;
 }
 
 .hero-button-text {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.3vw;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #000;
   text-decoration: none;
   text-align: center;
 }
 
-/* For smaller phone viewpoints */
-@media only screen and (min-width: 320px) {
-  .hero {
-    height: 50vh;
-  }
-
-  .hero-heading {
-    font-size: 6vw;
-    margin-top: 5vh;
-  }
-
-  .hero-subheading {
-    font-size: 4vw;
-  }
-
-  .hero__description {
-    font-size: 3.5vw;
-    margin-top: 2vh;
-  }
-
-  .hero-button {
-    padding: 2%;
-    margin-top: 1.5rem;
-    width: 40%;
-  }
-
-  .hero-button-text {
-    font-size: 2.6vw;
-  }
-}
-
-/* For small devices and most phones */
-@media only screen and (min-width: 480px) {
-  .hero {
-    height: 65vh;
-  }
-
-  .hero-heading {
-    font-size: 6vw;
-    margin-top: 5vh;
-  }
-
-  .hero-subheading {
-    font-size: 3.5vw;
-  }
-
-  .hero__description {
-    font-size: 3vw;
-    margin-top: 2vh;
-  }
-
-  .hero-button {
-    padding: 2%;
-    margin-top: 1.5rem;
-    width: 40%;
-  }
-
-  .hero-button-text {
-    font-size: 2.6vw;
-  }
-}
-
-/* For most tablets */
-@media only screen and (min-width: 768px) {
-  .hero {
-    height: 70vh;
-  }
-
-  .hero-heading {
-    font-size: 5vw;
-  }
-
-  .hero-subheading {
-    font-size: 3vw;
-  }
-
-  .hero__description {
-    font-size: 2.5vw;
-  }
-
-  .hero-button {
-    padding: 1rem;
-    margin-top: 1.5rem;
-    width: 35%;
-  }
-
-  .hero-button-text {
-    font-size: 2vw;
-  }
-}
-
-/* For smaller desktop viewpoints */
-@media only screen and (min-width: 992px) {
-  .hero {
-    height: 85vh;
-  }
-
-  .hero-heading {
-    font-size: 4.5vw;
-    margin-top: 10vh;
-  }
-
-  .hero-subheading {
-    font-size: 2vw;
-  }
-
-  .hero__description {
-    font-size: 2vw;
-    margin-top: 5vh;
-  }
-
-  .hero-button {
-    padding: 1rem;
-    margin-top: 1.5rem;
-    width: 35%;
-  }
-
-  .hero-button-text {
-    font-size: 2vw;
-  }
-}
-
-/* For large devices and wide screens */
-@media only screen and (min-width: 1200px) {
-  .hero {
-    height: 86vh;
-  }
-
-  .hero-heading {
-    font-size: 3.5vw;
-  }
-
-  .hero-subheading {
-    font-size: 2vw;
-  }
-
-  .hero__description {
-    font-size: 1.8vw;
-  }
-
-  .hero-button {
-    padding: 1rem;
-    margin-top: 2rem;
-    width: 30%;
-  }
-
-  .hero-button-text {
-    font-size: 1.5vw;
-  }
-}
 
 /* animate-section */
 .animate-section {
-  height: 60vh;
   background-color: rgba(0, 0, 0, 0.952);
 }
 
 .animate-heading {
-  font-family: "Poppins", sans-serif;
-  font-size: 3rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.5rem;
   color: #fff;
   text-align: center;
+  margin-top: 30px;
 }
 
 .animate-para {
   color: #ffffffc6;
   padding: 0.5rem;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.6rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
   margin: auto;
   margin-top: 10px;
   text-align: center;
-  max-width: 90vw;
+  max-width: 85vw;
 }
 
-/* For smaller phone viewpoints */
-@media only screen and (min-width: 320px) {
-  .animate-section {
-    height: auto;
-  }
-
-  .animate-heading {
-    font-size: 1.5rem;
-  }
-
-  .animate-para {
-    font-size: 1rem;
-    text-align: center;
-  }
-}
-
-/* For small devices and most phones */
-@media only screen and (min-width: 480px) {
-  .animate-section {
-    height: auto;
-  }
-
-  .animate-heading {
-    font-size: 1.5rem;
-  }
-
-  .animate-para {
-    font-size: 1rem;
-    text-align: center;
-  }
-}
-
-/* For most tablets */
-@media only screen and (min-width: 768px) {
-  .animate-section {
-    height: auto;
-  }
-
-  .animate-heading {
-    font-size: 2rem;
-  }
-
-  .animate-para {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-}
-
-/* For smaller desktop viewpoints */
-@media only screen and (min-width: 992px) {
-  .animate-section {
-    height: auto;
-  }
-
-  .animate-heading {
-    font-size: 2.3rem;
-  }
-
-  .animate-para {
-    font-size: 1.4rem;
-    text-align: center;
-  }
-}
-
-/* For large devices and wide screens */
-@media only screen and (min-width: 1200px) {
-  .animate-section {
-    height: auto;
-  }
-
-  .animate-heading {
-    font-size: 2.5rem;
-  }
-
-  .animate-para {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-}
 
 /* product-section */
 .product-section {
   color: #fff;
-  height: 95vh;
   background-color: rgba(0, 0, 0, 0.952);
 }
 
 .product-head {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin-top: 30px;
   font-size: 2.5rem;
   color: #fff;
   text-align: center;
@@ -370,6 +140,7 @@ body::-webkit-scrollbar {
   max-width: 800px;
   padding: 0 5%;
   box-sizing: border-box;
+  margin-top: 30px;
 }
 
 .my-hr {
@@ -390,8 +161,8 @@ body::-webkit-scrollbar {
 .para1-heading,
 .para2-heading,
 .para3-heading {
-  font-size: 2rem;
-  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   cursor: pointer;
 }
 
@@ -402,16 +173,14 @@ body::-webkit-scrollbar {
   margin-top: 1%;
   color: rgb(199, 195, 195);
   text-align: inherit;
-  font-family: "Baloo Thambi 2", cursive;
+  font-family: 'Nunito', sans-serif;
 }
 
 .right-image {
   float: right;
-  margin-top: 3%;
+  margin-top: 45px;
   width: 100%;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 700px;
 }
 
 img {
@@ -421,27 +190,6 @@ img {
 
 /* For smaller phone viewpoints */
 @media only screen and (min-width: 320px) {
-  .product-section {
-    height: auto;
-  }
-
-  .product-head {
-    font-size: 1.3rem;
-  }
-
-  .para1-heading,
-  .para2-heading,
-  .para3-heading {
-    margin-top: 10px;
-    font-size: 1.3rem;
-  }
-
-  .para1-detail,
-  .para2-detail,
-  .para3-detail {
-    font-size: 1rem;
-  }
-
   .right-image {
     display: block;
     margin-left: auto;
@@ -452,27 +200,6 @@ img {
 
 /* For small devices and most phones */
 @media only screen and (min-width: 480px) {
-  .product-section {
-    height: auto;
-  }
-
-  .product-head {
-    font-size: 1.7rem;
-  }
-
-  .para1-heading,
-  .para2-heading,
-  .para3-heading {
-    margin-top: 10px;
-    font-size: 1.5rem;
-  }
-
-  .para1-detail,
-  .para2-detail,
-  .para3-detail {
-    font-size: 1.2rem;
-  }
-
   .right-image {
     display: block;
     margin-left: auto;
@@ -483,27 +210,6 @@ img {
 
 /* For most tablets */
 @media only screen and (min-width: 768px) {
-  .product-section {
-    height: auto;
-  }
-
-  .product-head {
-    font-size: 2rem;
-  }
-
-  .para1-heading,
-  .para2-heading,
-  .para3-heading {
-    margin-top: 10px;
-    font-size: 1.6rem;
-  }
-
-  .para1-detail,
-  .para2-detail,
-  .para3-detail {
-    font-size: 1.3rem;
-  }
-
   .right-image {
     display: block;
     margin-left: auto;
@@ -514,30 +220,6 @@ img {
 
 /* For smaller desktop viewpoints */
 @media only screen and (min-width: 992px) {
-  .product-section {
-    height: auto;
-  }
-
-  .profuct-detail {
-    width: 705
-  }
-
-  .product-head {
-    font-size: 2rem;
-  }
-
-  .para1-heading,
-  .para2-heading,
-  .para3-heading {
-    margin-top: 10px;
-    font-size: 1.6rem;
-  }
-
-  .para1-detail,
-  .para2-detail,
-  .para3-detail {
-    font-size: 1.4rem;
-  }
 
   .right-image {
     margin-left: auto;
@@ -548,414 +230,108 @@ img {
 
 /* For large devices and wide screens */
 @media only screen and (min-width: 1200px) {
-  .product-section {
-    height: auto;
-  }
-
-  .profuct-detail {
-    width: 705
-  }
-
-  .product-head {
-    font-size: 3rem;
-  }
-
-  .para1-heading,
-  .para2-heading,
-  .para3-heading {
-    margin-top: 10px;
-    font-size: 1.6rem;
-  }
-
-  .para1-detail,
-  .para2-detail,
-  .para3-detail {
-    font-size: 1.4rem;
-  }
-
   .right-image {
-    width: 60%;
+    width: 50%;
   }
 }
 
-
-
 /* about-section */
 .about {
-  height: 96vh;
   background-color: rgba(0, 0, 0, 0.952);
 }
 
 .about-heading {
-  font-family: "Poppins", sans-serif;
-  font-size: 4rem;
+  margin-top: 30px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 3rem;
   color: #fff;
   text-align: center;
 }
 
 .about-text {
   color: rgba(242, 239, 239, 0.78);
-  font-family: "Poppins", sans-serif;
-  font-size: 1.25rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.6rem;
   margin: auto;
-  margin-top: 1%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-top: 10px;
+  max-width: 80%;
   text-align: center;
 }
-
-/* For smaller phone viewpoints */
-@media only screen and (min-width: 320px) {
-  .about {
-    height: auto;
-  }
-
-  .about-heading {
-    font-size: 1.6rem;
-  }
-
-  .about-text {
-    font-size: 1.1rem;
-  }
-}
-
-/* For small devices and most phones */
-@media only screen and (min-width: 480px) {
-  .about {
-    height: auto;
-  }
-
-  .about-heading {
-    font-size: 1.8rem;
-  }
-
-  .about-text {
-    font-size: 1.3rem;
-  }
-}
-
-/* For most tablets */
-@media only screen and (min-width: 768px) {
-  .about {
-    height: auto;
-  }
-
-  .about-heading {
-    font-size: 2.3rem;
-  }
-
-  .about-text {
-    font-size: 1.3rem;
-  }
-}
-
-/* For smaller desktop viewpoints */
-@media only screen and (min-width: 992px) {
-  .about {
-    height: auto;
-  }
-
-  .about-heading {
-    font-size: 2.8rem;
-  }
-
-  .about-text {
-    font-size: 1.5rem;
-  }
-}
-
-
-/* For large devices and wide screens */
-@media only screen and (min-width: 1200px) {
-  .about {
-    height: auto;
-  }
-
-  .about-heading {
-    font-size: 3rem;
-  }
-
-  .about-text {
-    font-size: 1.6rem;
-    padding-bottom: 30px;
-  }
-}
-
-
 
 /* footer-section */
 .footer-section {
   background: rgba(0, 0, 0, 0.959);
-  height: 35vh;
-  margin-top: 70px;
+  margin-top: 50px;
+  color: #fff;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
-  flex-flow: row wrap;
-  justify-content: center;
-  color: #fff;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
-.column {
-  flex: 1;
+.column1 {
+  margin-top: 20px;
+  margin-left: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .column1-heading {
-  text-align: center;
-  font-size: 1rem;
+  font-size: 2rem;
+  padding: 10px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .column1-para {
-  text-align: center;
-  font-size: 1.4rem;
-  margin-top: 2.8rem;
+  font-size: 1.6rem;
+  font-family: 'Nunito', sans-serif;
+  padding: 10px;
+}
+
+.column2 {
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
 }
 
 .column2-text {
+  font-size: 2.5rem;
   text-align: center;
-  font-size: 2.4rem;
+  padding: 10px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .social-icons {
   display: flex;
-  justify-content: space-around;
-  text-align: center;
-  /* margin-top: 1rem; */
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-.Colum3-heading {
-  text-align: center;
-  font-size: 2.4rem;
+.Column3{
+  justify-content: center;
+  align-items: center;
 }
 
 .Column3-text {
-  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
   font-size: 1.8rem;
-  margin-top: 2.8rem;
-  color: rgb(113, 112, 112);
-}
-
-/* For smaller phone viewpoints */
-@media only screen and (min-width: 320px) {
-  .footer-section {
-    height: auto;
-  }
-
-  .columns {
-    flex-direction: column;
-  }
-
-  .column {
-    text-align: center;
-  }
-
-  .column1-heading {
-    text-align: center;
-    font-size: 2.5rem;
-  }
-
-  .column1-para {
-    margin-top: 0.5rem;
-    font-size: 1.5rem;
-  }
-
-  .column2-text {
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  .Colum3-heading {
-    display: none;
-  }
-
-  .Column3-text {
-    text-align: center;
-    font-size: 1rem;
-  }
-
-  .social-icons {
-    /* margin-top: 1rem; */
-  }
-}
-
-/* For small devices and most phones */
-@media only screen and (min-width: 480px) {
-  .footer-section {
-    height: auto;
-  }
-
-  .columns {
-    flex-direction: column;
-  }
-
-  .column {
-    text-align: center;
-  }
-
-  .column1-heading {
-    text-align: center;
-    font-size: 2.5rem;
-  }
-
-  .column1-para {
-    margin-top: 0.5rem;
-    font-size: 1.5rem;
-  }
-
-  .column2-text {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: -1.8rem;
-  }
-
-  .Colum3-heading {
-    display: none;
-  }
-
-  .Column3-text {
-    text-align: center;
-    font-size: 1rem;
-    margin-top: -1.5rem;
-  }
-
-  .social-icons {
-    margin-top: 1rem;
-  }
-}
-
-/* For most tablets */
-@media only screen and (min-width: 768px) {
-  .footer-section {
-    height: auto;
-  }
-
-  .columns {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .column {
-    margin: 20px;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .column1-heading {
-    text-align: center;
-    font-size: 1.8rem;
-  }
-
-  .column1-para {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-  }
-
-  .column2-text {
-    text-align: center;
-    font-size: 1.8rem;
-  }
-
-  .Colum3-heading {
-    text-align: center;
-    font-size: 1.6rem;
-  }
-
-  .Column3-text {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-top: 2rem;
-  }
-
-  .social-icons {
-    margin-top: 1rem;
-  }
-}
-
-/* For smaller desktop viewpoints */
-@media only screen and (min-width: 992px) {
-  .footer-section {
-    height: auto;
-  }
-
-  .columns {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .column {
-    margin: 20px;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .column1-heading {
-    text-align: center;
-    font-size: 2rem;
-  }
-
-  .column1-para {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-  }
-
-  .column2-text {
-    text-align: center;
-    font-size: 2rem;
-  }
-
-  .Colum3-heading {
-    text-align: center;
-    font-size: 2rem;
-  }
-
-  .Column3-text {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 2rem;
-  }
+  font-family: 'Nunito', sans-serif;
 }
 
 
-/* For large devices and wide screens */
-@media only screen and (min-width: 1200px) {
-  .footer-section {
-    height: auto;
-  }
+.column2-text {
+  font-size: 2rem;
+}
 
-  .column {
-    text-align: center;
-  }
+.Colum3-heading {
 
-  .column1-heading {
-    font-size: 2rem;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-  }
+  font-size: 2rem;
+}
 
-  .column1-para {
-    margin-top: 1rem;
-    font-size: 1.4rem;
-    font-family: 'Nunito', sans-serif;
-  }
-
-  .column2-text {
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 0.1rem;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-  }
-
-  .Colum3-heading {
-    text-align: center;
-    font-size: 1.5rem;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-  }
-
-  .Column3-text {
-    text-align: center;
-    font-size: 1.4rem;
-    font-family: 'Nunito', sans-serif;
-  }
-
-  .social-icons {
-    margin-top: 1rem;
-  }
+.Column3-text {
+  font-size: 1.5rem;
 }

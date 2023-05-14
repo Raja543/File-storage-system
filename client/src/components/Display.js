@@ -35,7 +35,7 @@ const Display = ({ contract, account }) => {
             >
               <i className="fa-solid fa-trash fa-beat"></i>
             </button>
-            <a href={item} target="_blank" rel="noreferrer">
+            {/* <a href={item} target="_blank" rel="noreferrer">
               <img
                 src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
                 alt="new"
@@ -43,13 +43,46 @@ const Display = ({ contract, account }) => {
                 width={100}
                 height={100}
               />
+              <video width="320" height="240" controls>
+                <source src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`} type="video/mp4" />
+              </video>
+              <audio controls>
+                <source src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`} type="audio/mpeg" />
+              </audio>
+              <embed src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`} type="application/pdf" width="100%" height="px" />
+            </a> */}
+            <a href={item} target="_blank" rel="noreferrer">
+              {item.endsWith('.jpg') || item.endsWith('.png') ? (
+                <img
+                  src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
+                  alt="new"
+                  className="image-list"
+                  width={100}
+                  height={100}
+                />
+              ) : item.endsWith('.mp4') ? (
+                <video width="320" height="240" controls>
+                  <source src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`} type="video/mp4" />
+                </video>
+              ) : item.endsWith('.mp3') ? (
+                <audio controls>
+                  <source src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`} type="audio/mpeg" />
+                </audio>
+              ) : item.endsWith('.pdf') ? (
+                <embed src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`} type="application/pdf" width="100%" height="px" />
+              ) : (
+                <p>Unsupported file type</p>
+              )}
             </a>
+
           </div>
         );
       });
 
       setData(images);
       setShowData(true);
+
+
     } else {
       alert("No image to display");
     }
@@ -93,11 +126,11 @@ const Display = ({ contract, account }) => {
       </div>
       {showData && data.length > 0 && (
         <div className="blank-container">
-          
+
           <div className="image-grid">{data}
-          <button className="close-container" onClick={closeContainer}>
-            <i className="fa-sharp fa-solid fa-circle-xmark fa-2xl"></i>
-          </button>
+            <button className="close-container" onClick={closeContainer}>
+              <i className="fa-sharp fa-solid fa-circle-xmark fa-2xl"></i>
+            </button>
           </div>
         </div>
       )}
