@@ -310,7 +310,7 @@ img {
   justify-content: space-evenly;
 }
 
-.Column3{
+.Column3 {
   justify-content: center;
   align-items: center;
 }
@@ -328,10 +328,10 @@ img {
 }
 
 .Colum3-heading {
-
   font-size: 2rem;
 }
 
 .Column3-text {
   font-size: 1.5rem;
+  margin-right: 20px;
 }
