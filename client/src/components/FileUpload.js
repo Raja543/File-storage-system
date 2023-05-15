@@ -71,7 +71,7 @@ const FileUpload = ({ contract, account, provider }) => {
   const renderPreview = () => {
     if (file) {
       const fileType = file.type.split("/")[0];
-  
+
       switch (fileType) {
         case "image":
           return (
@@ -124,10 +124,10 @@ const FileUpload = ({ contract, account, provider }) => {
           );
       }
     }
-  
+
     return null;
   };
-  
+
 
   const [currentButton, setCurrentButton] = useState("upload");
 
@@ -156,9 +156,9 @@ const FileUpload = ({ contract, account, provider }) => {
         </div>
         {currentButton === "upload" && (
           <div className="wrapper">
-            <h3>Upload Your image</h3>
+            <h3>Upload Your Files</h3>
             <p className="first-desc">
-              File supported type : PNG , JPEG , JPG , WEBP{" "}
+              File supported type : PNG , MP3 ,MP4,  WEBP{" "}
             </p>
             <div
               className="form"
