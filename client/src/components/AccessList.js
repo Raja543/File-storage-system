@@ -102,7 +102,7 @@ const AccessListPage = ({ contract }) => {
             ))}
           </ul>
         ) : (
-          <p>No addresses with access.</p>
+          <p className="error-text">No addresses with access.</p>
         )}
       </div>
 

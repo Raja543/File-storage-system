@@ -91,13 +91,7 @@
   color: #000;
 }
 
-.connect-btn span {
-  display: inline-block;
-  max-width: 180px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin-right: 0.5rem;
+.btn-txt {
   font-family: 'Nunito', sans-serif;
 }
 

@@ -18,7 +18,7 @@
   top: 26%;
   left: 50%;
   overflow: hidden;
-  padding: 0 100px;
+  padding: 10px 100px ;
   transform: translate3d(-50%, -50%, 0);
   color: white;
 }
@@ -33,8 +33,8 @@
   display: inline-block;
   position: relative;
   width: 120px;
-  height: 45px;
-  background-color: #83d8ff;
+  height: 48px;
+  border : 2px solid gray;
   border-radius: 84px;
   transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
@@ -42,7 +42,7 @@
 .toggle:before {
   content: 'Upload';
   position: absolute;
-  left: -60px;
+  left: -70px;
   top: 15px;
   font-size: 20px;
   color: #00ffff;
@@ -51,7 +51,7 @@
 .toggle:after {
   content: 'Share';
   position: absolute;
-  right: -48px;
+  right: -58px;
   top: 15px;
   font-size: 20px;
   color: #fff;
@@ -70,10 +70,6 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
   transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transform: rotate(-45deg);
-}
-
-input:checked + .toggle {
-  background-color: #83d8ff;
 }
 
 input:checked + .toggle:before {
@@ -97,7 +93,7 @@ input:checked + .toggle .toggle__handler {
   padding: 20px 30px 20px 30px;
   box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
   margin: auto;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .wrapper h3 {
@@ -166,7 +162,7 @@ input:checked + .toggle .toggle__handler {
   padding: 20px 30px 20px 30px;
   box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
   margin: auto;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 
 .share-wrapper h3 {

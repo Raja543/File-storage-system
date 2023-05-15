@@ -65,11 +65,11 @@ function App() {
   return (
     <div>
       <button className="connect-btn" onClick={connectWallet}>
-        <span>
+        <span className="btn-txt">
           {walletAddress && walletAddress.length > 0
             ? `Connected: ${walletAddress.substring(
                 0,
-                6
+                4
               )}...${walletAddress.substring(38)}`
             : "Connect Wallet"}
         </span>

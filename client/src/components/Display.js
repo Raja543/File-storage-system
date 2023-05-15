@@ -48,8 +48,8 @@ const Display = ({ contract, account }) => {
                 src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
                 alt="File"
                 className="image-list"
-                width={100}
-                height={100}
+                width={200}
+                height={150}
                 style={{ display: "none" }} // Initially hide the video tag
                 controls
               />
