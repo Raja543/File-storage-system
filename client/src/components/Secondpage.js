@@ -148,26 +148,24 @@ const Secondpage = () => {
       </div>
 
       <div className="footer-section">
-        <div className="columns">
-          <div className="column">
-            <h2 className="column1-heading">Contact Us</h2>
-            <p className="column1-para">SecureShareX@gmail.com</p>
-          </div>
+        <div className="column1">
+          <h2 className="column1-heading">Contact Us</h2>
+          <p className="column1-para">SecureShareX@gmail.com</p>
+        </div>
 
-          <div className="column">
-            <h2 className="column2-text">Get involved</h2>
-            <div className="social-icons">
-              <Discordsvg />
-              <Twittersvg />
-              <Instagramsvg />
-            </div>
+        <div className="column2">
+          <h2 className="column2-text">Get involved</h2>
+          <div className="social-icons">
+            <Discordsvg />
+            <Twittersvg />
+            <Instagramsvg />
           </div>
+        </div>
 
-          <div className="column">
-            <p className="Column3-text">
-              © 2023 Secure ShareX. All rights reserved
-            </p>
-          </div>
+        <div className="column3">
+          <p className="Column3-text">
+            © 2023 Secure ShareX. All rights reserved
+          </p>
         </div>
       </div>
     </>
