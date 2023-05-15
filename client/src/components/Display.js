@@ -29,66 +29,43 @@ const Display = ({ contract, account }) => {
       const images = str_array.map((item, i) => {
         return (
           <div key={i} className="image-container">
-            <button
-              className="delete-button"
-              onClick={() => deleteImage(i)}
-            >
+            <button className="delete-button" onClick={() => deleteFile(i)}>
               <i className="fa-solid fa-trash fa-beat"></i>
             </button>
-            {/* <a href={item} target="_blank" rel="noreferrer">
+            <a href={item} target="_blank" rel="noreferrer">
               <img
                 src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
-                alt="new"
+                alt="File"
+                className="image-list"
+                width={300}
+                height={300}
+                onError={(e) => {
+                  e.target.style.display = "none"; // Hide the failed image
+                  e.target.nextSibling.style.display = "block"; // Show the video tag
+                }}
+              />
+              <video
+                src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
+                alt="File"
                 className="image-list"
                 width={100}
                 height={100}
+                style={{ display: "none" }} // Initially hide the video tag
+                controls
               />
-              <video width="320" height="240" controls>
-                <source src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`} type="video/mp4" />
-              </video>
-              <audio controls>
-                <source src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`} type="audio/mpeg" />
-              </audio>
-              <embed src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`} type="application/pdf" width="100%" height="px" />
-            </a> */}
-            <a href={item} target="_blank" rel="noreferrer">
-              {item.endsWith('.jpg') || item.endsWith('.png') ? (
-                <img
-                  src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
-                  alt="new"
-                  className="image-list"
-                  width={100}
-                  height={100}
-                />
-              ) : item.endsWith('.mp4') ? (
-                <video width="320" height="240" controls>
-                  <source src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`} type="video/mp4" />
-                </video>
-              ) : item.endsWith('.mp3') ? (
-                <audio controls>
-                  <source src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`} type="audio/mpeg" />
-                </audio>
-              ) : item.endsWith('.pdf') ? (
-                <embed src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`} type="application/pdf" width="100%" height="px" />
-              ) : (
-                <p>Unsupported file type</p>
-              )}
             </a>
-
           </div>
         );
       });
 
       setData(images);
       setShowData(true);
-
-
     } else {
       alert("No image to display");
     }
   };
 
-  const deleteImage = async (index) => {
+  const deleteFile = async (index) => {
     try {
       await contract.deleteUrl(index);
       alert("Image deleted successfully");
@@ -126,8 +103,8 @@ const Display = ({ contract, account }) => {
       </div>
       {showData && data.length > 0 && (
         <div className="blank-container">
-
-          <div className="image-grid">{data}
+          <div className="image-grid">
+            {data}
             <button className="close-container" onClick={closeContainer}>
               <i className="fa-sharp fa-solid fa-circle-xmark fa-2xl"></i>
             </button>

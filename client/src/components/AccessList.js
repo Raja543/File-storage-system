@@ -81,7 +81,7 @@ const AccessListPage = ({ contract }) => {
               <li key={item.user} className="accesslist-container">
                 <div className="address">{item.user}</div>
                 <div className="status">
-                  {item.access ? "allowed" : "not allowed"}
+                  {item.access ? "Allowed" : "Disallowed"}
                 </div>
                 {item.access ? (
                   <button

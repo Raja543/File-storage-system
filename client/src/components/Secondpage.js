@@ -144,7 +144,7 @@ const Secondpage = () => {
           the search bar field. This will display all the images that have been
           shared with you by that user.
         </p>
-        {/* <Display contract={contract} account={account}></Display> */}
+        <Display contract={contract} account={account}></Display>
       </div>
 
       <div className="footer-section">
