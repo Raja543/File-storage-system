@@ -15,7 +15,7 @@
   margin-bottom: 20px;
   margin: auto;
   position: absolute;
-  top: 26%;
+  top: 29%;
   left: 50%;
   overflow: hidden;
   padding: 10px 100px ;
@@ -61,7 +61,7 @@
   display: inline-block;
   position: relative;
   z-index: 1;
-  top: 5px;
+  top: 6.1px;
   left: 7px;
   width: 34px;
   height: 34px;
@@ -182,6 +182,23 @@ input:checked + .toggle .toggle__handler {
   margin-bottom: 5px;
   border: 3px solid #9531ff;
   border-radius: 6px;
+  background: transparent;
+}
+
+.share-wrapper input.address:focus{
+  border: 3px solid #9531ff;
+  outline: none;
+}
+
+.share-wrapper input.address:focus::placeholder{
+  color: transparent;
+}
+
+::placeholder{
+  background: transparent;
+  color: #9531ff;
+  border: none;
+  outline: none;
 }
 
 .footer {

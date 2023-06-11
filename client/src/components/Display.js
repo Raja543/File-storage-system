@@ -30,7 +30,7 @@ const Display = ({ contract, account }) => {
         return (
           <div key={i} className="image-container">
             <button className="delete-button" onClick={() => deleteFile(i)}>
-              <i className="fa-solid fa-trash fa-beat"></i>
+              <i className="fa-solid fa-trash fa-beat" style={{color:"#007bff"}}></i>
             </button>
             <a href={item} target="_blank" rel="noreferrer">
               <img
