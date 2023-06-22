@@ -43,7 +43,7 @@ const Secondpage = () => {
             const signer = provider.getSigner();
             const address = await signer.getAddress();
             setAccount(address);
-            let contractAddress = "0xACE38f5Fde9BbF2768F5Ee0A71b8360aD38903cc";
+            let contractAddress = "0xE73d5Ad03d9277641782c5F909cFC772ed10B1a7";
             const contract = new ethers.Contract(contractAddress, Upload.abi, signer);
             setContract(contract);
             setProvider(provider);
