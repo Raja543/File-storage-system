@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import axios from "axios";
 import Modal from "./Modal";
 
@@ -128,16 +129,9 @@ const FileUpload = ({ contract, account, provider }) => {
     return null;
   };
 
-
   const [currentButton, setCurrentButton] = useState("upload");
 
-  const handleUploadClick = () => {
-    setCurrentButton("upload");
-  };
 
-  const handleShareClick = () => {
-    setCurrentButton("share");
-  };
 
   return (
     <>
@@ -158,7 +152,7 @@ const FileUpload = ({ contract, account, provider }) => {
           <div className="wrapper">
             <h3>Upload Your Files</h3>
             <p className="first-desc">
-              File supported type : PNG , MP3 ,MP4,  WEBP{" "}
+              File supported type : PNG , MP3 ,MP4, WEBP{" "}
             </p>
             <div
               className="form"
@@ -210,5 +204,15 @@ const FileUpload = ({ contract, account, provider }) => {
       </div>
     </>
   );
+};
+
+FileUpload.propTypes = {
+  contract: PropTypes.shape({
+    connect: PropTypes.func,
+  }),
+  account: PropTypes.string,
+  provider: PropTypes.shape({
+    getSigner: PropTypes.func,
+  }),
 };
 export default FileUpload;

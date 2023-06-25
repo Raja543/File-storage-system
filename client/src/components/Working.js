@@ -22,8 +22,8 @@ const Working = () => {
                     The first step is to upload the image file to the Pinata platform.This can be done
                     through the Pinata web interface, an API endpoint, or through aPinata SDK if the user
                     is integrating Pinata into a software application. Once the image is uploaded to Pinata,
-                    the user "pins" the file to the IPFS network. Pinning a file ensures that it is stored
-                    permanently on the IPFS network, and is accessible to anyone who has the file's hash.
+                    the user &quot;pins&quot; the file to the IPFS network. Pinning a file ensures that it is stored
+                    permanently on the IPFS network, and is accessible to anyone who has the file&apos;s hash.
                     After the image is pinned, Pinata generates a hash value for the file. This hash value
                     is a unique identifier that can be used to access the file on the IPFS network.
                 </p>
@@ -37,7 +37,7 @@ const Working = () => {
                     metadata. This allows the user to associate the image with a specific blockchain
                     transaction, making it easier to verify the authenticity and ownership of the image.
                     The hash can be stored on a public blockchain, such as Ethereum, or on a private
-                    blockchain, depending on the user's needs.
+                    blockchain, depending on the user&apos;s needs.
                 </p>
                 <div className="image-2">
                     <img src={image2} alt="second-image" />

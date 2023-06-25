@@ -17,7 +17,6 @@ body::-webkit-scrollbar {
 }
 
 .hero {
-  height: 89vh;
   background-color: rgba(0, 0, 0, 0.952);
   position: relative;
   z-index: 1;
@@ -52,10 +51,11 @@ body::-webkit-scrollbar {
 
 .hero-heading {
   font-family: "Poppins", sans-serif;
-  font-size: 3.5rem;
+  font-size: 2.75rem;
   color: #fff;
+  padding: 0.5rem 2rem;
   text-align: center;
-  margin-top: 130px;
+  margin-top: 12rem;
 }
 
 .hero-subheading {
@@ -63,63 +63,107 @@ body::-webkit-scrollbar {
   text-align: center;
   font-size: 2rem;
   color: #fff;
+  padding: 0.2rem;
 }
 
 .hero__description {
   color: #ffffffc6;
-  padding: 10px;
-  max-width: 45em;
+  padding: 0.5rem 4rem 0.5rem 4rem;
+  max-width: 46em;
   font-family: "Poppins", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 1rem;
   text-align: center;
 }
 
 .hero-button {
-  background: linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
+  background: linear-gradient(
+    89.79deg,
+    rgb(12, 255, 240) 0.18%,
+    rgb(12, 255, 167) 99.9%
+  );
   border: none;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   margin-top: 1.5rem;
-  padding: 15px 10px;
-  width: 20%;
+  padding: 1rem 1rem;
   cursor: pointer;
+  margin-bottom: 12rem;
 }
 
 .hero-button-text {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
   color: #000;
   text-decoration: none;
   text-align: center;
+  text-transform: capitalize;
 }
 
+@media screen and (max-width: 768px) {
+  .hero-heading {
+    font-size: 2.5rem;
+    margin-top: 100px;
+  }
+  .hero-subheading {
+    font-size: 1.5rem;
+  }
+  .hero__description {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-heading {
+    font-size: 1.3rem;
+    margin-top: 90px;
+  }
+  .hero-subheading {
+    font-size: 1.2rem;
+  }
+  .hero__description {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-heading {
+    font-size: 1.3rem;
+    margin-top: 90px;
+  }
+  .hero-subheading {
+    font-size: 1.2rem;
+  }
+  .hero__description {
+    font-size: 1rem;
+  }
+}
 
 /* animate-section */
 .animate-section {
-  background-color: rgba(0, 0, 0, 0.952);
+  background-color: #060606;
 }
 
 .animate-heading {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 2.5rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2rem;
   color: #fff;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 1.75rem;
+  padding: 1.5rem 3rem;
 }
 
 .animate-para {
   color: #ffffffc6;
-  padding: 0.5rem;
-  font-family: 'Nunito', sans-serif;
+  padding: 0rem 2rem 5rem 2rem;
+  font-family: "Nunito", sans-serif;
   font-size: 1.5rem;
   margin: auto;
   margin-top: 10px;
   text-align: center;
-  max-width: 85vw;
+  max-width: 80vw;
 }
-
 
 /* product-section */
 .product-section {
@@ -128,7 +172,7 @@ body::-webkit-scrollbar {
 }
 
 .product-head {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   margin-top: 30px;
   font-size: 2.5rem;
   color: #fff;
@@ -162,7 +206,7 @@ body::-webkit-scrollbar {
 .para2-heading,
 .para3-heading {
   font-size: 1.6rem;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   cursor: pointer;
 }
 
@@ -173,7 +217,7 @@ body::-webkit-scrollbar {
   margin-top: 1%;
   color: rgb(199, 195, 195);
   text-align: inherit;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .right-image {
@@ -220,7 +264,6 @@ img {
 
 /* For smaller desktop viewpoints */
 @media only screen and (min-width: 992px) {
-
   .right-image {
     margin-left: auto;
     margin-right: auto;
@@ -242,96 +285,107 @@ img {
 
 .about-heading {
   margin-top: 30px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 3rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2rem;
+  padding: 1rem 2rem 0 2rem;
   color: #fff;
   text-align: center;
 }
 
 .about-text {
   color: rgba(242, 239, 239, 0.78);
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.6rem;
-  margin: auto;
-  margin-top: 10px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  padding: 1rem 2rem 3rem 2rem;
   max-width: 80%;
   text-align: center;
+  margin: auto;
 }
 
 /* footer-section */
 .footer-section {
   background: rgba(0, 0, 0, 0.959);
-  margin-top: 60px;
   color: #fff;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
   text-align: center;
 }
 
 .column1 {
-  margin-top: 20px;
-  margin-left: 50px;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .column1-heading {
   font-size: 2rem;
-  padding: 10px;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
+  padding: 0.5rem;
 }
 
 .column1-para {
   font-size: 1.6rem;
-  font-family: 'Nunito', sans-serif;
-  padding: 10px;
+  font-family: "Nunito", sans-serif;
+  margin: 0 3rem 0 3rem;
 }
 
 .column2 {
-  margin-top: 20px;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-left: 50px;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .column2-text {
-  font-size: 2.5rem;
-  text-align: center;
-  padding: 10px;
-  font-family: 'Nunito', sans-serif;
+  font-size: 2rem;
+  padding: 0.5rem;
+  font-family: "Nunito", sans-serif;
 }
 
 .social-icons {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin: 0 3rem 0 3rem;
 }
 
 .Column3 {
-  justify-content: center;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .Column3-text {
-  margin-top: 40px;
-  padding: 20px;
-  font-size: 1.8rem;
-  font-family: 'Nunito', sans-serif;
-}
-
-
-.column2-text {
-  font-size: 2rem;
-}
-
-.Colum3-heading {
-  font-size: 2rem;
-}
-
-.Column3-text {
+  margin-top: 2.5rem;
+  padding: 1.5rem 3rem 1rem 0rem;
   font-size: 1.5rem;
-  margin-right: 20px;
+  font-family: "Nunito", sans-serif;
 }
+
+@media screen and (max-width: 768px) {
+  .footer-section {
+    flex-direction: column;
+  }
+
+  .column1 {
+    margin-bottom: 0;
+  }
+
+  .column2 {
+    margin-bottom: 0;
+  }
+
+  .Column3 {
+    margin-bottom: 0;
+  }
+
+  .Column3-text{
+    margin-top: 1rem;
+  }
+}
+  
