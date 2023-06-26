@@ -1,7 +1,7 @@
 import React ,{ useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Navbar from "./Navbar";
-import "./AccessListPage.css";
+import "./AccessList.css";
 import Discordsvg from "./Discordsvg";
 import Twittersvg from "./Twittersvg";
 import Instagramsvg from "./Instagramsvg";

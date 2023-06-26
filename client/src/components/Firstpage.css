@@ -169,22 +169,31 @@ body::-webkit-scrollbar {
 .product-section {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.952);
+  margin-bottom: 100px;
 }
 
 .product-head {
   font-family: "Plus Jakarta Sans", sans-serif;
   margin-top: 30px;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #fff;
+  padding: 1rem;
   text-align: center;
 }
 
-.product-detail {
-  width: 100%;
-  max-width: 800px;
-  padding: 0 5%;
-  box-sizing: border-box;
-  margin-top: 30px;
+.product-content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  max-width: 90%;
+}
+
+.product-left{
+display: flex;
+flex-direction: column;
+margin-top: 1rem;
 }
 
 .my-hr {
@@ -197,9 +206,11 @@ body::-webkit-scrollbar {
 .Para-1,
 .Para-2,
 .Para-3 {
+  display: flex;
+  flex-direction: column;
   margin-top: 1%;
   margin-left: 2%;
-  max-width: 40em;
+  max-width: 80em;
 }
 
 .para1-heading,
@@ -220,63 +231,15 @@ body::-webkit-scrollbar {
   font-family: "Nunito", sans-serif;
 }
 
-.right-image {
-  float: right;
-  margin-top: 45px;
+.product-right{
+  max-width: 40%;
+}
+.product-right img {
   width: 100%;
-  max-width: 700px;
+  object-fit: fill;
+  overflow: hidden;
 }
 
-img {
-  width: 100%;
-  height: 100%;
-}
-
-/* For smaller phone viewpoints */
-@media only screen and (min-width: 320px) {
-  .right-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-  }
-}
-
-/* For small devices and most phones */
-@media only screen and (min-width: 480px) {
-  .right-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-  }
-}
-
-/* For most tablets */
-@media only screen and (min-width: 768px) {
-  .right-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-  }
-}
-
-/* For smaller desktop viewpoints */
-@media only screen and (min-width: 992px) {
-  .right-image {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-  }
-}
-
-/* For large devices and wide screens */
-@media only screen and (min-width: 1200px) {
-  .right-image {
-    width: 50%;
-  }
-}
 
 /* about-section */
 .about {
@@ -367,25 +330,4 @@ img {
   font-family: "Nunito", sans-serif;
 }
 
-@media screen and (max-width: 768px) {
-  .footer-section {
-    flex-direction: column;
-  }
-
-  .column1 {
-    margin-bottom: 0;
-  }
-
-  .column2 {
-    margin-bottom: 0;
-  }
-
-  .Column3 {
-    margin-bottom: 0;
-  }
-
-  .Column3-text{
-    margin-top: 1rem;
-  }
-}
   

@@ -5,21 +5,11 @@
   padding: 0;
 }
 
-.upload-share-container{
-  height: 75vh;
-}
 .toggleWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
-  margin: auto;
-  position: absolute;
-  top: 29%;
-  left: 50%;
-  overflow: hidden;
-  padding: 10px 100px ;
-  transform: translate3d(-50%, -50%, 0);
+  padding: 1rem;
   color: white;
 }
 
@@ -93,7 +83,8 @@ input:checked + .toggle .toggle__handler {
   padding: 20px 30px 20px 30px;
   box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
   margin: auto;
-  margin-top: 70px;
+  margin-top: 20px;
+  margin-bottom: 4rem;
 }
 
 .wrapper h3 {

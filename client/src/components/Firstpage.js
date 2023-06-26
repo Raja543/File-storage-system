@@ -29,10 +29,10 @@ function Firstpage() {
             <source src={myvideo} type="video/mp4" />
           </video>
           <div className="hero-content">
-          <div className="hero-heading-box">
-            <h1 className="hero-heading">
-              Innovate Your File Storage with Decentralization
-            </h1>
+            <div className="hero-heading-box">
+              <h1 className="hero-heading">
+                Innovate Your File Storage with Decentralization
+              </h1>
             </div>
             <h1 className="hero-subheading"> Your Data, Your Control</h1>
             <p className="hero__description">
@@ -76,55 +76,57 @@ function Firstpage() {
         <h2 className="product-head">
           Benefits of Blockchain-based File Storage
         </h2>
-        <div className="right-image">
-          <img src={imageSrc} alt="logo" />
-        </div>
-        <div className="product-detail">
-          <div className="Para-1">
-            <h3
-              id="para1-heading"
-              className="para1-heading"
-              onClick={() => handleHeadingClick(img2)}
-            >
-              Immutability
-            </h3>
-            <p className="para1-detail">
-              The blockchain provides a tamper-proof and immutable record of the
-              file. Once a file is stored on the blockchain, it cannot be
-              altered or deleted, ensuring the integrity of the data.
-            </p>
+        <div className="product-content">
+          <div className="product-left">
+            <div className="Para-1">
+              <h3
+                id="para1-heading"
+                className="para1-heading"
+                onClick={() => handleHeadingClick(img2)}
+              >
+                Immutability
+              </h3>
+              <p className="para1-detail">
+                The blockchain provides a tamper-proof and immutable record of
+                the file. Once a file is stored on the blockchain, it cannot be
+                altered or deleted, ensuring the integrity of the data.
+              </p>
+            </div>
+            <hr className="my-hr" />
+            <div className="Para-2">
+              <h3
+                id="para2-heading"
+                className="para2-heading"
+                onClick={() => handleHeadingClick(img3)}
+              >
+                Decentralization
+              </h3>
+              <p className="para2-detail">
+                The file is stored on a decentralized network of computers,
+                meaning that there is no single point of failure or control.
+                This ensures that the file remains accessible and secure even if
+                one or more nodes fail.
+              </p>
+            </div>
+            <hr className="my-hr" />
+            <div className="Para-3">
+              <h3
+                id="para3-heading"
+                className="para3-heading"
+                onClick={() => handleHeadingClick(img1)}
+              >
+                Transparency
+              </h3>
+              <p className="para3-detail">
+                All transactions on the blockchain are transparent and publicly
+                visible. This means that anyone can view the transaction history
+                of the file and verify its authenticity, providing a high level
+                of trust and accountability.
+              </p>
+            </div>
           </div>
-          <hr className="my-hr" />
-          <div className="Para-2">
-            <h3
-              id="para2-heading"
-              className="para2-heading"
-              onClick={() => handleHeadingClick(img3)}
-            >
-              Decentralization
-            </h3>
-            <p className="para2-detail">
-              The file is stored on a decentralized network of computers,
-              meaning that there is no single point of failure or control. This
-              ensures that the file remains accessible and secure even if one or
-              more nodes fail.
-            </p>
-          </div>
-          <hr className="my-hr" />
-          <div className="Para-3">
-            <h3
-              id="para3-heading"
-              className="para3-heading"
-              onClick={() => handleHeadingClick(img1)}
-            >
-              Transparency
-            </h3>
-            <p className="para3-detail">
-              All transactions on the blockchain are transparent and publicly
-              visible. This means that anyone can view the transaction history
-              of the file and verify its authenticity, providing a high level of
-              trust and accountability.
-            </p>
+          <div className="product-right">
+            <img src={imageSrc} alt="logo" />
           </div>
         </div>
       </div>
