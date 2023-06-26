@@ -34,7 +34,7 @@ The Decentralized File Storage System is a web-based application built on web3 t
 
 ## Demo
 
-https://securesharex.vercel.app/
+https://securesharex-web3.vercel.app/
 
 ## Installation
 
