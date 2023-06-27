@@ -111,7 +111,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For any questions or inquiries, please contact rajakumarmahto952@gmail.com , dipkarmakar47@gmail.com
+For any questions or inquiries, please contact rajakumarmahto952@gmail.com , dipkarmakar14@gmail.com
 
 ## Socials
  Follow on social to get insights of upcoming web3 projects
