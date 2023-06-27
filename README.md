@@ -42,7 +42,7 @@ https://securesharex-web3.vercel.app/
 
    ```shell
 
-   git clone
+   git clone https://github.com/Raja543/File-storage-system.git
 
    ```
 
