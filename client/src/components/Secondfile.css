@@ -8,25 +8,23 @@
 }
 
 .file-container {
-  height: 85vh;
   background: url("./images/herobg-min.png");
   background-repeat: no-repeat;
   background-size: cover;
-  font-size: 25px;
+  background-position: center;
   margin-top: 70px;
 }
 
 .file-container h1 {
   color: #fff;
   font-family: "Baloo Thambi 2", cursive;
-  font-size: 3.5rem;
-  padding-top: 20px;
+  font-size: 2.5rem;
+  padding-top: 80px;
   text-align: center;
 }
 
 .brief-detail {
   padding: 25px 30px;
-  height: 67vh;
   background-color: rgba(0, 0, 0, 0.952);
   font-size: 25px;
   text-align: center;
@@ -35,8 +33,10 @@
 }
 
 .brief-head {
-  font-family: "Baloo Thambi 2", cursive;
+  font-family: "poppins", sans-serif;
   letter-spacing: 4px;
+  font-size: 2rem;
+  padding :1rem;
 }
 
 input[type="file"] {
@@ -116,16 +116,14 @@ input[type="file"] {
 .upload-check-section {
   height: auto;
   background-color: rgba(2, 1, 2, 0.952);
-  font-size: 25px;
-  padding: auto;
-  min-height: 50vh;
-  padding-bottom: 15px;
+  margin-bottom: 5rem;
   padding-top: 10px;
+
 }
 
 .check-head {
   font-family: "Poppins", sans-serif;
-  font-size: 40px;
+  font-size: 2rem;
   color: #fff;
   text-align: center;
   margin-top: 39px;

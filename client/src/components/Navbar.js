@@ -39,7 +39,7 @@ const Navbar = () => {
         <Link to="/accessList" className="item">
           <li>Allowlist</li>
         </Link>
-        <Link className="about">
+        <Link className="item">
           <li>
             <Connectwallet />
           </li>

@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import React ,{ useEffect } from "react";
+import PropTypes from "prop-types"; 
 
 const Modal = ({ contract }) => {
   const sharing = async () => {
@@ -46,4 +47,13 @@ const Modal = ({ contract }) => {
     </>
   );
 };
+
+Modal.propTypes = {
+  contract: PropTypes.shape({
+    allow: PropTypes.any, 
+    disallow: PropTypes.any, 
+    shareAccess: PropTypes.any, 
+  }),
+};
+
 export default Modal;

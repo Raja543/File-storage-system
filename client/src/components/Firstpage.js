@@ -29,9 +29,11 @@ function Firstpage() {
             <source src={myvideo} type="video/mp4" />
           </video>
           <div className="hero-content">
-            <h1 className="hero-heading">
-              Innovate Your File Storage with Decentralization
-            </h1>
+            <div className="hero-heading-box">
+              <h1 className="hero-heading">
+                Innovate Your File Storage with Decentralization
+              </h1>
+            </div>
             <h1 className="hero-subheading"> Your Data, Your Control</h1>
             <p className="hero__description">
               Join the movement towards a more decentralized web, where users
@@ -69,74 +71,80 @@ function Firstpage() {
       </div>
 
       {/* Product section */}
+      {/* Product section */}
       <div className="product-section">
-        <h2 className="product-head">Benefits of Blockchain-based File Storage</h2>
-        <div className="right-image">
-          <img src={imageSrc} alt="logo" />
-        </div>
-        <div className="product-detail">
-          <div className="Para-1">
-            <h3
-              id="para1-heading"
-              className="para1-heading"
-              onClick={() => handleHeadingClick(img2)}
-            >
-              Immutability
-            </h3>
-            <p className="para1-detail">
-              The blockchain provides a tamper-proof and immutable record of the file.
-              Once a file is stored on the blockchain, it cannot be altered or deleted,
-              ensuring the integrity of the data.
-            </p>
+        <h2 className="product-head">
+          Benefits of Blockchain-based File Storage
+        </h2>
+        <div className="product-content">
+          <div className="product-left">
+            <div className="Para-1">
+              <h3
+                id="para1-heading"
+                className="para1-heading"
+                onClick={() => handleHeadingClick(img2)}
+              >
+                Immutability
+              </h3>
+              <p className="para1-detail">
+                The blockchain provides a tamper-proof and immutable record of
+                the file. Once a file is stored on the blockchain, it cannot be
+                altered or deleted, ensuring the integrity of the data.
+              </p>
+            </div>
+            <hr className="my-hr" />
+            <div className="Para-2">
+              <h3
+                id="para2-heading"
+                className="para2-heading"
+                onClick={() => handleHeadingClick(img3)}
+              >
+                Decentralization
+              </h3>
+              <p className="para2-detail">
+                The file is stored on a decentralized network of computers,
+                meaning that there is no single point of failure or control.
+                This ensures that the file remains accessible and secure even if
+                one or more nodes fail.
+              </p>
+            </div>
+            <hr className="my-hr" />
+            <div className="Para-3">
+              <h3
+                id="para3-heading"
+                className="para3-heading"
+                onClick={() => handleHeadingClick(img1)}
+              >
+                Transparency
+              </h3>
+              <p className="para3-detail">
+                All transactions on the blockchain are transparent and publicly
+                visible. This means that anyone can view the transaction history
+                of the file and verify its authenticity, providing a high level
+                of trust and accountability.
+              </p>
+            </div>
           </div>
-          <hr className="my-hr" />
-          <div className="Para-2">
-            <h3
-              id="para2-heading"
-              className="para2-heading"
-              onClick={() => handleHeadingClick(img3)}
-            >
-              Decentralization
-            </h3>
-            <p className="para2-detail">
-              The file is stored on a decentralized network of computers, meaning that
-              there is no single point of failure or control. This ensures that the file
-              remains accessible and secure even if one or more nodes fail.
-            </p>
-          </div>
-          <hr className="my-hr" />
-          <div className="Para-3">
-            <h3
-              id="para3-heading"
-              className="para3-heading"
-              onClick={() => handleHeadingClick(img1)}
-            >
-              Transparency
-            </h3>
-            <p className="para3-detail">
-              All transactions on the blockchain are transparent and publicly visible.
-              This means that anyone can view the transaction history of the file and
-              verify its authenticity, providing a high level of trust and accountability.
-            </p>
+          <div className="product-right">
+            <img src={imageSrc} alt="logo" />
           </div>
         </div>
       </div>
-
-
 
       {/* About section */}
       <div className="about">
         <h2 className="about-heading">About Us</h2>
         <p className="about-text">
           At SecureShareX, we believe that data ownership and privacy are
-          fundamental rights that should be protected in the digital age. That's
-          why we've created a decentralized file storage system that puts you in
-          control of your data. Our team of experienced developers and
-          blockchain experts have designed a secure, decentralized network that
-          allows you to store and access your files from anywhere, without
-          relying on a central authority. By using blockchain technology, we
-          ensure that your data is encrypted, tamper-proof, and always
-          available, even in the face of network outages or attacks.
+          fundamental rights that should be protected in the digital age.
+          That&apos;s why we&apos;ve created a decentralized file storage system
+          that puts you in control of your data. Our team of experienced
+          developers and blockchain experts have designed a secure,
+          decentralized network that allows you to store and access your files
+          from anywhere, without relying on a central authority. By using
+          blockchain technology, we ensure that your data is encrypted,
+          tamper-proof, and always available, even in the face of network
+          outages or attacks.
         </p>
       </div>
 

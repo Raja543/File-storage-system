@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React,{ useState } from "react";
+import PropTypes from "prop-types";
 import "./Secondfile.css";
 
 const Display = ({ contract, account }) => {
@@ -115,4 +116,12 @@ const Display = ({ contract, account }) => {
   );
 };
 
+Display.propTypes = {
+  contract: PropTypes.shape({
+    display: PropTypes.string, // Update the prop type according to the expected type
+    deleteUrl: PropTypes.string, // Update the prop type according to the expected type
+  }),
+  account: PropTypes.string, // Update the prop type according to the expected type
+};
 export default Display;
+

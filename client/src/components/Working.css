@@ -5,7 +5,7 @@ body {
 }
 
 .Work-heading {
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #fff;
     margin-top: 90px;
@@ -15,78 +15,54 @@ body {
 .first-section {
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 10px;
 }
 
-.first-para {
-    font-size: 1.5rem;
+.first-para ,.second-para ,.third-para{
+    font-size: 1.25rem;
     line-height: 1.6;
     font-family: 'Nunito', sans-serif;
     color: #fff;
-    max-width: 30em;
+    max-width: 40em;
     margin-left: 50px;
     margin-top: 30px;
 }
 
-.image-1 {
+.image-1 ,.image-2 ,.image-3{
     margin-top: 30px;
-    margin-left: 30px;
 }
 
-.image-1 img {
-    max-width: 700px;
+.image-1 img ,.image-2 img  , .image-3 img{
+    max-width: 100%;
+    object-fit: contain;
 }
+
+.image-2{
+    max-width: 50%;
+}
+
+
 
 .second-section {
     display: flex;
     flex-direction: row-reverse;
-    margin-top: 100px;
-    margin-bottom: 20px;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
 }
 
-.second-para {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    font-family: 'Nunito', sans-serif;
-    color: #fff;
-    max-width: 30em;
-    margin-left: 40px;
-    margin-right: 35px;
-    margin-top: 30px;
-}
-
-.image-2 {
-    margin-top: 0px;
-    margin-left: 30px;
-}
-
-.image-2 img {
-    max-width: 500px;
-}
 
 .third-section {
     display: flex;
     flex-direction: row;
-    margin-top: 80px;
-    margin-bottom: 20px;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 5rem;
 }
 
-.third-para {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    font-family: 'Nunito', sans-serif;
-    color: #fff;
-    max-width: 30em;
-    margin-left: 40px;
-    margin-top: 30px;
-}
 
-.image-3 {
-    margin-top: 30px;
-    margin-left: 30px;
-}
-
-.image-3 img {
-    max-width: 700px;
-}

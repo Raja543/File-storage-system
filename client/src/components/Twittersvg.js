@@ -8,7 +8,8 @@ let styles = {
     svg: {
       fill: '#ffff',
       width: "40px",
-      height: "50px",
+      height: "30px",
+      margin: "10px"
     }
   };
 

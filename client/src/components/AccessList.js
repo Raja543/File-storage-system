@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import React ,{ useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import Navbar from "./Navbar";
-import "./AccessListPage.css";
+import "./AccessList.css";
 import Discordsvg from "./Discordsvg";
 import Twittersvg from "./Twittersvg";
 import Instagramsvg from "./Instagramsvg";
@@ -132,4 +133,13 @@ const AccessListPage = ({ contract }) => {
   );
 };
 
+AccessListPage.propTypes = {
+  contract: PropTypes.shape({
+    shareAccess: PropTypes.any, 
+    allow: PropTypes.any, 
+    disallow: PropTypes.any, 
+  }),
+};
+
 export default AccessListPage;
+
