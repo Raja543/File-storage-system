@@ -1,10 +1,8 @@
-import React ,{ useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Navbar from "./Navbar";
 import "./AccessList.css";
-import Discordsvg from "./Discordsvg";
-import Twittersvg from "./Twittersvg";
-import Instagramsvg from "./Instagramsvg";
+import Footer from "./Footer";
 
 const AccessListPage = ({ contract }) => {
   const [accessList, setAccessList] = useState([]);
@@ -20,7 +18,7 @@ const AccessListPage = ({ contract }) => {
   const handleAllow = async (address) => {
     await contract.allow(address);
     const addressObj = { user: address, access: true };
-    if (accessList.some(item => item.user === address)) {
+    if (accessList.some((item) => item.user === address)) {
       setAccessList(
         accessList.map((item) => {
           if (item.user === address) {
@@ -44,16 +42,11 @@ const AccessListPage = ({ contract }) => {
         return item;
       })
     );
-    // setAccessList(updatedList);
   };
 
-
   return (
-    <div>
-      {/* Navbar section */}
-      <div className="navbar-section">
-        <Navbar />
-      </div>
+    <>
+      <Navbar />
       <div className="accesslist-section">
         <h1 className="accesslist-h1">Access List</h1>
         <form
@@ -107,39 +100,17 @@ const AccessListPage = ({ contract }) => {
         )}
       </div>
 
-      <div className="footer-section">
-        <div className="column1">
-          <h2 className="column1-heading">Contact Us</h2>
-          <p className="column1-para">SecureShareX@gmail.com</p>
-        </div>
-
-        <div className="column2">
-          <h2 className="column2-text">Get involved</h2>
-          <div className="social-icons">
-            <Discordsvg />
-            <Twittersvg />
-            <Instagramsvg />
-          </div>
-        </div>
-
-        <div className="column3">
-          <p className="Column3-text">
-            © 2023 Secure ShareX. All rights reserved
-          </p>
-        </div>
-      </div>
-
-    </div>
+      <Footer />
+    </>
   );
 };
 
 AccessListPage.propTypes = {
   contract: PropTypes.shape({
-    shareAccess: PropTypes.any, 
-    allow: PropTypes.any, 
-    disallow: PropTypes.any, 
+    shareAccess: PropTypes.any,
+    allow: PropTypes.any,
+    disallow: PropTypes.any,
   }),
 };
 
 export default AccessListPage;
-

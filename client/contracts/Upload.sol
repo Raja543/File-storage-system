@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: GPL-3.0
+// // SPDX-License-Identifier: GPL-3.0
 
 pragma solidity >=0.7.0 <0.9.0;
 
@@ -47,6 +47,7 @@ contract Upload {
   function shareAccess() public view returns(Access[] memory){
       return accessList[msg.sender];
   }
+  
   function deleteUrl(uint index) external {
     require(index < value[msg.sender].length, "Invalid index");
     for (uint i = index; i < value[msg.sender].length - 1; i++) {

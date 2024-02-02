@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ethers } from "ethers";
-import Firstpage from "./components/Firstpage";
-import Secondpage from "./components/Secondpage";
+import Home from "./pages/Home";
+import Secondpage from "./pages/Secondpage";
 import AccessList from "./components/AccessList";
-import "./App.css";
 import Working from "./components/Working";
+import UploadFile from "./pages/UploadFile";
 
 const App = () => {
   const [contract, setContract] = useState(null);
@@ -18,106 +18,106 @@ const App = () => {
         const contractAddress = "0x3d2aAecF743e62C202F0Ef1189B7A49C65d038ed"; // replace with your contract address
         const abi = [
           {
-            "inputs": [
+            inputs: [
               {
-                "internalType": "address",
-                "name": "_user",
-                "type": "address"
+                internalType: "address",
+                name: "_user",
+                type: "address",
               },
               {
-                "internalType": "string",
-                "name": "url",
-                "type": "string"
-              }
+                internalType: "string",
+                name: "url",
+                type: "string",
+              },
             ],
-            "name": "add",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
+            name: "add",
+            outputs: [],
+            stateMutability: "nonpayable",
+            type: "function",
           },
           {
-            "inputs": [
+            inputs: [
               {
-                "internalType": "address",
-                "name": "user",
-                "type": "address"
-              }
+                internalType: "address",
+                name: "user",
+                type: "address",
+              },
             ],
-            "name": "allow",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
+            name: "allow",
+            outputs: [],
+            stateMutability: "nonpayable",
+            type: "function",
           },
           {
-            "inputs": [
+            inputs: [
               {
-                "internalType": "uint256",
-                "name": "index",
-                "type": "uint256"
-              }
+                internalType: "uint256",
+                name: "index",
+                type: "uint256",
+              },
             ],
-            "name": "deleteUrl",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
+            name: "deleteUrl",
+            outputs: [],
+            stateMutability: "nonpayable",
+            type: "function",
           },
           {
-            "inputs": [
+            inputs: [
               {
-                "internalType": "address",
-                "name": "user",
-                "type": "address"
-              }
+                internalType: "address",
+                name: "user",
+                type: "address",
+              },
             ],
-            "name": "disallow",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
+            name: "disallow",
+            outputs: [],
+            stateMutability: "nonpayable",
+            type: "function",
           },
           {
-            "inputs": [
+            inputs: [
               {
-                "internalType": "address",
-                "name": "_user",
-                "type": "address"
-              }
+                internalType: "address",
+                name: "_user",
+                type: "address",
+              },
             ],
-            "name": "display",
-            "outputs": [
+            name: "display",
+            outputs: [
               {
-                "internalType": "string[]",
-                "name": "",
-                "type": "string[]"
-              }
+                internalType: "string[]",
+                name: "",
+                type: "string[]",
+              },
             ],
-            "stateMutability": "view",
-            "type": "function"
+            stateMutability: "view",
+            type: "function",
           },
           {
-            "inputs": [],
-            "name": "shareAccess",
-            "outputs": [
+            inputs: [],
+            name: "shareAccess",
+            outputs: [
               {
-                "components": [
+                components: [
                   {
-                    "internalType": "address",
-                    "name": "user",
-                    "type": "address"
+                    internalType: "address",
+                    name: "user",
+                    type: "address",
                   },
                   {
-                    "internalType": "bool",
-                    "name": "access",
-                    "type": "bool"
-                  }
+                    internalType: "bool",
+                    name: "access",
+                    type: "bool",
+                  },
                 ],
-                "internalType": "struct Upload.Access[]",
-                "name": "",
-                "type": "tuple[]"
-              }
+                internalType: "struct Upload.Access[]",
+                name: "",
+                type: "tuple[]",
+              },
             ],
-            "stateMutability": "view",
-            "type": "function"
-          }
+            stateMutability: "view",
+            type: "function",
+          },
         ];
         const contractInstance = new ethers.Contract(
           contractAddress,
@@ -135,15 +135,18 @@ const App = () => {
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Firstpage />} />
-        <Route path="/Secondpage" element={<Secondpage />} />
-        <Route
-          path="/accesslist"
-          element={<AccessList contract={contract} />}
-        />
-        <Route path="/Working" element={<Working/>} />
-      </Routes>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/upload" element={<UploadFile />} />
+          <Route path="/Secondpage" element={<Secondpage />} />
+          <Route
+            path="/accesslist"
+            element={<AccessList contract={contract} />}
+          />
+          <Route path="/Working" element={<Working />} />
+        </Routes>
+      </Router>
     </>
   );
 };

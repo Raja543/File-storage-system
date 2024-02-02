@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;500&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.button-bg {
+  background: linear-gradient(
+    89.79deg,
+    rgb(12, 255, 240) 0.18%,
+    rgb(12, 255, 167) 99.9%
+  );
+}
+
+.has-mask {
+  position: absolute;
+  clip: rect(10px, 150px, 130px, 10px);
+}

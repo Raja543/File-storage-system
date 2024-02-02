@@ -12,7 +12,6 @@ function App() {
   const connectWallet = async () => {
     if (typeof window != "undefined" && typeof window.ethereum != "undefined") {
       try {
-        /* MetaMask is installed */
         const accounts = await window.ethereum.request({
           method: "eth_requestAccounts",
         });
@@ -22,7 +21,6 @@ function App() {
         console.error(err.message);
       }
     } else {
-      /* MetaMask is not installed */
       console.log("Please install MetaMask");
     }
   };
