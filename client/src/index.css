@@ -23,6 +23,10 @@ body::-webkit-scrollbar {
   );
 }
 
+.upload-bg {
+  background: linear-gradient(184deg, #00d486, #00ffbd 73%);
+}
+
 .has-mask {
   position: absolute;
   clip: rect(10px, 150px, 130px, 10px);

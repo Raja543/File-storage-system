@@ -16,6 +16,7 @@ const Navbar = () => {
     { to: "/upload", text: "Upload" },
     { to: "/working", text: "Working" },
     { to: "/accesslist", text: "AllowList" },
+    { to: "/myfiles", text: "MyFiles" },
   ];
 
   const connectWallet = async () => {
@@ -68,7 +69,7 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <nav className="flex justify-between bg-[#030303] text-[#fff] items-center w-full px-6 md:px-10 lg:px-20 py-5 mx-auto">
+    <nav className="flex justify-between bg-[#0e1310] text-[#fff] items-center w-full px-6 md:px-10 lg:px-20 py-5 mx-auto">
       <div className="flex items-center">
         <NavLink to="/">
           <img

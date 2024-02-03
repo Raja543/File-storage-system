@@ -6,6 +6,7 @@ import Secondpage from "./pages/Secondpage";
 import AccessList from "./components/AccessList";
 import Working from "./components/Working";
 import UploadFile from "./pages/UploadFile";
+import MyFiles from "./pages/MyFiles";
 
 const App = () => {
   const [contract, setContract] = useState(null);
@@ -140,6 +141,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/upload" element={<UploadFile />} />
           <Route path="/Secondpage" element={<Secondpage />} />
+          <Route path="/myfiles" element={<MyFiles />} />
           <Route
             path="/accesslist"
             element={<AccessList contract={contract} />}
