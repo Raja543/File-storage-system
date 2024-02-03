@@ -10,6 +10,7 @@ import MyFiles from "./pages/MyFiles";
 
 const App = () => {
   const [contract, setContract] = useState(null);
+  const [account, setAccount] = useState(null);
 
   useEffect(() => {
     const connectToContract = async () => {
@@ -141,7 +142,10 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/upload" element={<UploadFile />} />
           <Route path="/Secondpage" element={<Secondpage />} />
-          <Route path="/myfiles" element={<MyFiles />} />
+          <Route
+            path="/myfiles"
+            element={<MyFiles contract={contract} account={account} />}
+          />
           <Route
             path="/accesslist"
             element={<AccessList contract={contract} />}
