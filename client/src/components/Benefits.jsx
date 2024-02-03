@@ -12,14 +12,15 @@ const Benefits = () => {
     <>
       <div
         className="bg-cover bg-center px-32 py-40 grid grid-cols-2 grid-rows-2 gap-24"
-        style={{ backgroundImage: `url('/Specialimages/landing-center.png')` }}
+        style={{ backgroundImage: `url('/images/landing-center.png')` }}
       >
         <div>
           <img
             className="w-[450px] h-full "
-            src="/specialimages/security.gif"
+            src="/images/security.gif"
             alt=""
             data-aos="zoom-in"
+            type="image/gif"
           />
         </div>
         <div
@@ -60,9 +61,10 @@ const Benefits = () => {
         <div>
           <img
             className="w-[450px] h-full ml-auto"
-            src="/specialimages/fragments.gif"
+            src="/images/fragments.gif"
             alt=""
             data-aos="zoom-in"
+            type="image/gif"
           />
         </div>
       </div>

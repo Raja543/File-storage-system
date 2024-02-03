@@ -54,13 +54,13 @@ const Features = () => {
     >
       <h1
         className="text-xl md:text-2xl lg:text-4xl font-bold py-4"
-        data-aos="zoom-in"
+        data-aos="fade-up"
       >
         What we are offering
       </h1>
       <h2
         className="text-md md:text-lg text-gray-300 lg:text-xl "
-        data-aos="zoom-in"
+        data-aos="fade-up"
       >
         Discover the Power of SecureShareX: Unlocking Effortless Control and
         Privacy.

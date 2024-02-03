@@ -3,14 +3,17 @@ import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
-    <footer className="text-gray-50 w-full p-8 bg-cover bg-center bg-no-repeat bg-[#121916]"  style={{ backgroundImage: `url('/Specialimages/signin-gradient.png')` }}>
+    <footer
+      className="text-gray-50 w-full p-8 bg-cover bg-center bg-no-repeat bg-[#121916]"
+      style={{ backgroundImage: `url('/images/signin-gradient.png')` }}
+    >
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-4">
         <div className="md:flex  md:justify-between">
           <div className="mb-6 md:mb-0 md:max-w-xl">
             <HashLink href="#" className="flex items-center">
               <img
                 src="/images/logo.jpg"
-                className="h-8 mr-3 w-8" 
+                className="h-8 mr-3 w-8"
                 alt="securesharex-logo"
               />
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">

@@ -16,18 +16,17 @@ const Joinus = () => {
       <p className="text-[#dcdcdc] text-2xl py-3" data-aos="fade-up">
         Help us on our quest to make this product even better.
       </p>
-      <div className="use-btn landing-btn">
-        <HashLink to="">
-          <button className="bg-[#00ffa8] text-[#000] py-3 px-6 my-4 text-xl rounded-lg">
-            Join Us
-          </button>
-        </HashLink>
-      </div>
+      <HashLink to="" data-aos="fade-up">
+        <button className="bg-[#00ffa8] text-[#000] py-3 px-6 my-4 text-xl rounded-lg">
+          Join Us
+        </button>
+      </HashLink>
       <img
         className="w-3/4 h-full py-8"
-        src="/specialimages/map.png"
+        src="/images/map.png"
         alt=""
         data-aos="zoom-in"
+        type="image/gif"
       />
     </div>
   );
