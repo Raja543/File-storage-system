@@ -12,7 +12,10 @@ const Benefits = () => {
     <>
       <div
         className="bg-cover bg-center px-32 py-40 grid grid-cols-2 grid-rows-2 gap-24"
-        style={{ backgroundImage: `url('/images/landing-center.png')`,  type :"image/png" }}
+        style={{
+          backgroundImage: `url('/images/landing-center.png')`,
+          type: "image/png",
+        }}
       >
         <div>
           <img
@@ -52,10 +55,10 @@ const Benefits = () => {
             <span className="text-[#00ffa8]"> Reliable</span>
           </h1>
           <p className="py-3 text-xl text-[#dcdcdc]">
-            SecureShareX offers a range of features that prioritize user privacy
-            and security. From file upload to deletion, our platform ensures
-            tamper-proof storage and controlled access, empowering users with
-            complete control over their shared content.
+            SecureShareX is built on the blockchain, ensuring a decentralized
+            and distributed network that guarantees high-speed file sharing and
+            retrieval. Our platform is designed to be highly reliable and
+            efficient, providing users with a seamless experience.
           </p>
         </div>
         <div>

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ethers } from "ethers";
 import Home from "./pages/Home";
 import Secondpage from "./pages/Secondpage";
-import AccessList from "./components/AccessList";
+import AccessList from "./pages/AllowList";
 import Working from "./components/Working";
 import UploadFile from "./pages/UploadFile";
 import MyFiles from "./pages/MyFiles";
@@ -17,7 +17,7 @@ const App = () => {
       try {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
-        const contractAddress = "0x3d2aAecF743e62C202F0Ef1189B7A49C65d038ed"; // replace with your contract address
+        const contractAddress = "0x3d2aAecF743e62C202F0Ef1189B7A49C65d038ed";
         const abi = [
           {
             inputs: [
@@ -147,7 +147,7 @@ const App = () => {
             element={<MyFiles contract={contract} account={account} />}
           />
           <Route
-            path="/accesslist"
+            path="/allowlist"
             element={<AccessList contract={contract} />}
           />
           <Route path="/Working" element={<Working />} />

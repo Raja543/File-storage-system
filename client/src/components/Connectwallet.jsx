@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-function App() {
+function Connectwallet() {
   const [walletAddress, setWalletAddress] = useState("");
 
   useEffect(() => {
@@ -43,7 +43,6 @@ function App() {
     } else {
       /* MetaMask is not installed */
       console.log("Please install MetaMask");
-
     }
   };
 
@@ -62,8 +61,8 @@ function App() {
 
   return (
     <div>
-      <button className="connect-btn" onClick={connectWallet}>
-        <span className="btn-txt">
+      <button onClick={connectWallet}>
+        <span>
           {walletAddress && walletAddress.length > 0
             ? `Connected: ${walletAddress.substring(
                 0,
@@ -76,4 +75,4 @@ function App() {
   );
 }
 
-export default App;
+export default Connectwallet;
