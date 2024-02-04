@@ -11,7 +11,7 @@ const Benefits = () => {
   return (
     <>
       <div
-        className="bg-cover bg-center px-32 py-40 grid grid-cols-2 grid-rows-2 gap-24"
+        className="bg-cover bg-center px-32 py-40 bg-[#000] grid grid-cols-2 grid-rows-2 gap-24"
         style={{
           backgroundImage: `url('/images/landing-center.png')`,
           type: "image/png",

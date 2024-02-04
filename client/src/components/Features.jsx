@@ -49,7 +49,7 @@ const Features = () => {
   }, []);
   return (
     <div
-      className="bg-cover bg-center px-16 py-20 text-[#fff]"
+      className="bg-cover bg-center px-16 py-20 text-[#fff] bg-[#000] "
       style={{ backgroundImage: `url('/Specialimages/landing-center.png')` }}
     >
       <h1

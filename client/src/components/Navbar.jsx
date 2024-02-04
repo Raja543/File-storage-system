@@ -15,7 +15,7 @@ const Navbar = () => {
   const navLinks = [
     { to: "/upload", text: "Upload" },
     { to: "/working", text: "Working" },
-    { to: "/accesslist", text: "AllowList" },
+    { to: "/allowlist", text: "AllowList" },
     { to: "/myfiles", text: "MyFiles" },
   ];
 

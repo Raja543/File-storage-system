@@ -4,9 +4,9 @@ import { ethers } from "ethers";
 import Home from "./pages/Home";
 import Secondpage from "./pages/Secondpage";
 import AccessList from "./pages/AllowList";
-import Working from "./components/Working";
 import UploadFile from "./pages/UploadFile";
 import MyFiles from "./pages/MyFiles";
+import Working from "./pages/Working";
 
 const App = () => {
   const [contract, setContract] = useState(null);
