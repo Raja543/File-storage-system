@@ -73,8 +73,8 @@ const Navbar = () => {
       <div className="flex items-center">
         <NavLink to="/">
           <img
-            className="w-24 cursor-pointer"
-            src="/images/Logo.svg"
+            className="w-12 h-full cursor-pointer"
+            src="/images/logo.jpg"
             alt="Logo"
           />
         </NavLink>
@@ -86,7 +86,9 @@ const Navbar = () => {
       >
         {navLinks.map((link) => (
           <NavLink key={link.to} to={link.to}>
-            <li className="text-lg pr-8">{link.text}</li>
+            <ul>
+              <li className="text-lg pr-8">{link.text}</li>
+            </ul>
           </NavLink>
         ))}
         <button

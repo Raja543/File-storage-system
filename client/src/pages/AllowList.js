@@ -53,7 +53,7 @@ const AllowList = ({ contract }) => {
           type: "image/svg+xml",
         }}
       >
-        <h1 className="text-5xl font-bold">Access List</h1>
+        <h1 className="text-5xl font-bold">Allow List</h1>
         <form
           onSubmit={(e) => {
             e.preventDefault();
